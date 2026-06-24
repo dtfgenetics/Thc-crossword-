@@ -20,6 +20,7 @@ h1 { font-size: clamp(2rem, 8vw, 5rem); line-height: .9; margin: 0 0 12px; }
 .toolbar button { border: 0; border-radius: 999px; padding: 10px 16px; font-weight: 900; background: #a6ff4d; color: #102015; cursor: pointer; }
 .status { color: #b8c8b1; background: #07130d; border-radius: 14px; padding: 12px; }
 .progress { margin: 8px 0 14px; color: #ffd166; font-weight: 800; }
+.mobile-input { position: fixed; left: -1000px; top: 0; width: 1px; height: 1px; opacity: .01; }
 .export-preview { white-space: pre-wrap; overflow: auto; background: #07130d; color: #f3f7ef; border: 1px solid #294431; border-radius: 16px; padding: 16px; line-height: 1.5; }
 .grid { --cols: 15; display: grid; grid-template-columns: repeat(var(--cols), minmax(30px, 1fr)); gap: 3px; overflow: auto; }
 .cell { aspect-ratio: 1 / 1; position: relative; border: 0; border-radius: 8px; background: #f7f5e8; color: #102015; font-weight: 900; cursor: pointer; }
