@@ -12,7 +12,7 @@ const fallbackPuzzle = {
     ['.', 'C', '.', '.', '.', '.'],
     ['R', 'O', 'S', 'I', 'N', '.'],
     ['.', 'L', '.', '.', '.', '.'],
-    ['K', 'A', 'I', 'E', 'F', '.']
+    ['K', 'I', 'E', 'F', '.', '.']
   ],
   rows: 4,
   cols: 6,
@@ -32,14 +32,23 @@ function key(x, y) { return `${x},${y}`; }
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[char]));
 }
-async function loadPuzzle() {
+async function loadJson(url, fallback) {
   try {
-    const response = await fetch('/puzzles/current.json', { cache: 'no-cache' });
-    if (!response.ok) throw new Error('missing puzzle');
+    const response = await fetch(url, { cache: 'no-cache' });
+    if (!response.ok) throw new Error('missing file');
     return await response.json();
   } catch {
-    return fallbackPuzzle;
+    return fallback;
   }
+}
+async function loadPuzzle() {
+  const params = new URLSearchParams(window.location.search);
+  const requested = params.get('puzzle');
+  const file = requested ? `/puzzles/${requested}.json` : '/puzzles/current.json';
+  return loadJson(file, fallbackPuzzle);
+}
+async function loadArchive() {
+  return loadJson('/puzzles/index.json', { puzzles: [] });
 }
 function buildMeta(puzzle) {
   const starts = new Map();
@@ -62,7 +71,15 @@ function loadLetters(puzzle) {
 function saveLetters(puzzle, letters) {
   localStorage.setItem(`thc-crossword:${puzzle.id}`, JSON.stringify(letters));
 }
-function render(puzzle) {
+function renderArchive(archive, puzzle) {
+  const puzzles = archive.puzzles || [];
+  if (!puzzles.length) return '<p class="archive-empty">Archive appears after the generator publishes weekly puzzle files.</p>';
+  return `<div class="archive-list">${puzzles.map((item) => {
+    const active = item.id === puzzle.id ? ' active-archive' : '';
+    return `<a class="archive-link${active}" href="?puzzle=${encodeURIComponent(item.id)}">${escapeHtml(item.week || item.id)} <span>${item.stats?.placedCount || 0} words</span></a>`;
+  }).join('')}</div>`;
+}
+function render(puzzle, archive) {
   const meta = buildMeta(puzzle);
   let letters = loadLetters(puzzle);
   let active = puzzle.words[0] ? { x: puzzle.words[0].startx, y: puzzle.words[0].starty, orientation: puzzle.words[0].orientation } : { x: 1, y: 1, orientation: 'across' };
@@ -74,6 +91,10 @@ function render(puzzle) {
       <h1>${escapeHtml(puzzle.title)}</h1>
       <p>${escapeHtml(puzzle.subtitle || '')}</p>
       <p class="notice">${escapeHtml(puzzle.adultUseNotice || '')}</p>
+      <section class="archive-panel" aria-label="Puzzle archive">
+        <h2>Archive</h2>
+        ${renderArchive(archive, puzzle)}
+      </section>
     </header>
     <main class="shell">
       <section class="panel">
@@ -184,4 +205,4 @@ function render(puzzle) {
   setActive(active.x, active.y, active.orientation);
 }
 
-loadPuzzle().then(render);
+Promise.all([loadPuzzle(), loadArchive()]).then(([puzzle, archive]) => render(puzzle, archive));
