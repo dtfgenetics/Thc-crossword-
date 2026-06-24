@@ -1,0 +1,26 @@
+[
+  {
+    "id": "dtf-genetics",
+    "name": "DTF Genetics",
+    "description": "Brand, breeding projects, and house cultivar language.",
+    "preferredCategories": ["DTF Genetics", "Lineage", "Breeding"]
+  },
+  {
+    "id": "grow-room-basics",
+    "name": "Grow Room Basics",
+    "description": "Beginner-friendly cultivation terms.",
+    "preferredCategories": ["Cultivation", "Tools", "Environment", "Nutrients"]
+  },
+  {
+    "id": "plant-science",
+    "name": "Plant Science",
+    "description": "Terpenes, anatomy, and biology clues.",
+    "preferredCategories": ["Plant Science", "Plant Anatomy", "Breeding"]
+  },
+  {
+    "id": "harvest-and-extracts",
+    "name": "Harvest and Extracts",
+    "description": "Post-harvest terms and solventless culture.",
+    "preferredCategories": ["Harvest", "Extracts"]
+  }
+]
