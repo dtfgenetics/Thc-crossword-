@@ -1,0 +1,13 @@
+{
+  "updatedAt": "2026-06-23T00:00:00.000Z",
+  "puzzles": [
+    {
+      "id": "2026-W26",
+      "week": "2026-W26",
+      "title": "THC Weekly Crossword — 2026-W26",
+      "status": "published",
+      "stats": {"submittedCount": 3, "placedCount": 3, "score": 2976},
+      "file": "2026-W26.json"
+    }
+  ]
+}
