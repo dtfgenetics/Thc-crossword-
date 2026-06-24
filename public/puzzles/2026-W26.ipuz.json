@@ -1,0 +1,26 @@
+{
+  "version": "http://ipuz.org/v2",
+  "kind": ["http://ipuz.org/crossword#1"],
+  "title": "THC Weekly Crossword — 2026-W26",
+  "intro": "Starter puzzle. Run the generator to replace this with a larger weekly grid.",
+  "explanation": "Cannabis-themed parody and education content for adults 21+ where legal.",
+  "dimensions": {"width": 6, "height": 5},
+  "puzzle": [
+    ["#", 1, "#", "#", "#", "#"],
+    ["#", 0, "#", "#", "#", "#"],
+    ["#", 2, 0, 0, 0, "#"],
+    [3, 0, 0, 0, "#", "#"],
+    ["#", 0, "#", "#", "#", "#"]
+  ],
+  "solution": [
+    ["#", "R", "#", "#", "#", "#"],
+    ["#", "O", "#", "#", "#", "#"],
+    ["#", "S", "E", "E", "D", "#"],
+    ["K", "I", "E", "F", "#", "#"],
+    ["#", "N", "#", "#", "#", "#"]
+  ],
+  "clues": {
+    "Across": [[2, "Starting point for a new genetic run"], [3, "Collected resin glands often found in a grinder"]],
+    "Down": [[1, "Solventless extract made with heat and pressure"]]
+  }
+}
