@@ -1,10 +1,15 @@
 import { normalizeAnswer } from './format.js';
 
 export function selectEntries({ bank, theme, max = 28, random = Math.random }) {
-  const approved = bank
-    .filter((entry) => entry.approved !== false)
-    .map((entry) => ({ ...entry, normalizedAnswer: normalizeAnswer(entry.answer) }))
-    .filter((entry) => entry.normalizedAnswer.length >= 3);
+  const seen = new Set();
+  const approved = [];
+
+  for (const entry of bank.filter((item) => item.approved !== false)) {
+    const normalizedAnswer = normalizeAnswer(entry.answer);
+    if (normalizedAnswer.length < 3 || seen.has(normalizedAnswer)) continue;
+    seen.add(normalizedAnswer);
+    approved.push({ ...entry, normalizedAnswer });
+  }
 
   const preferred = new Set(theme?.preferredCategories || []);
   const scored = approved.map((entry) => ({
@@ -13,7 +18,7 @@ export function selectEntries({ bank, theme, max = 28, random = Math.random }) {
   }));
 
   return scored
-    .sort((a, b) => b.score - a.score)
+    .sort((a, b) => b.score - a.score || a.entry.normalizedAnswer.localeCompare(b.entry.normalizedAnswer))
     .slice(0, max)
     .map((item) => item.entry);
 }
