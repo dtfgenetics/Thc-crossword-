@@ -17,6 +17,7 @@ jobs:
       - run: npm install
       - run: npm run crossword:audit
       - run: npm test
+      - run: npm run crossword:publish-next -- --theme plant-science --dry-run
       - run: npm run crossword:generate -- --week 2026-W26 --theme grow-room-basics --attempts 50
       - run: npm run crossword:validate
       - run: npm run verify
