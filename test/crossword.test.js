@@ -3,6 +3,7 @@ import { normalizeAnswer, groupWords } from '../src/crossword/format.js';
 import { validateClueBank, validatePuzzle, isConnected } from '../src/crossword/validate.js';
 import { exportIpuz, exportExolve } from '../src/crossword/exporters.js';
 import { selectEntries } from '../src/crossword/selectEntries.js';
+import { currentIsoWeek, latestArchivedWeek, nextIsoWeek, weeksInIsoYear } from '../src/crossword/week.js';
 
 const puzzle = {
   id: 'test-week',
@@ -80,5 +81,13 @@ describe('crossword helpers', () => {
       random: () => 0
     });
     expect(selected.map((entry) => normalizeAnswer(entry.answer))).toEqual(['BLUEMANGO', 'ROSIN']);
+  });
+
+  it('handles ISO week rollover correctly', () => {
+    expect(weeksInIsoYear(2026)).toBe(53);
+    expect(nextIsoWeek('2026-W26')).toBe('2026-W27');
+    expect(nextIsoWeek('2026-W53')).toBe('2027-W01');
+    expect(latestArchivedWeek(['2026-W02', '2026-W10', 'bad'])).toBe('2026-W10');
+    expect(currentIsoWeek(new Date(Date.UTC(2026, 5, 23)))).toBe('2026-W26');
   });
 });
