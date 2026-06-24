@@ -14,6 +14,8 @@
     "crossword:theme": "node scripts/preview-theme.mjs",
     "crossword:validate": "node scripts/validate-puzzles.mjs",
     "crossword:validate-ipuz": "node scripts/validate-ipuz.mjs",
+    "crossword:validate-exolve": "node scripts/validate-exolve.mjs",
+    "crossword:check-exports": "node scripts/check-export-set.mjs",
     "verify": "node scripts/verify-project.mjs",
     "test": "vitest run"
   },
