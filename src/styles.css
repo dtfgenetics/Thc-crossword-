@@ -1,0 +1,24 @@
+body { margin: 0; font-family: Arial, sans-serif; background: #07130d; color: #f3f7ef; }
+.hero, .shell { max-width: 1180px; margin: 0 auto; padding: 24px 20px; }
+h1 { font-size: clamp(2rem, 8vw, 5rem); line-height: .9; margin: 0 0 12px; }
+.eyebrow { color: #a6ff4d; text-transform: uppercase; letter-spacing: .14em; font-weight: 800; }
+.notice { border-left: 4px solid #ffd166; padding-left: 12px; color: #b8c8b1; }
+.shell { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(300px, .8fr); gap: 20px; }
+.panel { background: #102418; border: 1px solid #294431; border-radius: 24px; padding: 18px; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+.toolbar button { border: 0; border-radius: 999px; padding: 10px 16px; font-weight: 900; background: #a6ff4d; color: #102015; cursor: pointer; }
+.status { color: #b8c8b1; background: #07130d; border-radius: 14px; padding: 12px; }
+.grid { --cols: 15; display: grid; grid-template-columns: repeat(var(--cols), minmax(30px, 1fr)); gap: 3px; overflow: auto; }
+.cell { aspect-ratio: 1 / 1; position: relative; border: 0; border-radius: 8px; background: #f7f5e8; color: #102015; font-weight: 900; cursor: pointer; }
+.cell.black { background: #07130d; cursor: default; outline: 1px solid #294431; }
+.cell.word { background: #fff8c9; }
+.cell.active { outline: 3px solid #a6ff4d; background: #d9ffc5; }
+.cell.wrong { background: #ffd7d7; }
+.cell.right { background: #dcffd6; }
+.cell span { position: absolute; top: 4px; left: 5px; font-size: .65rem; opacity: .72; }
+.cell b { display: grid; place-items: center; width: 100%; height: 100%; font-size: clamp(1rem, 3vw, 1.55rem); }
+.clues { max-height: 80vh; overflow: auto; }
+.clues ol { list-style: none; padding: 0; display: grid; gap: 8px; }
+.clues button { width: 100%; text-align: left; border: 1px solid #294431; border-radius: 16px; padding: 11px 12px; background: #173522; color: #f3f7ef; cursor: pointer; }
+.clues em { color: #ffd166; font-style: normal; }
+@media (max-width: 880px) { .shell { grid-template-columns: 1fr; } .clues { max-height: none; } }
