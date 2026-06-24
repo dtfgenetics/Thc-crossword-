@@ -2,6 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { normalizeAnswer, groupWords } from '../src/crossword/format.js';
 import { validateClueBank, validatePuzzle, isConnected } from '../src/crossword/validate.js';
 import { exportIpuz, exportExolve } from '../src/crossword/exporters.js';
+import { parseIpuzJson, validateIpuz, ipuzToInternalPuzzle } from '../src/crossword/ipuz.js';
+import { adapterById, assertPermissiveAdapter, enabledGeneratorAdapters } from '../src/crossword/generatorAdapters.js';
 import { selectEntries } from '../src/crossword/selectEntries.js';
 import { progressStats, isSolved } from '../src/crossword/progress.js';
 import { currentIsoWeek, latestArchivedWeek, nextIsoWeek, weeksInIsoYear } from '../src/crossword/week.js';
@@ -55,6 +57,18 @@ describe('crossword helpers', () => {
   it('exports IPUZ and Exolve formats', () => {
     expect(exportIpuz(puzzle)).toContain('Test Puzzle');
     expect(exportExolve(puzzle)).toContain('exolve-title: Test Puzzle');
+  });
+
+  it('validates and parses exported IPUZ', () => {
+    const ipuz = parseIpuzJson(exportIpuz(puzzle));
+    expect(validateIpuz(ipuz)).toEqual([]);
+    expect(ipuzToInternalPuzzle(ipuz).grid[0]).toEqual(['C', 'O', 'L', 'A']);
+  });
+
+  it('tracks approved generator adapters', () => {
+    expect(enabledGeneratorAdapters().map((adapter) => adapter.id)).toContain('crossword-layout-generator');
+    expect(assertPermissiveAdapter(adapterById('crossword-layout-generator'))).toBe(true);
+    expect(adapterById('gaoryrt-crossword-generator').enabled).toBe(false);
   });
 
   it('selects entries by preferred theme categories', () => {
