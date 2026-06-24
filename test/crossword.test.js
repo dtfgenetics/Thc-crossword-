@@ -8,6 +8,8 @@ import { adapterById, assertPermissiveAdapter, enabledGeneratorAdapters } from '
 import { selectEntries } from '../src/crossword/selectEntries.js';
 import { progressStats, isSolved } from '../src/crossword/progress.js';
 import { currentIsoWeek, latestArchivedWeek, nextIsoWeek, weeksInIsoYear } from '../src/crossword/week.js';
+import { buildWeeklyPuzzle } from '../src/crossword/generatePuzzle.js';
+import { generateLocalLayout } from '../src/crossword/localLayout.js';
 
 const puzzle = {
   id: 'test-week',
@@ -29,6 +31,15 @@ const puzzle = {
   },
   stats: { submittedCount: 1, placedCount: 1, score: 990 }
 };
+
+const miniBank = [
+  { answer: 'Cola', clue: 'Main flower cluster', category: 'Cultivation', difficulty: 'easy' },
+  { answer: 'Clone', clue: 'Cutting that preserves genetics', category: 'Cultivation', difficulty: 'easy' },
+  { answer: 'Node', clue: 'Point where leaves or branches emerge', category: 'Plant Anatomy', difficulty: 'easy' },
+  { answer: 'Rosin', clue: 'Solventless extract made with heat and pressure', category: 'Extracts', difficulty: 'easy' },
+  { answer: 'Kief', clue: 'Loose resin glands from flower', category: 'Extracts', difficulty: 'easy' },
+  { answer: 'Seed', clue: 'Starting point for a genetic run', category: 'Seeds', difficulty: 'easy' }
+];
 
 describe('crossword helpers', () => {
   it('normalizes answers for grid use', () => {
@@ -76,6 +87,25 @@ describe('crossword helpers', () => {
     expect(enabledGeneratorAdapters().map((adapter) => adapter.id)).toContain('crossword-layout-generator');
     expect(assertPermissiveAdapter(adapterById('crossword-layout-generator'))).toBe(true);
     expect(adapterById('gaoryrt-crossword-generator').enabled).toBe(false);
+  });
+
+  it('generates a local layout from reusable engine code', () => {
+    const layout = generateLocalLayout(miniBank.map((entry) => ({ ...entry, answer: normalizeAnswer(entry.answer) })), () => 0.5);
+    expect(layout.placedCount).toBeGreaterThan(0);
+    expect(layout.grid.length).toBeGreaterThan(0);
+  });
+
+  it('builds a weekly puzzle from reusable generation core', () => {
+    const weekly = buildWeeklyPuzzle({
+      bank: miniBank,
+      themes: [{ id: 'test', name: 'Test Theme', description: 'Test', preferredCategories: ['Cultivation', 'Extracts', 'Seeds', 'Plant Anatomy'] }],
+      week: '2026-W26',
+      themeId: 'test',
+      max: 6,
+      attempts: 8
+    });
+    expect(weekly.week).toBe('2026-W26');
+    expect(weekly.words.length).toBeGreaterThan(0);
   });
 
   it('selects entries by preferred theme categories', () => {
