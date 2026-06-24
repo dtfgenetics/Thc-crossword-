@@ -7,6 +7,7 @@ import { parseExolveText, validateExolveText } from '../src/crossword/exolve.js'
 import { adapterById, assertPermissiveAdapter, enabledGeneratorAdapters } from '../src/crossword/generatorAdapters.js';
 import { selectEntries } from '../src/crossword/selectEntries.js';
 import { progressStats, isSolved } from '../src/crossword/progress.js';
+import { safePuzzleId, puzzleJsonPath, puzzleExportBase } from '../src/crossword/routes.js';
 import { currentIsoWeek, latestArchivedWeek, nextIsoWeek, weeksInIsoYear } from '../src/crossword/week.js';
 import { buildWeeklyPuzzle } from '../src/crossword/generatePuzzle.js';
 import { generateLocalLayout } from '../src/crossword/localLayout.js';
@@ -87,6 +88,15 @@ describe('crossword helpers', () => {
     expect(enabledGeneratorAdapters().map((adapter) => adapter.id)).toContain('crossword-layout-generator');
     expect(assertPermissiveAdapter(adapterById('crossword-layout-generator'))).toBe(true);
     expect(adapterById('gaoryrt-crossword-generator').enabled).toBe(false);
+  });
+
+  it('sanitizes puzzle route ids before building file paths', () => {
+    expect(safePuzzleId('2026-W26')).toBe('2026-W26');
+    expect(safePuzzleId('../secret')).toBeNull();
+    expect(safePuzzleId('2026-W26.json')).toBeNull();
+    expect(puzzleJsonPath('2026-W26')).toBe('/puzzles/2026-W26.json');
+    expect(puzzleJsonPath('../secret')).toBe('/puzzles/current.json');
+    expect(puzzleExportBase('2026-W26')).toBe('/puzzles/2026-W26');
   });
 
   it('generates a local layout from reusable engine code', () => {
