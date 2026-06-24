@@ -1,4 +1,5 @@
 import './styles.css';
+import { progressStats } from './crossword/progress.js';
 
 const BLACK = '.';
 const app = document.querySelector('#app');
@@ -9,20 +10,21 @@ const fallbackPuzzle = {
   subtitle: 'Run npm run crossword:generate to publish the weekly puzzle.',
   adultUseNotice: 'Cannabis-themed parody and education content for adults 21+ where legal.',
   grid: [
-    ['.', 'C', '.', '.', '.', '.'],
-    ['R', 'O', 'S', 'I', 'N', '.'],
-    ['.', 'L', '.', '.', '.', '.'],
-    ['K', 'I', 'E', 'F', '.', '.']
+    ['.', 'R', '.', '.', '.', '.'],
+    ['.', 'O', '.', '.', '.', '.'],
+    ['.', 'S', 'E', 'E', 'D', '.'],
+    ['K', 'I', 'E', 'F', '.', '.'],
+    ['.', 'N', '.', '.', '.', '.']
   ],
-  rows: 4,
+  rows: 5,
   cols: 6,
   clues: {
     across: [
-      { answer: 'ROSIN', clue: 'Solventless extract made with heat and pressure', startx: 1, starty: 2, position: 1, orientation: 'across' },
-      { answer: 'KIEF', clue: 'Collected resin glands often found in a grinder', startx: 1, starty: 4, position: 2, orientation: 'across' }
+      { answer: 'SEED', clue: 'Starting point for a new genetic run', startx: 2, starty: 3, position: 2, orientation: 'across' },
+      { answer: 'KIEF', clue: 'Collected resin glands often found in a grinder', startx: 1, starty: 4, position: 3, orientation: 'across' }
     ],
     down: [
-      { answer: 'COLA', clue: 'Main flower cluster on a plant', startx: 2, starty: 1, position: 3, orientation: 'down' }
+      { answer: 'ROSIN', clue: 'Solventless extract made with heat and pressure', startx: 2, starty: 1, position: 1, orientation: 'down' }
     ]
   }
 };
@@ -105,6 +107,7 @@ function render(puzzle, archive) {
           <button data-action="print">Print</button>
         </div>
         <p class="status" id="status">Choose a square or clue.</p>
+        <p class="progress" id="progress">Progress: 0%</p>
         <div class="grid" id="grid"></div>
       </section>
       <aside class="panel clues">
@@ -115,8 +118,14 @@ function render(puzzle, archive) {
 
   const grid = document.querySelector('#grid');
   const status = document.querySelector('#status');
+  const progress = document.querySelector('#progress');
   grid.style.setProperty('--cols', puzzle.cols);
 
+  function updateProgress() {
+    const stats = progressStats(puzzle, letters);
+    const checkedText = checking ? ` • ${stats.correct}/${stats.total} correct` : '';
+    progress.textContent = stats.solved ? 'Solved. Nice work.' : `Progress: ${stats.percentFilled}% filled (${stats.filled}/${stats.total})${checkedText}`;
+  }
   function wordFor(x, y) {
     const cellKey = key(x, y);
     return active.orientation === 'across' ? meta.across.get(cellKey) || meta.down.get(cellKey) : meta.down.get(cellKey) || meta.across.get(cellKey);
@@ -148,6 +157,7 @@ function render(puzzle, archive) {
       }
       grid.appendChild(button);
     }
+    updateProgress();
   }
   function drawClues() {
     for (const direction of ['across', 'down']) {
