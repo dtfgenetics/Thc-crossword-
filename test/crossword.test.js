@@ -67,4 +67,18 @@ describe('crossword helpers', () => {
     });
     expect(selected[0].answer).toBe('Rosin');
   });
+
+  it('filters duplicate normalized answers during selection', () => {
+    const selected = selectEntries({
+      bank: [
+        { answer: 'Blue Mango', clue: 'First version', category: 'Lineage', difficulty: 'easy' },
+        { answer: 'Blue-Mango', clue: 'Duplicate punctuation version', category: 'Lineage', difficulty: 'easy' },
+        { answer: 'Rosin', clue: 'Solventless extract', category: 'Extracts', difficulty: 'easy' }
+      ],
+      theme: { preferredCategories: ['Lineage', 'Extracts'] },
+      max: 3,
+      random: () => 0
+    });
+    expect(selected.map((entry) => normalizeAnswer(entry.answer))).toEqual(['BLUEMANGO', 'ROSIN']);
+  });
 });
