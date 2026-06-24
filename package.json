@@ -13,6 +13,7 @@
     "crossword:audit": "node scripts/audit-clue-bank.mjs",
     "crossword:theme": "node scripts/preview-theme.mjs",
     "crossword:validate": "node scripts/validate-puzzles.mjs",
+    "crossword:validate-ipuz": "node scripts/validate-ipuz.mjs",
     "verify": "node scripts/verify-project.mjs",
     "test": "vitest run"
   },
