@@ -12,9 +12,12 @@ const requiredFiles = [
   'src/crossword/validate.js',
   'src/crossword/exporters.js',
   'src/crossword/selectEntries.js',
+  'src/crossword/week.js',
+  'src/crossword/progress.js',
   'content/clue-bank.json',
   'content/themes.json',
   'scripts/generate-weekly-crossword.mjs',
+  'scripts/publish-next.mjs',
   'scripts/audit-clue-bank.mjs',
   'scripts/validate-puzzles.mjs',
   'public/puzzles/current.json'
@@ -36,7 +39,7 @@ for (const file of requiredFiles) {
 }
 
 const pkg = JSON.parse(await fs.readFile('package.json', 'utf8'));
-for (const script of ['dev', 'build', 'crossword:generate', 'crossword:audit', 'crossword:validate', 'test']) {
+for (const script of ['dev', 'build', 'crossword:generate', 'crossword:publish-next', 'crossword:audit', 'crossword:validate', 'verify', 'test']) {
   if (!pkg.scripts?.[script]) errors.push(`Missing npm script: ${script}`);
 }
 
