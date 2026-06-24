@@ -3,6 +3,7 @@ import { normalizeAnswer, groupWords } from '../src/crossword/format.js';
 import { validateClueBank, validatePuzzle, isConnected } from '../src/crossword/validate.js';
 import { exportIpuz, exportExolve } from '../src/crossword/exporters.js';
 import { parseIpuzJson, validateIpuz, ipuzToInternalPuzzle } from '../src/crossword/ipuz.js';
+import { parseExolveText, validateExolveText } from '../src/crossword/exolve.js';
 import { adapterById, assertPermissiveAdapter, enabledGeneratorAdapters } from '../src/crossword/generatorAdapters.js';
 import { selectEntries } from '../src/crossword/selectEntries.js';
 import { progressStats, isSolved } from '../src/crossword/progress.js';
@@ -63,6 +64,12 @@ describe('crossword helpers', () => {
     const ipuz = parseIpuzJson(exportIpuz(puzzle));
     expect(validateIpuz(ipuz)).toEqual([]);
     expect(ipuzToInternalPuzzle(ipuz).grid[0]).toEqual(['C', 'O', 'L', 'A']);
+  });
+
+  it('validates and parses exported Exolve text', () => {
+    const exolve = exportExolve(puzzle);
+    expect(validateExolveText(exolve)).toEqual([]);
+    expect(parseExolveText(exolve).grid).toEqual(['COLA', '....']);
   });
 
   it('tracks approved generator adapters', () => {
