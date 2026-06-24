@@ -4,6 +4,7 @@ import path from 'node:path';
 import { createRequire } from 'node:module';
 import { validateClueBank, validatePuzzle } from '../src/crossword/validate.js';
 import { exportIpuz, exportExolve } from '../src/crossword/exporters.js';
+import { selectEntries } from '../src/crossword/selectEntries.js';
 
 const require = createRequire(import.meta.url);
 const BLACK = '.';
@@ -159,26 +160,33 @@ async function writeArchiveIndex(outDir) {
   const puzzles = [];
   for (const file of files.filter((name) => /^\d{4}-W\d{2}\.json$/.test(name)).sort().reverse()) {
     const puzzle = JSON.parse(await fs.readFile(path.join(outDir, file), 'utf8'));
-    puzzles.push({ id: puzzle.id, week: puzzle.week, title: puzzle.title, status: puzzle.status, stats: puzzle.stats, file });
+    puzzles.push({ id: puzzle.id, week: puzzle.week, title: puzzle.title, status: puzzle.status, theme: puzzle.theme, stats: puzzle.stats, file });
   }
   await fs.writeFile(path.join(outDir, 'index.json'), JSON.stringify({ updatedAt: new Date().toISOString(), puzzles }, null, 2));
+}
+
+function findTheme(themes, id) {
+  return themes.find((theme) => theme.id === id) || themes[0] || null;
 }
 
 const week = arg('week', '2026-W26');
 const max = Number(arg('max', '28'));
 const attempts = Number(arg('attempts', '200'));
+const themeId = arg('theme', 'grow-room-basics');
 const bank = JSON.parse(await fs.readFile('content/clue-bank.json', 'utf8'));
+const themes = JSON.parse(await fs.readFile('content/themes.json', 'utf8').catch(() => '[]'));
+const theme = findTheme(themes, themeId);
 const bankErrors = validateClueBank(bank);
 if (bankErrors.length) {
   console.error(bankErrors.join('\n'));
   process.exit(1);
 }
-const approved = bank.filter((x) => x.approved !== false).map((x) => ({ ...x, answer: normalize(x.answer), displayAnswer: x.answer })).filter((x) => x.answer.length >= 3);
 let best = null;
 
 for (let i = 0; i < attempts; i++) {
-  const random = rng(`${week}:${i}`);
-  const picked = shuffle(approved, random).slice(0, max);
+  const random = rng(`${week}:${theme?.id || 'default'}:${i}`);
+  const selected = selectEntries({ bank, theme, max, random });
+  const picked = selected.map((x) => ({ ...x, answer: normalize(x.answer), displayAnswer: x.answer })).filter((x) => x.answer.length >= 3);
   const candidates = [tryPublicGenerator(picked), localLayout(picked, random)].filter(Boolean);
   for (const candidate of candidates) {
     candidate.source ||= 'local-layout-engine';
@@ -190,12 +198,14 @@ const clues = {
   across: best.words.filter((w) => w.orientation === 'across'),
   down: best.words.filter((w) => w.orientation === 'down')
 };
+const themeLabel = theme?.name || 'Mixed Theme';
 const puzzle = {
   id: week,
   week,
   title: `THC Weekly Crossword — ${week}`,
-  subtitle: 'Grow terms, breeding language, DTF flavor, and culture clues.',
+  subtitle: `${themeLabel}: grow terms, breeding language, DTF flavor, and culture clues.`,
   status: 'published',
+  theme: theme ? { id: theme.id, name: theme.name, description: theme.description } : null,
   adultUseNotice: 'Cannabis-themed parody and education content for adults 21+ where legal.',
   generatedAt: new Date().toISOString(),
   source: { generator: best.source, publicCode: 'crossword-layout-generator is used when available; local fallback is included.' },
@@ -220,4 +230,4 @@ await fs.writeFile(path.join(outDir, 'current.json'), JSON.stringify(puzzle, nul
 await fs.writeFile(path.join(outDir, `${week}.ipuz.json`), exportIpuz(puzzle));
 await fs.writeFile(path.join(outDir, `${week}.exolve.txt`), exportExolve(puzzle));
 await writeArchiveIndex(outDir);
-console.log(`Generated ${puzzle.title}: ${puzzle.stats.placedCount}/${puzzle.stats.submittedCount} words, ${puzzle.cols}x${puzzle.rows}`);
+console.log(`Generated ${puzzle.title} (${themeLabel}): ${puzzle.stats.placedCount}/${puzzle.stats.submittedCount} words, ${puzzle.cols}x${puzzle.rows}`);
