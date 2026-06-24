@@ -1,0 +1,17 @@
+exolve-begin
+exolve-title: THC Weekly Crossword — 2026-W26
+exolve-id: 2026-W26
+exolve-width: 6
+exolve-height: 5
+exolve-grid:
+.R....
+.O....
+.SEED.
+KIEF..
+.N....
+exolve-across:
+2. Starting point for a new genetic run (4)
+3. Collected resin glands often found in a grinder (4)
+exolve-down:
+1. Solventless extract made with heat and pressure (5)
+exolve-end
