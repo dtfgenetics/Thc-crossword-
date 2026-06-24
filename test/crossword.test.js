@@ -3,6 +3,7 @@ import { normalizeAnswer, groupWords } from '../src/crossword/format.js';
 import { validateClueBank, validatePuzzle, isConnected } from '../src/crossword/validate.js';
 import { exportIpuz, exportExolve } from '../src/crossword/exporters.js';
 import { selectEntries } from '../src/crossword/selectEntries.js';
+import { progressStats, isSolved } from '../src/crossword/progress.js';
 import { currentIsoWeek, latestArchivedWeek, nextIsoWeek, weeksInIsoYear } from '../src/crossword/week.js';
 
 const puzzle = {
@@ -89,5 +90,14 @@ describe('crossword helpers', () => {
     expect(nextIsoWeek('2026-W53')).toBe('2027-W01');
     expect(latestArchivedWeek(['2026-W02', '2026-W10', 'bad'])).toBe('2026-W10');
     expect(currentIsoWeek(new Date(Date.UTC(2026, 5, 23)))).toBe('2026-W26');
+  });
+
+  it('tracks crossword progress and solved state', () => {
+    const partial = progressStats(puzzle, { '1,1': 'C', '2,1': 'X' });
+    expect(partial.total).toBe(4);
+    expect(partial.filled).toBe(2);
+    expect(partial.correct).toBe(1);
+    expect(partial.solved).toBe(false);
+    expect(isSolved(puzzle, { '1,1': 'C', '2,1': 'O', '3,1': 'L', '4,1': 'A' })).toBe(true);
   });
 });
