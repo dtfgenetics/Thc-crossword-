@@ -79,6 +79,7 @@ function put(grid, word, x, y, dir, position) {
 }
 
 function localLayout(words, random) {
+  if (!words.length) return null;
   const size = 41;
   const grid = Array.from({ length: size }, () => Array.from({ length: size }, () => ''));
   const ordered = shuffle(words, random).sort((a, b) => b.answer.length - a.answer.length);
@@ -108,6 +109,7 @@ function localLayout(words, random) {
 }
 
 function crop(grid, placed, submittedCount) {
+  if (!placed.length) return null;
   let minX = 99, minY = 99, maxX = 0, maxY = 0;
   for (const word of placed) {
     const dx = word.orientation === 'across' ? 1 : 0;
@@ -135,16 +137,21 @@ function numberWords(words) {
   words.sort((a, b) => a.position - b.position || a.orientation.localeCompare(b.orientation));
 }
 
+function normalizePublicTable(table) {
+  return table.map((row) => Array.from(row).map((v) => normalize(v)[0] || BLACK));
+}
+
 function tryPublicGenerator(words) {
   try {
+    if (!words.length) return null;
     const clg = require('crossword-layout-generator');
     const layout = clg.generateLayout(words.map((w) => ({ answer: w.answer, clue: w.clue })));
     if (!layout?.result?.length || !layout?.table?.length) return null;
     const placed = layout.result.filter((w) => w.orientation !== 'none').map((w) => {
       const match = words.find((entry) => entry.answer === normalize(w.answer));
       return { ...match, startx: Number(w.startx), starty: Number(w.starty), orientation: w.orientation, position: Number(w.position) };
-    }).filter(Boolean);
-    const grid = layout.table.map((row) => row.map((v) => normalize(v)[0] || BLACK));
+    }).filter((word) => word.answer && Number.isFinite(word.startx) && Number.isFinite(word.starty));
+    const grid = normalizePublicTable(layout.table);
     return { grid, rows: grid.length, cols: grid[0].length, words: placed, submittedCount: words.length, placedCount: placed.length, source: 'crossword-layout-generator' };
   } catch {
     return null;
@@ -187,11 +194,17 @@ for (let i = 0; i < attempts; i++) {
   const random = rng(`${week}:${theme?.id || 'default'}:${i}`);
   const selected = selectEntries({ bank, theme, max, random });
   const picked = selected.map((x) => ({ ...x, answer: normalize(x.answer), displayAnswer: x.answer })).filter((x) => x.answer.length >= 3);
+  if (picked.length < 3) continue;
   const candidates = [tryPublicGenerator(picked), localLayout(picked, random)].filter(Boolean);
   for (const candidate of candidates) {
     candidate.source ||= 'local-layout-engine';
     if (!best || score(candidate) > score(best)) best = candidate;
   }
+}
+
+if (!best) {
+  console.error(`Unable to generate a puzzle for ${week}. Add more approved clues or lower the theme constraints.`);
+  process.exit(1);
 }
 
 const clues = {
