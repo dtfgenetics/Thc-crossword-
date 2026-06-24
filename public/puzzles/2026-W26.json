@@ -1,0 +1,32 @@
+{
+  "id": "2026-W26",
+  "week": "2026-W26",
+  "title": "THC Weekly Crossword — 2026-W26",
+  "subtitle": "Starter puzzle. Run the generator to replace this with a larger weekly grid.",
+  "status": "published",
+  "adultUseNotice": "Cannabis-themed parody and education content for adults 21+ where legal.",
+  "grid": [
+    [".", "R", ".", ".", ".", "."],
+    [".", "O", ".", ".", ".", "."],
+    [".", "S", "E", "E", "D", "."],
+    ["K", "I", "E", "F", ".", "."],
+    [".", "N", ".", ".", ".", "."]
+  ],
+  "rows": 5,
+  "cols": 6,
+  "words": [
+    {"answer":"ROSIN","displayAnswer":"Rosin","clue":"Solventless extract made with heat and pressure","startx":2,"starty":1,"position":1,"orientation":"down"},
+    {"answer":"SEED","displayAnswer":"Seed","clue":"Starting point for a new genetic run","startx":2,"starty":3,"position":2,"orientation":"across"},
+    {"answer":"KIEF","displayAnswer":"Kief","clue":"Collected resin glands often found in a grinder","startx":1,"starty":4,"position":3,"orientation":"across"}
+  ],
+  "clues": {
+    "across": [
+      {"answer":"SEED","displayAnswer":"Seed","clue":"Starting point for a new genetic run","startx":2,"starty":3,"position":2,"orientation":"across"},
+      {"answer":"KIEF","displayAnswer":"Kief","clue":"Collected resin glands often found in a grinder","startx":1,"starty":4,"position":3,"orientation":"across"}
+    ],
+    "down": [
+      {"answer":"ROSIN","displayAnswer":"Rosin","clue":"Solventless extract made with heat and pressure","startx":2,"starty":1,"position":1,"orientation":"down"}
+    ]
+  },
+  "stats": {"submittedCount":3,"placedCount":3,"score":2970}
+}
