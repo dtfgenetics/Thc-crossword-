@@ -162,6 +162,19 @@ function score(layout) {
   return layout.placedCount * 1000 - layout.rows * layout.cols;
 }
 
+function validateCandidate(candidate) {
+  if (!candidate || !candidate.words?.length || !candidate.grid?.length) return false;
+  const tempPuzzle = {
+    id: 'candidate',
+    grid: candidate.grid,
+    rows: candidate.rows,
+    cols: candidate.cols,
+    words: candidate.words,
+    stats: { submittedCount: candidate.submittedCount, placedCount: candidate.placedCount }
+  };
+  return validatePuzzle(tempPuzzle, { minPlacedRatio: 0.55 }).length === 0;
+}
+
 async function writeArchiveIndex(outDir) {
   const files = await fs.readdir(outDir).catch(() => []);
   const puzzles = [];
@@ -195,7 +208,7 @@ for (let i = 0; i < attempts; i++) {
   const selected = selectEntries({ bank, theme, max, random });
   const picked = selected.map((x) => ({ ...x, answer: normalize(x.answer), displayAnswer: x.answer })).filter((x) => x.answer.length >= 3);
   if (picked.length < 3) continue;
-  const candidates = [tryPublicGenerator(picked), localLayout(picked, random)].filter(Boolean);
+  const candidates = [tryPublicGenerator(picked), localLayout(picked, random)].filter(validateCandidate);
   for (const candidate of candidates) {
     candidate.source ||= 'local-layout-engine';
     if (!best || score(candidate) > score(best)) best = candidate;
