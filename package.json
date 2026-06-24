@@ -9,6 +9,7 @@
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
     "crossword:generate": "node scripts/generate-weekly-crossword.mjs",
+    "crossword:audit": "node scripts/audit-clue-bank.mjs",
     "test": "vitest run"
   },
   "dependencies": {
