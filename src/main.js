@@ -34,6 +34,18 @@ function key(x, y) { return `${x},${y}`; }
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[char]));
 }
+function exportBase(puzzle) {
+  return puzzle.id && puzzle.id !== 'demo' ? `/puzzles/${encodeURIComponent(puzzle.id)}` : null;
+}
+function renderExportLinks(puzzle) {
+  const base = exportBase(puzzle);
+  if (!base) return '<p class="archive-empty">Export files appear after a generated weekly puzzle is loaded.</p>';
+  return `<div class="export-list">
+    <a href="${base}.json">Playable JSON</a>
+    <a href="${base}.ipuz.json">IPUZ</a>
+    <a href="${base}.exolve.txt">Exolve</a>
+  </div>`;
+}
 async function loadJson(url, fallback) {
   try {
     const response = await fetch(url, { cache: 'no-cache' });
@@ -96,6 +108,10 @@ function render(puzzle, archive) {
       <section class="archive-panel" aria-label="Puzzle archive">
         <h2>Archive</h2>
         ${renderArchive(archive, puzzle)}
+      </section>
+      <section class="archive-panel" aria-label="Puzzle exports">
+        <h2>Exports</h2>
+        ${renderExportLinks(puzzle)}
       </section>
     </header>
     <main class="shell">
