@@ -34,8 +34,12 @@ function key(x, y) { return `${x},${y}`; }
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[char]));
 }
+function safePuzzleId(value) {
+  const id = String(value || '').trim();
+  return /^\d{4}-W\d{2}$/.test(id) ? id : null;
+}
 function exportBase(puzzle) {
-  return puzzle.id && puzzle.id !== 'demo' ? `/puzzles/${encodeURIComponent(puzzle.id)}` : null;
+  return safePuzzleId(puzzle.id) ? `/puzzles/${encodeURIComponent(puzzle.id)}` : null;
 }
 function renderExportLinks(puzzle) {
   const base = exportBase(puzzle);
@@ -68,7 +72,7 @@ async function loadJson(url, fallback) {
 }
 async function loadPuzzle() {
   const params = new URLSearchParams(window.location.search);
-  const requested = params.get('puzzle');
+  const requested = safePuzzleId(params.get('puzzle'));
   const file = requested ? `/puzzles/${requested}.json` : '/puzzles/current.json';
   return loadJson(file, fallbackPuzzle);
 }
@@ -150,6 +154,7 @@ function render(puzzle, archive) {
         </div>
         <p class="status" id="status">Choose a square or clue.</p>
         <p class="progress" id="progress">Progress: 0%</p>
+        <input id="mobile-input" class="mobile-input" autocomplete="off" autocapitalize="characters" inputmode="text" maxlength="1" aria-label="Crossword letter input" />
         <div class="grid" id="grid"></div>
       </section>
       <aside class="panel clues">
@@ -161,6 +166,7 @@ function render(puzzle, archive) {
   const grid = document.querySelector('#grid');
   const status = document.querySelector('#status');
   const progress = document.querySelector('#progress');
+  const mobileInput = document.querySelector('#mobile-input');
   grid.style.setProperty('--cols', puzzle.cols);
 
   function updateProgress() {
@@ -181,6 +187,25 @@ function render(puzzle, archive) {
       if (wx === x && wy === y) return true;
     }
     return false;
+  }
+  function focusLetterInput() {
+    mobileInput.value = '';
+    try { mobileInput.focus({ preventScroll: true }); }
+    catch { mobileInput.focus(); }
+  }
+  function enterLetter(letter) {
+    const normalized = String(letter || '').toUpperCase().replace(/[^A-Z]/g, '').slice(-1);
+    if (!normalized) return;
+    letters[key(active.x, active.y)] = normalized;
+    saveLetters(puzzle, letters);
+    advance(1);
+    drawGrid();
+  }
+  function deleteLetter() {
+    delete letters[key(active.x, active.y)];
+    saveLetters(puzzle, letters);
+    advance(-1);
+    drawGrid();
   }
   function drawGrid() {
     grid.innerHTML = '';
@@ -206,12 +231,13 @@ function render(puzzle, archive) {
       document.querySelector(`#${direction}`).innerHTML = puzzle.clues[direction].map((word) => `<li><button data-x="${word.startx}" data-y="${word.starty}" data-o="${direction}"><strong>${word.position}.</strong> ${escapeHtml(word.clue)} <em>${word.answer.length}</em></button></li>`).join('');
     }
   }
-  function setActive(x, y, orientation = active.orientation) {
+  function setActive(x, y, orientation = active.orientation, shouldFocus = false) {
     if (puzzle.grid[y - 1]?.[x - 1] === BLACK) return;
     active = { x, y, orientation };
     const word = wordFor(x, y);
     status.textContent = word ? `${word.position} ${word.orientation}: ${word.clue}` : 'Choose a clue.';
     drawGrid();
+    if (shouldFocus) focusLetterInput();
   }
   function advance(delta) {
     const word = wordFor(active.x, active.y);
@@ -225,11 +251,11 @@ function render(puzzle, archive) {
     const cell = event.target.closest('.cell');
     if (!cell || cell.classList.contains('black')) return;
     const x = Number(cell.dataset.x), y = Number(cell.dataset.y);
-    setActive(x, y, active.x === x && active.y === y ? (active.orientation === 'across' ? 'down' : 'across') : active.orientation);
+    setActive(x, y, active.x === x && active.y === y ? (active.orientation === 'across' ? 'down' : 'across') : active.orientation, true);
   });
   document.querySelector('.clues').addEventListener('click', (event) => {
     const clue = event.target.closest('button[data-x]');
-    if (clue) setActive(Number(clue.dataset.x), Number(clue.dataset.y), clue.dataset.o);
+    if (clue) setActive(Number(clue.dataset.x), Number(clue.dataset.y), clue.dataset.o, true);
   });
   document.querySelector('.toolbar').addEventListener('click', (event) => {
     const action = event.target.dataset.action;
@@ -239,22 +265,20 @@ function render(puzzle, archive) {
     if (action === 'print') window.print();
     drawGrid();
   });
+  mobileInput.addEventListener('input', () => {
+    enterLetter(mobileInput.value);
+    mobileInput.value = '';
+  });
+  mobileInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Backspace') { event.preventDefault(); deleteLetter(); }
+  });
   window.addEventListener('keydown', (event) => {
-    if (/^[a-zA-Z]$/.test(event.key)) {
-      letters[key(active.x, active.y)] = event.key.toUpperCase();
-      saveLetters(puzzle, letters);
-      advance(1);
-      drawGrid();
-    }
-    if (event.key === 'Backspace') {
-      delete letters[key(active.x, active.y)];
-      saveLetters(puzzle, letters);
-      advance(-1);
-      drawGrid();
-    }
+    if (event.target === mobileInput) return;
+    if (/^[a-zA-Z]$/.test(event.key)) enterLetter(event.key);
+    if (event.key === 'Backspace') deleteLetter();
   });
   drawClues();
-  setActive(active.x, active.y, active.orientation);
+  setActive(active.x, active.y, active.orientation, false);
 }
 
 Promise.all([loadPuzzle(), loadArchive()]).then(([puzzle, archive]) => {
