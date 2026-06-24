@@ -40,11 +40,22 @@ function exportBase(puzzle) {
 function renderExportLinks(puzzle) {
   const base = exportBase(puzzle);
   if (!base) return '<p class="archive-empty">Export files appear after a generated weekly puzzle is loaded.</p>';
+  const puzzleId = encodeURIComponent(puzzle.id);
   return `<div class="export-list">
     <a href="${base}.json">Playable JSON</a>
     <a href="${base}.ipuz.json">IPUZ</a>
     <a href="${base}.exolve.txt">Exolve</a>
+    <a href="?puzzle=${puzzleId}&view=exolve">Preview Exolve</a>
   </div>`;
+}
+async function loadText(url, fallback = '') {
+  try {
+    const response = await fetch(url, { cache: 'no-cache' });
+    if (!response.ok) throw new Error('missing file');
+    return await response.text();
+  } catch {
+    return fallback;
+  }
 }
 async function loadJson(url, fallback) {
   try {
@@ -63,6 +74,21 @@ async function loadPuzzle() {
 }
 async function loadArchive() {
   return loadJson('/puzzles/index.json', { puzzles: [] });
+}
+async function renderExolvePreview(puzzle) {
+  const base = exportBase(puzzle);
+  const text = base ? await loadText(`${base}.exolve.txt`, 'No Exolve export found for this puzzle.') : 'No Exolve export found for this puzzle.';
+  app.innerHTML = `
+    <header class="hero">
+      <p class="eyebrow">Adults 21+ • Exolve Export Preview</p>
+      <h1>${escapeHtml(puzzle.title)}</h1>
+      <p><a class="back-link" href="?puzzle=${encodeURIComponent(puzzle.id)}">Back to puzzle</a></p>
+    </header>
+    <main class="shell single">
+      <section class="panel">
+        <pre class="export-preview">${escapeHtml(text)}</pre>
+      </section>
+    </main>`;
 }
 function buildMeta(puzzle) {
   const starts = new Map();
@@ -231,4 +257,8 @@ function render(puzzle, archive) {
   setActive(active.x, active.y, active.orientation);
 }
 
-Promise.all([loadPuzzle(), loadArchive()]).then(([puzzle, archive]) => render(puzzle, archive));
+Promise.all([loadPuzzle(), loadArchive()]).then(([puzzle, archive]) => {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('view') === 'exolve') renderExolvePreview(puzzle);
+  else render(puzzle, archive);
+});
