@@ -1,0 +1,31 @@
+{
+  "id": "2026-W26",
+  "week": "2026-W26",
+  "title": "THC Weekly Crossword — 2026-W26",
+  "subtitle": "Starter puzzle. Run the generator to replace this with a larger weekly grid.",
+  "status": "published",
+  "adultUseNotice": "Cannabis-themed parody and education content for adults 21+ where legal.",
+  "grid": [
+    [".", "C", ".", ".", ".", "."],
+    ["R", "O", "S", "I", "N", "."],
+    [".", "L", ".", ".", ".", "."],
+    ["K", "I", "E", "F", ".", "."]
+  ],
+  "rows": 4,
+  "cols": 6,
+  "words": [
+    {"answer":"ROSIN","displayAnswer":"Rosin","clue":"Solventless extract made with heat and pressure","startx":1,"starty":2,"position":1,"orientation":"across"},
+    {"answer":"KIEF","displayAnswer":"Kief","clue":"Collected resin glands often found in a grinder","startx":1,"starty":4,"position":2,"orientation":"across"},
+    {"answer":"COLA","displayAnswer":"Cola","clue":"Main flower cluster on a plant","startx":2,"starty":1,"position":3,"orientation":"down"}
+  ],
+  "clues": {
+    "across": [
+      {"answer":"ROSIN","displayAnswer":"Rosin","clue":"Solventless extract made with heat and pressure","startx":1,"starty":2,"position":1,"orientation":"across"},
+      {"answer":"KIEF","displayAnswer":"Kief","clue":"Collected resin glands often found in a grinder","startx":1,"starty":4,"position":2,"orientation":"across"}
+    ],
+    "down": [
+      {"answer":"COLA","displayAnswer":"Cola","clue":"Main flower cluster on a plant","startx":2,"starty":1,"position":3,"orientation":"down"}
+    ]
+  },
+  "stats": {"submittedCount":3,"placedCount":3,"score":2976}
+}
