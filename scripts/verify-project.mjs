@@ -2,6 +2,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { validateClueBank, validatePuzzle } from '../src/crossword/validate.js';
+import { parseIpuzJson } from '../src/crossword/ipuz.js';
 
 const requiredFiles = [
   'package.json',
@@ -14,12 +15,16 @@ const requiredFiles = [
   'src/crossword/selectEntries.js',
   'src/crossword/week.js',
   'src/crossword/progress.js',
+  'src/crossword/ipuz.js',
+  'src/crossword/generatorAdapters.js',
   'content/clue-bank.json',
   'content/themes.json',
+  'docs/public-code-audit.md',
   'scripts/generate-weekly-crossword.mjs',
   'scripts/publish-next.mjs',
   'scripts/audit-clue-bank.mjs',
   'scripts/validate-puzzles.mjs',
+  'scripts/validate-ipuz.mjs',
   'public/puzzles/current.json'
 ];
 
@@ -39,7 +44,7 @@ for (const file of requiredFiles) {
 }
 
 const pkg = JSON.parse(await fs.readFile('package.json', 'utf8'));
-for (const script of ['dev', 'build', 'crossword:generate', 'crossword:publish-next', 'crossword:audit', 'crossword:validate', 'verify', 'test']) {
+for (const script of ['dev', 'build', 'crossword:generate', 'crossword:publish-next', 'crossword:audit', 'crossword:validate', 'crossword:validate-ipuz', 'verify', 'test']) {
   if (!pkg.scripts?.[script]) errors.push(`Missing npm script: ${script}`);
 }
 
@@ -65,6 +70,16 @@ for (const file of puzzleFiles) {
   for (const error of validatePuzzle(puzzle, { minPlacedRatio: 0.55 })) errors.push(`${file}: ${error}`);
 }
 
+const ipuzFiles = (await fs.readdir(puzzleDir).catch(() => [])).filter((file) => file.endsWith('.ipuz.json'));
+if (!ipuzFiles.length) errors.push('No IPUZ export files found.');
+for (const file of ipuzFiles) {
+  try {
+    parseIpuzJson(await fs.readFile(path.join(puzzleDir, file), 'utf8'));
+  } catch (error) {
+    errors.push(`${file}: ${error.message}`);
+  }
+}
+
 if (errors.length) {
   console.error('Project verification failed:');
   for (const error of errors) console.error(`- ${error}`);
@@ -75,3 +90,4 @@ console.log('Project verification passed.');
 console.log(`Approved clues: ${approvedCount}`);
 console.log(`Themes: ${themes.length}`);
 console.log(`Puzzle files: ${puzzleFiles.length}`);
+console.log(`IPUZ files: ${ipuzFiles.length}`);
