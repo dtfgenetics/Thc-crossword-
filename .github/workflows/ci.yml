@@ -21,5 +21,7 @@ jobs:
       - run: npm run crossword:generate -- --week 2026-W26 --theme grow-room-basics --attempts 50
       - run: npm run crossword:validate
       - run: npm run crossword:validate-ipuz
+      - run: npm run crossword:validate-exolve
+      - run: npm run crossword:check-exports
       - run: npm run verify
       - run: npm run build
