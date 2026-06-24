@@ -1,0 +1,26 @@
+{
+  "name": "thc-weekly-crossword",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Weekly THC-themed crossword generator and browser player.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "crossword:generate": "node scripts/generate-weekly-crossword.mjs",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@vitejs/plugin-legacy": "latest",
+    "vite": "latest",
+    "typescript": "latest",
+    "crossword-layout-generator": "latest"
+  },
+  "devDependencies": {
+    "vitest": "latest"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
