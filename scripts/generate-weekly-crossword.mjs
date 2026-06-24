@@ -2,6 +2,8 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createRequire } from 'node:module';
+import { validateClueBank, validatePuzzle } from '../src/crossword/validate.js';
+import { exportIpuz, exportExolve } from '../src/crossword/exporters.js';
 
 const require = createRequire(import.meta.url);
 const BLACK = '.';
@@ -13,8 +15,6 @@ function arg(name, fallback) {
 
 function normalize(answer) {
   return String(answer || '')
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
     .replace(/&/g, 'AND')
     .replace(/[^a-zA-Z]/g, '')
     .toUpperCase();
@@ -154,10 +154,25 @@ function score(layout) {
   return layout.placedCount * 1000 - layout.rows * layout.cols;
 }
 
+async function writeArchiveIndex(outDir) {
+  const files = await fs.readdir(outDir).catch(() => []);
+  const puzzles = [];
+  for (const file of files.filter((name) => /^\d{4}-W\d{2}\.json$/.test(name)).sort().reverse()) {
+    const puzzle = JSON.parse(await fs.readFile(path.join(outDir, file), 'utf8'));
+    puzzles.push({ id: puzzle.id, week: puzzle.week, title: puzzle.title, status: puzzle.status, stats: puzzle.stats, file });
+  }
+  await fs.writeFile(path.join(outDir, 'index.json'), JSON.stringify({ updatedAt: new Date().toISOString(), puzzles }, null, 2));
+}
+
 const week = arg('week', '2026-W26');
 const max = Number(arg('max', '28'));
 const attempts = Number(arg('attempts', '200'));
 const bank = JSON.parse(await fs.readFile('content/clue-bank.json', 'utf8'));
+const bankErrors = validateClueBank(bank);
+if (bankErrors.length) {
+  console.error(bankErrors.join('\n'));
+  process.exit(1);
+}
 const approved = bank.filter((x) => x.approved !== false).map((x) => ({ ...x, answer: normalize(x.answer), displayAnswer: x.answer })).filter((x) => x.answer.length >= 3);
 let best = null;
 
@@ -192,8 +207,17 @@ const puzzle = {
   stats: { submittedCount: best.submittedCount, placedCount: best.placedCount, score: score(best) }
 };
 
+const puzzleErrors = validatePuzzle(puzzle, { minPlacedRatio: 0.55 });
+if (puzzleErrors.length) {
+  console.error(puzzleErrors.join('\n'));
+  process.exit(1);
+}
+
 const outDir = path.resolve('public/puzzles');
 await fs.mkdir(outDir, { recursive: true });
 await fs.writeFile(path.join(outDir, `${week}.json`), JSON.stringify(puzzle, null, 2));
 await fs.writeFile(path.join(outDir, 'current.json'), JSON.stringify(puzzle, null, 2));
+await fs.writeFile(path.join(outDir, `${week}.ipuz.json`), exportIpuz(puzzle));
+await fs.writeFile(path.join(outDir, `${week}.exolve.txt`), exportExolve(puzzle));
+await writeArchiveIndex(outDir);
 console.log(`Generated ${puzzle.title}: ${puzzle.stats.placedCount}/${puzzle.stats.submittedCount} words, ${puzzle.cols}x${puzzle.rows}`);
