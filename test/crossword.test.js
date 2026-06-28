@@ -8,7 +8,7 @@ import { adapterById, assertPermissiveAdapter, enabledGeneratorAdapters } from '
 import { selectEntries } from '../src/crossword/selectEntries.js';
 import { progressStats, isSolved } from '../src/crossword/progress.js';
 import { safePuzzleId, puzzleJsonPath, puzzleExportBase } from '../src/crossword/routes.js';
-import { currentIsoWeek, latestArchivedWeek, nextIsoWeek, weeksInIsoYear } from '../src/crossword/week.js';
+import { currentIsoWeek, isValidIsoWeek, latestArchivedWeek, nextIsoWeek, weeksInIsoYear } from '../src/crossword/week.js';
 import { buildWeeklyPuzzle } from '../src/crossword/generatePuzzle.js';
 import { generateLocalLayout } from '../src/crossword/localLayout.js';
 
@@ -17,19 +17,11 @@ const puzzle = {
   title: 'Test Puzzle',
   subtitle: 'Test subtitle',
   adultUseNotice: 'Adults only where legal.',
-  grid: [
-    ['C', 'O', 'L', 'A'],
-    ['.', '.', '.', '.']
-  ],
+  grid: [['C', 'O', 'L', 'A'], ['.', '.', '.', '.']],
   rows: 2,
   cols: 4,
-  words: [
-    { answer: 'COLA', clue: 'Main flower cluster', startx: 1, starty: 1, position: 1, orientation: 'across' }
-  ],
-  clues: {
-    across: [{ answer: 'COLA', clue: 'Main flower cluster', startx: 1, starty: 1, position: 1, orientation: 'across' }],
-    down: []
-  },
+  words: [{ answer: 'COLA', clue: 'Main flower cluster', startx: 1, starty: 1, position: 1, orientation: 'across' }],
+  clues: { across: [{ answer: 'COLA', clue: 'Main flower cluster', startx: 1, starty: 1, position: 1, orientation: 'across' }], down: [] },
   stats: { submittedCount: 1, placedCount: 1, score: 990 }
 };
 
@@ -92,6 +84,7 @@ describe('crossword helpers', () => {
 
   it('sanitizes puzzle route ids before building file paths', () => {
     expect(safePuzzleId('2026-W26')).toBe('2026-W26');
+    expect(safePuzzleId('2026-W99')).toBeNull();
     expect(safePuzzleId('../secret')).toBeNull();
     expect(safePuzzleId('2026-W26.json')).toBeNull();
     expect(puzzleJsonPath('2026-W26')).toBe('/puzzles/2026-W26.json');
@@ -119,15 +112,7 @@ describe('crossword helpers', () => {
   });
 
   it('selects entries by preferred theme categories', () => {
-    const selected = selectEntries({
-      bank: [
-        { answer: 'Cola', clue: 'Main flower cluster', category: 'Cultivation', difficulty: 'easy' },
-        { answer: 'Rosin', clue: 'Solventless extract', category: 'Extracts', difficulty: 'easy' }
-      ],
-      theme: { preferredCategories: ['Extracts'] },
-      max: 1,
-      random: () => 0
-    });
+    const selected = selectEntries({ bank: miniBank, theme: { preferredCategories: ['Extracts'] }, max: 1, random: () => 0 });
     expect(selected[0].answer).toBe('Rosin');
   });
 
@@ -147,9 +132,11 @@ describe('crossword helpers', () => {
 
   it('handles ISO week rollover correctly', () => {
     expect(weeksInIsoYear(2026)).toBe(53);
+    expect(isValidIsoWeek('2026-W53')).toBe(true);
+    expect(isValidIsoWeek('2026-W54')).toBe(false);
     expect(nextIsoWeek('2026-W26')).toBe('2026-W27');
     expect(nextIsoWeek('2026-W53')).toBe('2027-W01');
-    expect(latestArchivedWeek(['2026-W02', '2026-W10', 'bad'])).toBe('2026-W10');
+    expect(latestArchivedWeek(['2026-W02', '2026-W99', '2026-W10', 'bad'])).toBe('2026-W10');
     expect(currentIsoWeek(new Date(Date.UTC(2026, 5, 23)))).toBe('2026-W26');
   });
 
