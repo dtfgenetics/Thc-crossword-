@@ -2,22 +2,24 @@
 
 A weekly crossword generator and browser-playable crossword game for the THC / DTF games hub.
 
-This repo is intentionally built as its own clean public repository. It uses public MIT-licensed crossword tooling where useful and adds our own validation, weekly publishing, archive, and branded player layer.
+This repo is built as a clean public repository. It uses permissive public crossword tooling where useful and adds our own validation, weekly publishing, archive, export, and branded player layer.
 
 ## What it does
 
 - Generates weekly crossword puzzle JSON from an approved clue bank.
 - Publishes the current puzzle to `public/puzzles/current.json`.
 - Publishes archived puzzles to `public/puzzles/YYYY-WW.json`.
+- Exports matching `YYYY-WW.ipuz.json` and `YYYY-WW.exolve.txt` files.
 - Runs a mobile-friendly browser crossword player.
 - Saves solver progress in `localStorage`.
-- Supports check, reveal, clear, print, and clue highlighting.
-- Exports internal JSON, IPUZ-style JSON, and Exolve puzzle text from the generator.
+- Supports check, reveal, clear, print, clue highlighting, progress tracking, archive links, and export links.
+- Rejects invalid puzzle week IDs such as `2026-W99`.
 
 ## Public code used
 
-- `crossword-layout-generator` by Michael Wehar and contributors is listed as a dependency and used by the generator when available. It is MIT licensed. The repo docs state that it accepts clue/answer JSON and outputs crossword layout positions.
-- This project also contains a local fallback layout engine so the generator remains usable if the dependency is unavailable or produces a weak layout.
+- `crossword-layout-generator` is used as the primary public layout engine when available.
+- The project also includes a local fallback layout engine so weekly generation can still work if the public generator is unavailable or produces a weak layout.
+- IPUZ and Exolve exports are generated and validated for interoperability.
 
 ## Install
 
@@ -34,32 +36,50 @@ npm run dev
 ## Generate a weekly puzzle
 
 ```sh
-npm run crossword:generate -- --week 2026-W26
+npm run crossword:generate -- --week 2026-W26 --theme grow-room-basics --max 28 --attempts 200
 ```
 
-Optional flags:
+## Publish the next weekly puzzle
 
 ```sh
-npm run crossword:generate -- --week 2026-W26 --seed blue-mango --min 18 --max 28 --attempts 250
+npm run crossword:publish-next -- --theme plant-science
 ```
 
-## Build
+Dry run without writing files:
 
 ```sh
+npm run crossword:publish-next -- --theme plant-science --dry-run
+```
+
+## Verify the project
+
+```sh
+npm run crossword:audit
+npm test
+npm run crossword:validate
+npm run crossword:validate-ipuz
+npm run crossword:validate-exolve
+npm run crossword:check-exports
+npm run verify
 npm run build
 ```
 
-## Test
+## Main files
 
-```sh
-npm test
-```
+- `content/clue-bank.json` — original approved clue bank.
+- `content/themes.json` — weekly theme definitions.
+- `scripts/generate-weekly-crossword.mjs` — CLI wrapper for weekly generation.
+- `scripts/publish-next.mjs` — next-week publisher.
+- `src/crossword/generatePuzzle.js` — reusable generation core.
+- `src/crossword/localLayout.js` — local fallback layout engine.
+- `src/crossword/publicLayout.js` — public generator adapter.
+- `src/main.js` — browser player.
 
 ## Content rules
 
 Do not copy newspaper clues, paid puzzle clues, or copyrighted puzzle content. Add only original clue/answer pairs to `content/clue-bank.json`.
 
-Answers should be clean, playable, and normalized to letters only. The generator removes spaces and punctuation for the grid, but the clue bank keeps display text for humans.
+Answers should be clean, playable, and normalized to letters only. The clue bank keeps display text for humans.
 
 ## Adult-use disclaimer
 
