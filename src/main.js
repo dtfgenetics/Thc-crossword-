@@ -1,5 +1,6 @@
 import './styles.css';
 import { progressStats } from './crossword/progress.js';
+import { puzzleExportBase, puzzleJsonPath } from './crossword/routes.js';
 
 const BLACK = '.';
 const app = document.querySelector('#app');
@@ -34,12 +35,8 @@ function key(x, y) { return `${x},${y}`; }
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[char]));
 }
-function safePuzzleId(value) {
-  const id = String(value || '').trim();
-  return /^\d{4}-W\d{2}$/.test(id) ? id : null;
-}
 function exportBase(puzzle) {
-  return safePuzzleId(puzzle.id) ? `/puzzles/${encodeURIComponent(puzzle.id)}` : null;
+  return puzzleExportBase(puzzle.id);
 }
 function renderExportLinks(puzzle) {
   const base = exportBase(puzzle);
@@ -72,9 +69,7 @@ async function loadJson(url, fallback) {
 }
 async function loadPuzzle() {
   const params = new URLSearchParams(window.location.search);
-  const requested = safePuzzleId(params.get('puzzle'));
-  const file = requested ? `/puzzles/${requested}.json` : '/puzzles/current.json';
-  return loadJson(file, fallbackPuzzle);
+  return loadJson(puzzleJsonPath(params.get('puzzle')), fallbackPuzzle);
 }
 async function loadArchive() {
   return loadJson('/puzzles/index.json', { puzzles: [] });
