@@ -19,10 +19,13 @@ export function validatePuzzle(puzzle, options = {}) {
   const errors = [];
   if (!puzzle?.grid?.length) errors.push('Puzzle is missing grid.');
   if (!puzzle?.words?.length) errors.push('Puzzle is missing placed words.');
+  if (puzzle?.rows && puzzle.grid?.length !== puzzle.rows) errors.push('Grid row count does not match puzzle rows.');
+  if (puzzle?.cols && puzzle.grid?.some((row) => row.length !== puzzle.cols)) errors.push('Grid column count does not match puzzle cols.');
   if (puzzle?.stats?.submittedCount && puzzle.stats.placedCount / puzzle.stats.submittedCount < minPlacedRatio) {
     errors.push(`Only ${puzzle.stats.placedCount}/${puzzle.stats.submittedCount} entries were placed.`);
   }
   const seen = new Set();
+  const cluedCells = new Set();
   for (const word of puzzle.words || []) {
     const answer = normalizeAnswer(word.answer);
     if (seen.has(answer)) errors.push(`Duplicate placed answer: ${word.answer}`);
@@ -33,6 +36,12 @@ export function validatePuzzle(puzzle, options = {}) {
       const y = word.starty - 1 + (word.orientation === 'down' ? i : 0);
       const gridLetter = puzzle.grid?.[y]?.[x];
       if (gridLetter !== answer[i]) errors.push(`Grid mismatch for ${word.answer} at letter ${i + 1}.`);
+      cluedCells.add(`${x},${y}`);
+    }
+  }
+  for (let y = 0; y < (puzzle.grid || []).length; y++) {
+    for (let x = 0; x < puzzle.grid[y].length; x++) {
+      if (puzzle.grid[y][x] !== BLACK && !cluedCells.has(`${x},${y}`)) errors.push(`Filled cell without clue at row ${y + 1}, col ${x + 1}.`);
     }
   }
   const filled = countFilledCells(puzzle.grid || []);
