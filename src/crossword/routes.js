@@ -1,6 +1,8 @@
+import { isValidIsoWeek } from './week.js';
+
 export function safePuzzleId(value) {
   const id = String(value || '').trim();
-  return /^\d{4}-W\d{2}$/.test(id) ? id : null;
+  return isValidIsoWeek(id) ? id : null;
 }
 
 export function puzzleJsonPath(id) {
