@@ -4,8 +4,10 @@ import { selectEntries } from './selectEntries.js';
 import { generateLocalLayout } from './localLayout.js';
 import { generatePublicLayout } from './publicLayout.js';
 import { validatePuzzle } from './validate.js';
+import { parseIsoWeek } from './week.js';
 
 export function buildWeeklyPuzzle({ bank, themes = [], week, themeId = 'grow-room-basics', max = 28, attempts = 200 }) {
+  parseIsoWeek(week);
   const theme = findTheme(themes, themeId);
   let best = null;
 
