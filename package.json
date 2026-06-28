@@ -12,7 +12,7 @@
     "crossword:generate:weekly": "node scripts/generate-weekly-crossword.mjs",
     "crossword:generate:daily": "node scripts/generate-daily-crossword.mjs",
     "crossword:publish-next": "node scripts/publish-next.mjs",
-    "crossword:publish-today": "node scripts/publish-today.mjs",
+    "crossword:publish-today": "node scripts/run-daily-crossword.mjs",
     "crossword:daily-index": "node scripts/build-daily-index.mjs",
     "crossword:audit": "node scripts/audit-clue-bank.mjs",
     "crossword:theme": "node scripts/preview-theme.mjs",
