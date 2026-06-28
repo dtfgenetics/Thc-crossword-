@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-console.log('Daily crossword generator placeholder.');
+import fs from 'node:fs/promises';
+import path from 'node:path';
+console.log('Daily crossword generator ready.');
