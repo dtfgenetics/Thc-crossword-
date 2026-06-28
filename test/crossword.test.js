@@ -34,6 +34,8 @@ const miniBank = [
   { answer: 'Seed', clue: 'Starting point for a genetic run', category: 'Seeds', difficulty: 'easy' }
 ];
 
+const testTheme = { id: 'test', name: 'Test Theme', description: 'Test', preferredCategories: ['Cultivation', 'Extracts', 'Seeds', 'Plant Anatomy'] };
+
 describe('crossword helpers', () => {
   it('normalizes answers for grid use', () => {
     expect(normalizeAnswer('Blue Mango')).toBe('BLUEMANGO');
@@ -99,16 +101,13 @@ describe('crossword helpers', () => {
   });
 
   it('builds a weekly puzzle from reusable generation core', () => {
-    const weekly = buildWeeklyPuzzle({
-      bank: miniBank,
-      themes: [{ id: 'test', name: 'Test Theme', description: 'Test', preferredCategories: ['Cultivation', 'Extracts', 'Seeds', 'Plant Anatomy'] }],
-      week: '2026-W26',
-      themeId: 'test',
-      max: 6,
-      attempts: 8
-    });
+    const weekly = buildWeeklyPuzzle({ bank: miniBank, themes: [testTheme], week: '2026-W26', themeId: 'test', max: 6, attempts: 8 });
     expect(weekly.week).toBe('2026-W26');
     expect(weekly.words.length).toBeGreaterThan(0);
+  });
+
+  it('rejects invalid week ids at generation time', () => {
+    expect(() => buildWeeklyPuzzle({ bank: miniBank, themes: [testTheme], week: '2026-W99', themeId: 'test', max: 6, attempts: 1 })).toThrow(/Invalid ISO week/);
   });
 
   it('selects entries by preferred theme categories', () => {
