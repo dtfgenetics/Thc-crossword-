@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { isValidDailyDate } from '../src/crossword/date.js';
 
-export async function writeDailyArchiveIndex(outDir = path.resolve('public/puzzles/daily')) {
+export async function writeDailyArchiveIndex(outDir = path.resolve('public/puzzles/daily'), options = {}) {
   const files = await fs.readdir(outDir).catch(() => []);
   const puzzles = [];
 
@@ -22,8 +22,16 @@ export async function writeDailyArchiveIndex(outDir = path.resolve('public/puzzl
     });
   }
 
+  const index = { updatedAt: new Date().toISOString(), puzzleType: 'daily', puzzles };
   await fs.mkdir(outDir, { recursive: true });
-  await fs.writeFile(path.join(outDir, 'index.json'), JSON.stringify({ updatedAt: new Date().toISOString(), puzzles }, null, 2));
+  await fs.writeFile(path.join(outDir, 'index.json'), JSON.stringify(index, null, 2));
+
+  if (options.mirrorRoot !== false) {
+    const rootDir = path.resolve('public/puzzles');
+    await fs.mkdir(rootDir, { recursive: true });
+    await fs.writeFile(path.join(rootDir, 'index.json'), JSON.stringify(index, null, 2));
+  }
+
   return puzzles;
 }
 
