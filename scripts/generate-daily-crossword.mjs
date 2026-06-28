@@ -12,4 +12,10 @@ function arg(name, fallback) {
   return index >= 0 && process.argv[index + 1] ? process.argv[index + 1] : fallback;
 }
 
+const zone = arg('timezone', 'America/Chicago');
+const runDate = arg('date', currentDailyDate(new Date(), zone));
+const limit = Number(arg('max', '18'));
+const tries = Number(arg('attempts', '200'));
+const theme = arg('theme', 'grow-room-basics');
+
 console.log('Daily crossword generator ready.');
