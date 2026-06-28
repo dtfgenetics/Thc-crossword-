@@ -1,7 +1,20 @@
 export function parseIsoWeek(value) {
   const match = /^(\d{4})-W(\d{2})$/.exec(String(value || '').trim());
   if (!match) throw new Error(`Invalid ISO week: ${value}`);
-  return { year: Number(match[1]), week: Number(match[2]) };
+  const year = Number(match[1]);
+  const week = Number(match[2]);
+  const maxWeek = weeksInIsoYear(year);
+  if (week < 1 || week > maxWeek) throw new Error(`Invalid ISO week range: ${value}`);
+  return { year, week };
+}
+
+export function isValidIsoWeek(value) {
+  try {
+    parseIsoWeek(value);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 export function formatIsoWeek(year, week) {
@@ -35,6 +48,6 @@ export function currentIsoWeek(date = new Date()) {
 }
 
 export function latestArchivedWeek(ids) {
-  const valid = ids.filter((id) => /^\d{4}-W\d{2}$/.test(id)).sort();
+  const valid = ids.filter(isValidIsoWeek).sort();
   return valid.at(-1) || null;
 }
