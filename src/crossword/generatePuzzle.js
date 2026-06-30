@@ -5,14 +5,44 @@ import { generateLocalLayout } from './localLayout.js';
 import { generatePublicLayout } from './publicLayout.js';
 import { validatePuzzle } from './validate.js';
 import { parseIsoWeek } from './week.js';
+import { parseDailyDate } from './date.js';
 
 export function buildWeeklyPuzzle({ bank, themes = [], week, themeId = 'grow-room-basics', max = 28, attempts = 200 }) {
   parseIsoWeek(week);
+  return buildPuzzle({
+    bank,
+    themes,
+    id: week,
+    fields: { week },
+    puzzleType: 'weekly',
+    title: `THC Weekly Crossword — ${week}`,
+    themeId,
+    max,
+    attempts
+  });
+}
+
+export function buildDailyPuzzle({ bank, themes = [], date, themeId = 'grow-room-basics', max = 18, attempts = 200 }) {
+  parseDailyDate(date);
+  return buildPuzzle({
+    bank,
+    themes,
+    id: date,
+    fields: { date },
+    puzzleType: 'daily',
+    title: `THC Daily Crossword — ${date}`,
+    themeId,
+    max,
+    attempts
+  });
+}
+
+function buildPuzzle({ bank, themes, id, fields, puzzleType, title, themeId, max, attempts }) {
   const theme = findTheme(themes, themeId);
   let best = null;
 
   for (let index = 0; index < attempts; index++) {
-    const random = seededRandom(`${week}:${theme?.id || 'default'}:${index}`);
+    const random = seededRandom(`${puzzleType}:${id}:${theme?.id || 'default'}:${index}`);
     const selected = selectEntries({ bank, theme, max, random });
     const picked = selected.map(toGridEntry).filter((entry) => entry.answer.length >= 3);
     if (picked.length < 3) continue;
@@ -22,7 +52,7 @@ export function buildWeeklyPuzzle({ bank, themes = [], week, themeId = 'grow-roo
     }
   }
 
-  if (!best) throw new Error(`Unable to generate a puzzle for ${week}. Add more approved clues or lower theme constraints.`);
+  if (!best) throw new Error(`Unable to generate a ${puzzleType} puzzle for ${id}. Add more approved clues or lower theme constraints.`);
 
   const clues = {
     across: best.words.filter((word) => word.orientation === 'across'),
@@ -30,9 +60,10 @@ export function buildWeeklyPuzzle({ bank, themes = [], week, themeId = 'grow-roo
   };
   const themeLabel = theme?.name || 'Mixed Theme';
   const puzzle = {
-    id: week,
-    week,
-    title: `THC Weekly Crossword — ${week}`,
+    id,
+    ...fields,
+    puzzleType,
+    title,
     subtitle: `${themeLabel}: grow terms, breeding language, DTF flavor, and culture clues.`,
     status: 'published',
     theme: theme ? { id: theme.id, name: theme.name, description: theme.description } : null,
