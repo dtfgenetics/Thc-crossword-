@@ -110,9 +110,11 @@ describe('crossword helpers', () => {
     expect(() => buildWeeklyPuzzle({ bank: miniBank, themes: [testTheme], week: '2026-W99', themeId: 'test', max: 6, attempts: 1 })).toThrow(/Invalid ISO week/);
   });
 
-  it('selects entries by preferred theme categories', () => {
-    const selected = selectEntries({ bank: miniBank, theme: { preferredCategories: ['Extracts'] }, max: 1, random: () => 0 });
-    expect(selected[0].answer).toBe('Rosin');
+  it('ranks preferred theme categories ahead of nonpreferred entries', () => {
+    const selected = selectEntries({ bank: miniBank, theme: { preferredCategories: ['Extracts'] }, max: 2, random: () => 0 });
+    expect(selected).toHaveLength(2);
+    expect(selected.every((entry) => entry.category === 'Extracts')).toBe(true);
+    expect(new Set(selected.map((entry) => entry.answer))).toEqual(new Set(['Kief', 'Rosin']));
   });
 
   it('filters duplicate normalized answers during selection', () => {
