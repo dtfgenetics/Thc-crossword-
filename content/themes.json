@@ -14,7 +14,7 @@
   {
     "id": "plant-science",
     "name": "Plant Science",
-    "description": "Terpenes, anatomy, and biology clues.",
+    "description": "Terpenes, anatomy, physiology, and biology clues.",
     "preferredCategories": ["Plant Science", "Plant Anatomy", "Breeding"]
   },
   {
@@ -22,5 +22,29 @@
     "name": "Harvest and Extracts",
     "description": "Post-harvest terms and solventless culture.",
     "preferredCategories": ["Harvest", "Extracts"]
+  },
+  {
+    "id": "light-and-environment",
+    "name": "Light and Environment",
+    "description": "Lighting metrics, climate, airflow, and plant-environment relationships.",
+    "preferredCategories": ["Lighting", "Environment", "Plant Science"]
+  },
+  {
+    "id": "roots-water-and-media",
+    "name": "Roots, Water and Media",
+    "description": "Root-zone science, irrigation measurements, and growing-media terminology.",
+    "preferredCategories": ["Water", "Media", "Plant Anatomy", "Nutrients"]
+  },
+  {
+    "id": "ipm-and-plant-health",
+    "name": "IPM and Plant Health",
+    "description": "Pests, disease pressure, sanitation, and prevention vocabulary.",
+    "preferredCategories": ["Pests", "Plant Science", "Environment"]
+  },
+  {
+    "id": "seeds-and-reproduction",
+    "name": "Seeds and Reproduction",
+    "description": "Seed types, reproduction, breeding, inheritance, and selection.",
+    "preferredCategories": ["Seeds", "Breeding", "Plant Anatomy"]
   }
 ]

@@ -28,7 +28,24 @@ describe('crossword keyboard polish', () => {
     }
     expect(keyboard).toContain("classList.contains('black')");
     expect(keyboard).toContain('candidate.click()');
-    expect(keyboard).toContain('candidate.focus');
+    expect(keyboard).toContain("document.querySelector('.cell.active')?.focus");
+  });
+
+  it('prevents page scrolling when crossword arrow navigation owns the key', () => {
+    const activeLookup = keyboard.indexOf("document.querySelector('.cell.active')");
+    const preventDefault = keyboard.indexOf('event.preventDefault()', activeLookup);
+    const candidateLookup = keyboard.indexOf('let candidate =', activeLookup);
+    expect(activeLookup).toBeGreaterThanOrEqual(0);
+    expect(preventDefault).toBeGreaterThan(activeLookup);
+    expect(candidateLookup).toBeGreaterThan(preventDefault);
+  });
+
+  it('refocuses the newly rendered active square after navigation redraws the grid', () => {
+    const clickIndex = keyboard.indexOf('candidate.click()');
+    const activeFocusIndex = keyboard.indexOf("document.querySelector('.cell.active')?.focus", clickIndex);
+    expect(clickIndex).toBeGreaterThanOrEqual(0);
+    expect(activeFocusIndex).toBeGreaterThan(clickIndex);
+    expect(keyboard).not.toContain('candidate.focus');
   });
 
   it('protects non-grid interactive controls from puzzle shortcuts', () => {
@@ -47,5 +64,12 @@ describe('crossword keyboard polish', () => {
   it('keeps keyboard focus visible and respects reduced motion', () => {
     expect(styles).toContain(':focus-visible');
     expect(styles).toContain('prefers-reduced-motion');
+  });
+
+  it('provides phone-sized controls without removing the scrollable full grid', () => {
+    expect(styles).toContain('min-height: 44px');
+    expect(styles).toContain('@media (max-width: 600px)');
+    expect(styles).toContain('repeat(var(--cols), 32px)');
+    expect(styles).toContain('overscroll-behavior-inline: contain');
   });
 });

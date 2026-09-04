@@ -141,18 +141,18 @@ function render(puzzle, archive) {
     </header>
     <main class="shell">
       <section class="panel">
-        <div class="toolbar">
+        <div class="toolbar" aria-label="Puzzle actions">
           <button data-action="check">Check</button>
           <button data-action="reveal">Reveal</button>
           <button data-action="clear">Clear</button>
           <button data-action="print">Print</button>
         </div>
-        <p class="status" id="status">Choose a square or clue.</p>
-        <p class="progress" id="progress">Progress: 0%</p>
+        <p class="status" id="status" aria-live="polite">Choose a square or clue.</p>
+        <p class="progress" id="progress" aria-live="polite">Progress: 0%</p>
         <input id="mobile-input" class="mobile-input" autocomplete="off" autocapitalize="characters" inputmode="text" maxlength="1" aria-label="Crossword letter input" />
-        <div class="grid" id="grid"></div>
+        <div class="grid" id="grid" role="grid" aria-label="Crossword grid"></div>
       </section>
-      <aside class="panel clues">
+      <aside class="panel clues" aria-label="Crossword clues">
         <h2>Across</h2><ol id="across"></ol>
         <h2>Down</h2><ol id="down"></ol>
       </aside>
@@ -168,6 +168,14 @@ function render(puzzle, archive) {
     const stats = progressStats(puzzle, letters);
     const checkedText = checking ? ` • ${stats.correct}/${stats.total} correct` : '';
     progress.textContent = stats.solved ? 'Solved. Nice work.' : `Progress: ${stats.percentFilled}% filled (${stats.filled}/${stats.total})${checkedText}`;
+  }
+  function resolveOrientation(x, y, preferred = active.orientation) {
+    const cellKey = key(x, y);
+    if (preferred === 'across' && meta.across.has(cellKey)) return 'across';
+    if (preferred === 'down' && meta.down.has(cellKey)) return 'down';
+    if (meta.across.has(cellKey)) return 'across';
+    if (meta.down.has(cellKey)) return 'down';
+    return preferred;
   }
   function wordFor(x, y) {
     const cellKey = key(x, y);
@@ -188,6 +196,19 @@ function render(puzzle, archive) {
     try { mobileInput.focus({ preventScroll: true }); }
     catch { mobileInput.focus(); }
   }
+  function focusActiveCell() {
+    const cell = grid.querySelector('.cell.active');
+    if (!cell) return;
+    try { cell.focus({ preventScroll: true }); }
+    catch { cell.focus(); }
+  }
+  function usesTouchKeyboard() {
+    return Boolean(window.matchMedia?.('(pointer: coarse)').matches || navigator.maxTouchPoints > 0);
+  }
+  function focusEntrySurface() {
+    if (usesTouchKeyboard()) focusLetterInput();
+    else focusActiveCell();
+  }
   function enterLetter(letter) {
     const normalized = String(letter || '').toUpperCase().replace(/[^A-Z]/g, '').slice(-1);
     if (!normalized) return;
@@ -197,10 +218,27 @@ function render(puzzle, archive) {
     drawGrid();
   }
   function deleteLetter() {
-    delete letters[key(active.x, active.y)];
+    const currentKey = key(active.x, active.y);
+    if (letters[currentKey]) {
+      delete letters[currentKey];
+    } else {
+      advance(-1);
+      delete letters[key(active.x, active.y)];
+    }
     saveLetters(puzzle, letters);
-    advance(-1);
     drawGrid();
+  }
+  function updateClueHighlight() {
+    const word = wordFor(active.x, active.y);
+    document.querySelectorAll('.clues button[data-x]').forEach((button) => {
+      const matches = Boolean(word)
+        && Number(button.dataset.x) === word.startx
+        && Number(button.dataset.y) === word.starty
+        && button.dataset.o === word.orientation;
+      button.classList.toggle('active-clue', matches);
+      if (matches) button.setAttribute('aria-current', 'true');
+      else button.removeAttribute('aria-current');
+    });
   }
   function drawGrid() {
     grid.innerHTML = '';
@@ -208,18 +246,33 @@ function render(puzzle, archive) {
       const solution = puzzle.grid[y - 1][x - 1];
       const button = document.createElement('button');
       button.className = solution === BLACK ? 'cell black' : 'cell';
-      button.dataset.x = x; button.dataset.y = y;
-      if (solution !== BLACK) {
+      button.dataset.x = x;
+      button.dataset.y = y;
+      button.setAttribute('role', 'gridcell');
+      if (solution === BLACK) {
+        button.disabled = true;
+        button.tabIndex = -1;
+        button.setAttribute('aria-label', `Blocked square, row ${y}, column ${x}`);
+      } else {
         const value = letters[key(x, y)] || '';
+        const number = meta.starts.get(key(x, y));
         if (isInActiveWord(x, y)) button.classList.add('word');
-        if (active.x === x && active.y === y) button.classList.add('active');
+        if (active.x === x && active.y === y) {
+          button.classList.add('active');
+          button.tabIndex = 0;
+          button.setAttribute('aria-selected', 'true');
+        } else {
+          button.tabIndex = -1;
+        }
         if (checking && value && value !== solution) button.classList.add('wrong');
         if (checking && value === solution) button.classList.add('right');
-        button.innerHTML = `${meta.starts.get(key(x, y)) ? `<span>${meta.starts.get(key(x, y))}</span>` : ''}<b>${escapeHtml(value)}</b>`;
+        button.setAttribute('aria-label', `${number ? `Clue ${number}, ` : ''}row ${y}, column ${x}${value ? `, ${value}` : ', blank'}`);
+        button.innerHTML = `${number ? `<span>${number}</span>` : ''}<b>${escapeHtml(value)}</b>`;
       }
       grid.appendChild(button);
     }
     updateProgress();
+    updateClueHighlight();
   }
   function drawClues() {
     for (const direction of ['across', 'down']) {
@@ -228,11 +281,11 @@ function render(puzzle, archive) {
   }
   function setActive(x, y, orientation = active.orientation, shouldFocus = false) {
     if (puzzle.grid[y - 1]?.[x - 1] === BLACK) return;
-    active = { x, y, orientation };
+    active = { x, y, orientation: resolveOrientation(x, y, orientation) };
     const word = wordFor(x, y);
     status.textContent = word ? `${word.position} ${word.orientation}: ${word.clue}` : 'Choose a clue.';
     drawGrid();
-    if (shouldFocus) focusLetterInput();
+    if (shouldFocus) focusEntrySurface();
   }
   function advance(delta) {
     const word = wordFor(active.x, active.y);
@@ -241,12 +294,21 @@ function render(puzzle, archive) {
     const next = Math.max(0, Math.min(word.answer.length - 1, offset + delta));
     active.x = word.startx + (word.orientation === 'across' ? next : 0);
     active.y = word.starty + (word.orientation === 'down' ? next : 0);
+    active.orientation = word.orientation;
   }
   grid.addEventListener('click', (event) => {
     const cell = event.target.closest('.cell');
     if (!cell || cell.classList.contains('black')) return;
-    const x = Number(cell.dataset.x), y = Number(cell.dataset.y);
-    setActive(x, y, active.x === x && active.y === y ? (active.orientation === 'across' ? 'down' : 'across') : active.orientation, true);
+    const x = Number(cell.dataset.x);
+    const y = Number(cell.dataset.y);
+    const cellKey = key(x, y);
+    const hasAcross = meta.across.has(cellKey);
+    const hasDown = meta.down.has(cellKey);
+    const sameCell = active.x === x && active.y === y;
+    const orientation = sameCell && hasAcross && hasDown
+      ? (active.orientation === 'across' ? 'down' : 'across')
+      : active.orientation;
+    setActive(x, y, orientation, true);
   });
   document.querySelector('.clues').addEventListener('click', (event) => {
     const clue = event.target.closest('button[data-x]');
@@ -269,8 +331,16 @@ function render(puzzle, archive) {
   });
   window.addEventListener('keydown', (event) => {
     if (event.target === mobileInput) return;
-    if (/^[a-zA-Z]$/.test(event.key)) enterLetter(event.key);
-    if (event.key === 'Backspace') deleteLetter();
+    const fromGridCell = event.target?.classList?.contains('cell');
+    if (/^[a-zA-Z]$/.test(event.key)) {
+      enterLetter(event.key);
+      if (fromGridCell) window.requestAnimationFrame(focusActiveCell);
+    }
+    if (event.key === 'Backspace') {
+      event.preventDefault();
+      deleteLetter();
+      if (fromGridCell) window.requestAnimationFrame(focusActiveCell);
+    }
   });
   drawClues();
   setActive(active.x, active.y, active.orientation, false);
