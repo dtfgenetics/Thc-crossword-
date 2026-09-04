@@ -28,7 +28,7 @@ describe('crossword keyboard polish', () => {
     }
     expect(keyboard).toContain("classList.contains('black')");
     expect(keyboard).toContain('candidate.click()');
-    expect(keyboard).toContain('candidate.focus');
+    expect(keyboard).toContain("document.querySelector('.cell.active')?.focus");
   });
 
   it('prevents page scrolling when crossword arrow navigation owns the key', () => {
@@ -38,6 +38,14 @@ describe('crossword keyboard polish', () => {
     expect(activeLookup).toBeGreaterThanOrEqual(0);
     expect(preventDefault).toBeGreaterThan(activeLookup);
     expect(candidateLookup).toBeGreaterThan(preventDefault);
+  });
+
+  it('refocuses the newly rendered active square after navigation redraws the grid', () => {
+    const clickIndex = keyboard.indexOf('candidate.click()');
+    const activeFocusIndex = keyboard.indexOf("document.querySelector('.cell.active')?.focus", clickIndex);
+    expect(clickIndex).toBeGreaterThanOrEqual(0);
+    expect(activeFocusIndex).toBeGreaterThan(clickIndex);
+    expect(keyboard).not.toContain('candidate.focus');
   });
 
   it('protects non-grid interactive controls from puzzle shortcuts', () => {
