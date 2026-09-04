@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import fs from 'node:fs/promises';
 import { selectEntries } from '../src/crossword/selectEntries.js';
+import { loadClueBank } from './load-clue-bank.mjs';
 
 function readArg(name, fallback) {
   const index = process.argv.indexOf(`--${name}`);
@@ -9,7 +10,7 @@ function readArg(name, fallback) {
 
 const themeId = readArg('theme', 'grow-room-basics');
 const max = Number(readArg('max', '20'));
-const bank = JSON.parse(await fs.readFile('content/clue-bank.json', 'utf8'));
+const bank = await loadClueBank();
 const themes = JSON.parse(await fs.readFile('content/themes.json', 'utf8'));
 const theme = themes.find((item) => item.id === themeId) || themes[0];
 const selected = selectEntries({ bank, theme, max, random: () => 0 });
