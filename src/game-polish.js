@@ -5,6 +5,7 @@ import {
   createGameSession,
   elapsedSeconds,
   finishGameSession,
+  forfeitGameSession,
   formatElapsed,
   scoreGameSession,
   shareResultText,
@@ -268,7 +269,11 @@ function bindSessionEvents() {
       updateHud();
     }
     if (action === 'reveal') {
-      blockAction(event, 'Reveal the entire puzzle? This ends the scored run.');
+      if (blockAction(event, 'Reveal the entire puzzle? This ends the scored run.')) return;
+      startSession();
+      session = forfeitGameSession(session);
+      saveSession();
+      updateHud();
     }
   }, true);
 
