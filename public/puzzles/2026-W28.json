@@ -1,7 +1,7 @@
 {
-  "id": "2026-W36",
-  "week": "2026-W36",
-  "title": "THC Weekly Crossword — 2026-W36",
+  "id": "2026-W28",
+  "week": "2026-W28",
+  "title": "THC Weekly Crossword — 2026-W28",
   "subtitle": "IPM and Plant Health: grow terms, breeding language, DTF flavor, and culture clues.",
   "status": "published",
   "theme": {
@@ -10,7 +10,7 @@
     "description": "Pests, disease pressure, sanitation, and prevention vocabulary."
   },
   "adultUseNotice": "Cannabis-themed parody and education content for adults 21+ where legal.",
-  "generatedAt": "2026-09-04T16:11:31.585Z",
+  "generatedAt": "2026-09-04T16:03:55.002Z",
   "source": {
     "generator": "local-layout-engine",
     "publicCode": "crossword-layout-generator is used when available; local fallback is included."
@@ -86,73 +86,73 @@
       ".",
       ".",
       ".",
+      "R",
+      "O",
+      "O",
+      "T",
+      "R",
+      "O",
+      "T",
+      ".",
+      ".",
+      ".",
+      ".",
+      "A",
+      ".",
+      ".",
+      ".",
+      ".",
+      ".",
+      ".",
+      "."
+    ],
+    [
+      ".",
+      ".",
+      ".",
+      ".",
+      ".",
+      ".",
+      ".",
+      ".",
+      ".",
+      ".",
+      ".",
+      ".",
+      ".",
+      "H",
+      ".",
+      ".",
+      ".",
+      ".",
+      "P",
+      "I",
+      "N",
+      "E",
+      "N",
+      "E",
+      ".",
+      ".",
+      ".",
+      "."
+    ],
+    [
+      ".",
+      ".",
+      ".",
+      ".",
+      ".",
       ".",
       ".",
       ".",
       ".",
       "R",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      "A",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      "."
-    ],
-    [
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      "A",
-      "P",
-      "H",
+      "O",
+      "O",
+      "T",
       "I",
-      "D",
-      ".",
-      ".",
-      ".",
-      ".",
       "N",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      "."
-    ],
-    [
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      "I",
-      ".",
-      ".",
+      "G",
       ".",
       ".",
       ".",
@@ -188,12 +188,12 @@
       ".",
       ".",
       "A",
+      "P",
+      "H",
       "I",
-      "R",
-      "F",
-      "L",
-      "O",
-      "W",
+      "D",
+      ".",
+      ".",
       "."
     ],
     [
@@ -205,13 +205,13 @@
       ".",
       ".",
       ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
+      "A",
+      "I",
+      "R",
+      "F",
+      "L",
       "O",
-      ".",
+      "W",
       ".",
       ".",
       ".",
@@ -266,12 +266,12 @@
       ".",
       "F",
       ".",
-      ".",
-      ".",
-      ".",
-      ".",
+      "T",
+      "H",
+      "R",
+      "I",
       "P",
-      ".",
+      "S",
       ".",
       ".",
       ".",
@@ -771,9 +771,9 @@
       "N",
       ".",
       ".",
-      "T",
       ".",
-      "R",
+      ".",
+      ".",
       ".",
       ".",
       ".",
@@ -831,12 +831,12 @@
       ".",
       ".",
       ".",
-      "R",
-      ".",
-      "O",
       ".",
       ".",
-      "I",
+      ".",
+      ".",
+      ".",
+      ".",
       ".",
       ".",
       ".",
@@ -861,12 +861,12 @@
       ".",
       ".",
       ".",
-      "I",
-      ".",
-      "T",
       ".",
       ".",
-      "N",
+      ".",
+      ".",
+      ".",
+      ".",
       ".",
       ".",
       ".",
@@ -891,12 +891,6 @@
       ".",
       ".",
       ".",
-      "P",
-      ".",
-      "R",
-      ".",
-      ".",
-      "E",
       ".",
       ".",
       ".",
@@ -904,60 +898,6 @@
       ".",
       ".",
       ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      "."
-    ],
-    [
-      ".",
-      ".",
-      ".",
-      ".",
-      "S",
-      ".",
-      "O",
-      ".",
-      ".",
-      "N",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      "."
-    ],
-    [
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      ".",
-      "T",
-      "I",
-      "M",
-      "E",
-      "R",
       ".",
       ".",
       ".",
@@ -977,7 +917,7 @@
       "."
     ]
   ],
-  "rows": 32,
+  "rows": 30,
   "cols": 28,
   "words": [
     {
@@ -1007,6 +947,19 @@
       "position": 2
     },
     {
+      "answer": "ROOTROT",
+      "clue": "Root-zone disease risk tied to poor oxygen and wet conditions",
+      "category": "Pests",
+      "difficulty": "medium",
+      "approved": true,
+      "normalizedAnswer": "ROOTROT",
+      "displayAnswer": "Root Rot",
+      "startx": 10,
+      "starty": 3,
+      "orientation": "across",
+      "position": 3
+    },
+    {
       "answer": "RHIZOSPHERE",
       "clue": "Narrow root-influenced zone where plants, media, and microbes interact",
       "category": "Plant Science",
@@ -1017,7 +970,33 @@
       "startx": 14,
       "starty": 3,
       "orientation": "down",
-      "position": 3
+      "position": 4
+    },
+    {
+      "answer": "PINENE",
+      "clue": "Pine-leaning terpene whose name gives away its aroma",
+      "category": "Plant Science",
+      "difficulty": "easy",
+      "approved": true,
+      "normalizedAnswer": "PINENE",
+      "displayAnswer": "Pinene",
+      "startx": 19,
+      "starty": 4,
+      "orientation": "across",
+      "position": 5
+    },
+    {
+      "answer": "ROOTING",
+      "clue": "Process a cutting must complete before becoming a strong clone",
+      "category": "Cultivation",
+      "difficulty": "easy",
+      "approved": true,
+      "normalizedAnswer": "ROOTING",
+      "displayAnswer": "Rooting",
+      "startx": 10,
+      "starty": 5,
+      "orientation": "across",
+      "position": 6
     },
     {
       "answer": "APHID",
@@ -1027,10 +1006,10 @@
       "approved": true,
       "normalizedAnswer": "APHID",
       "displayAnswer": "Aphid",
-      "startx": 12,
-      "starty": 4,
+      "startx": 21,
+      "starty": 6,
       "orientation": "across",
-      "position": 4
+      "position": 7
     },
     {
       "answer": "AIRFLOW",
@@ -1040,10 +1019,10 @@
       "approved": true,
       "normalizedAnswer": "AIRFLOW",
       "displayAnswer": "Airflow",
-      "startx": 21,
-      "starty": 6,
+      "startx": 9,
+      "starty": 7,
       "orientation": "across",
-      "position": 5
+      "position": 8
     },
     {
       "answer": "SPIDERMITE",
@@ -1056,7 +1035,7 @@
       "startx": 19,
       "starty": 7,
       "orientation": "down",
-      "position": 6
+      "position": 9
     },
     {
       "answer": "DEWPOINT",
@@ -1069,7 +1048,7 @@
       "startx": 16,
       "starty": 8,
       "orientation": "across",
-      "position": 7
+      "position": 10
     },
     {
       "answer": "FLAVONOID",
@@ -1082,7 +1061,20 @@
       "startx": 8,
       "starty": 9,
       "orientation": "down",
-      "position": 8
+      "position": 11
+    },
+    {
+      "answer": "THRIPS",
+      "clue": "Slender pests that can leave silvery feeding marks on leaves",
+      "category": "Pests",
+      "difficulty": "medium",
+      "approved": true,
+      "normalizedAnswer": "THRIPS",
+      "displayAnswer": "Thrips",
+      "startx": 10,
+      "starty": 9,
+      "orientation": "across",
+      "position": 12
     },
     {
       "answer": "LIGHTCYCLE",
@@ -1095,7 +1087,7 @@
       "startx": 4,
       "starty": 11,
       "orientation": "down",
-      "position": 9
+      "position": 13
     },
     {
       "answer": "VAPORPRESSUREDEFICIT",
@@ -1108,7 +1100,7 @@
       "startx": 8,
       "starty": 12,
       "orientation": "across",
-      "position": 10
+      "position": 14
     },
     {
       "answer": "PHOTOSYNTHESIS",
@@ -1121,7 +1113,7 @@
       "startx": 10,
       "starty": 12,
       "orientation": "down",
-      "position": 11
+      "position": 15
     },
     {
       "answer": "RELATIVEHUMIDITY",
@@ -1134,7 +1126,7 @@
       "startx": 12,
       "starty": 12,
       "orientation": "down",
-      "position": 12
+      "position": 16
     },
     {
       "answer": "CARYOPHYLLENE",
@@ -1147,7 +1139,7 @@
       "startx": 25,
       "starty": 12,
       "orientation": "down",
-      "position": 13
+      "position": 17
     },
     {
       "answer": "TEMPERATURE",
@@ -1160,7 +1152,7 @@
       "startx": 27,
       "starty": 12,
       "orientation": "down",
-      "position": 14
+      "position": 18
     },
     {
       "answer": "FUNGUSGNAT",
@@ -1173,7 +1165,7 @@
       "startx": 6,
       "starty": 13,
       "orientation": "down",
-      "position": 15
+      "position": 19
     },
     {
       "answer": "TRANSPIRATION",
@@ -1186,7 +1178,7 @@
       "startx": 10,
       "starty": 15,
       "orientation": "across",
-      "position": 16
+      "position": 20
     },
     {
       "answer": "LIGHTINTENSITY",
@@ -1199,7 +1191,7 @@
       "startx": 4,
       "starty": 19,
       "orientation": "across",
-      "position": 17
+      "position": 21
     },
     {
       "answer": "LINALOOL",
@@ -1212,7 +1204,7 @@
       "startx": 18,
       "starty": 20,
       "orientation": "across",
-      "position": 18
+      "position": 22
     },
     {
       "answer": "TERPENE",
@@ -1225,7 +1217,7 @@
       "startx": 2,
       "starty": 21,
       "orientation": "down",
-      "position": 19
+      "position": 23
     },
     {
       "answer": "MYCORRHIZAE",
@@ -1238,7 +1230,7 @@
       "startx": 12,
       "starty": 22,
       "orientation": "across",
-      "position": 20
+      "position": 24
     },
     {
       "answer": "HUMULENE",
@@ -1251,7 +1243,7 @@
       "startx": 18,
       "starty": 22,
       "orientation": "down",
-      "position": 21
+      "position": 25
     },
     {
       "answer": "POWDERYMILDEW",
@@ -1264,7 +1256,7 @@
       "startx": 2,
       "starty": 24,
       "orientation": "across",
-      "position": 22
+      "position": 26
     },
     {
       "answer": "LIMONENE",
@@ -1277,33 +1269,7 @@
       "startx": 20,
       "starty": 24,
       "orientation": "across",
-      "position": 23
-    },
-    {
-      "answer": "THRIPS",
-      "clue": "Slender pests that can leave silvery feeding marks on leaves",
-      "category": "Pests",
-      "difficulty": "medium",
-      "approved": true,
-      "normalizedAnswer": "THRIPS",
-      "displayAnswer": "Thrips",
-      "startx": 5,
-      "starty": 26,
-      "orientation": "down",
-      "position": 24
-    },
-    {
-      "answer": "ROOTROT",
-      "clue": "Root-zone disease risk tied to poor oxygen and wet conditions",
-      "category": "Pests",
-      "difficulty": "medium",
-      "approved": true,
-      "normalizedAnswer": "ROOTROT",
-      "displayAnswer": "Root Rot",
-      "startx": 7,
-      "starty": 26,
-      "orientation": "down",
-      "position": 25
+      "position": 27
     },
     {
       "answer": "CHLOROPHYLL",
@@ -1315,32 +1281,6 @@
       "displayAnswer": "Chlorophyll",
       "startx": 4,
       "starty": 27,
-      "orientation": "across",
-      "position": 26
-    },
-    {
-      "answer": "PINENE",
-      "clue": "Pine-leaning terpene whose name gives away its aroma",
-      "category": "Plant Science",
-      "difficulty": "easy",
-      "approved": true,
-      "normalizedAnswer": "PINENE",
-      "displayAnswer": "Pinene",
-      "startx": 10,
-      "starty": 27,
-      "orientation": "down",
-      "position": 27
-    },
-    {
-      "answer": "TIMER",
-      "clue": "Simple tool that keeps lights on a consistent schedule",
-      "category": "Tools",
-      "difficulty": "easy",
-      "approved": true,
-      "normalizedAnswer": "TIMER",
-      "displayAnswer": "Timer",
-      "startx": 7,
-      "starty": 32,
       "orientation": "across",
       "position": 28
     }
@@ -1361,6 +1301,45 @@
         "position": 1
       },
       {
+        "answer": "ROOTROT",
+        "clue": "Root-zone disease risk tied to poor oxygen and wet conditions",
+        "category": "Pests",
+        "difficulty": "medium",
+        "approved": true,
+        "normalizedAnswer": "ROOTROT",
+        "displayAnswer": "Root Rot",
+        "startx": 10,
+        "starty": 3,
+        "orientation": "across",
+        "position": 3
+      },
+      {
+        "answer": "PINENE",
+        "clue": "Pine-leaning terpene whose name gives away its aroma",
+        "category": "Plant Science",
+        "difficulty": "easy",
+        "approved": true,
+        "normalizedAnswer": "PINENE",
+        "displayAnswer": "Pinene",
+        "startx": 19,
+        "starty": 4,
+        "orientation": "across",
+        "position": 5
+      },
+      {
+        "answer": "ROOTING",
+        "clue": "Process a cutting must complete before becoming a strong clone",
+        "category": "Cultivation",
+        "difficulty": "easy",
+        "approved": true,
+        "normalizedAnswer": "ROOTING",
+        "displayAnswer": "Rooting",
+        "startx": 10,
+        "starty": 5,
+        "orientation": "across",
+        "position": 6
+      },
+      {
         "answer": "APHID",
         "clue": "Soft-bodied plant pest that can cluster on tender growth",
         "category": "Pests",
@@ -1368,10 +1347,10 @@
         "approved": true,
         "normalizedAnswer": "APHID",
         "displayAnswer": "Aphid",
-        "startx": 12,
-        "starty": 4,
+        "startx": 21,
+        "starty": 6,
         "orientation": "across",
-        "position": 4
+        "position": 7
       },
       {
         "answer": "AIRFLOW",
@@ -1381,10 +1360,10 @@
         "approved": true,
         "normalizedAnswer": "AIRFLOW",
         "displayAnswer": "Airflow",
-        "startx": 21,
-        "starty": 6,
+        "startx": 9,
+        "starty": 7,
         "orientation": "across",
-        "position": 5
+        "position": 8
       },
       {
         "answer": "DEWPOINT",
@@ -1397,7 +1376,20 @@
         "startx": 16,
         "starty": 8,
         "orientation": "across",
-        "position": 7
+        "position": 10
+      },
+      {
+        "answer": "THRIPS",
+        "clue": "Slender pests that can leave silvery feeding marks on leaves",
+        "category": "Pests",
+        "difficulty": "medium",
+        "approved": true,
+        "normalizedAnswer": "THRIPS",
+        "displayAnswer": "Thrips",
+        "startx": 10,
+        "starty": 9,
+        "orientation": "across",
+        "position": 12
       },
       {
         "answer": "VAPORPRESSUREDEFICIT",
@@ -1410,7 +1402,7 @@
         "startx": 8,
         "starty": 12,
         "orientation": "across",
-        "position": 10
+        "position": 14
       },
       {
         "answer": "TRANSPIRATION",
@@ -1423,7 +1415,7 @@
         "startx": 10,
         "starty": 15,
         "orientation": "across",
-        "position": 16
+        "position": 20
       },
       {
         "answer": "LIGHTINTENSITY",
@@ -1436,7 +1428,7 @@
         "startx": 4,
         "starty": 19,
         "orientation": "across",
-        "position": 17
+        "position": 21
       },
       {
         "answer": "LINALOOL",
@@ -1449,7 +1441,7 @@
         "startx": 18,
         "starty": 20,
         "orientation": "across",
-        "position": 18
+        "position": 22
       },
       {
         "answer": "MYCORRHIZAE",
@@ -1462,7 +1454,7 @@
         "startx": 12,
         "starty": 22,
         "orientation": "across",
-        "position": 20
+        "position": 24
       },
       {
         "answer": "POWDERYMILDEW",
@@ -1475,7 +1467,7 @@
         "startx": 2,
         "starty": 24,
         "orientation": "across",
-        "position": 22
+        "position": 26
       },
       {
         "answer": "LIMONENE",
@@ -1488,7 +1480,7 @@
         "startx": 20,
         "starty": 24,
         "orientation": "across",
-        "position": 23
+        "position": 27
       },
       {
         "answer": "CHLOROPHYLL",
@@ -1500,19 +1492,6 @@
         "displayAnswer": "Chlorophyll",
         "startx": 4,
         "starty": 27,
-        "orientation": "across",
-        "position": 26
-      },
-      {
-        "answer": "TIMER",
-        "clue": "Simple tool that keeps lights on a consistent schedule",
-        "category": "Tools",
-        "difficulty": "easy",
-        "approved": true,
-        "normalizedAnswer": "TIMER",
-        "displayAnswer": "Timer",
-        "startx": 7,
-        "starty": 32,
         "orientation": "across",
         "position": 28
       }
@@ -1542,7 +1521,7 @@
         "startx": 14,
         "starty": 3,
         "orientation": "down",
-        "position": 3
+        "position": 4
       },
       {
         "answer": "SPIDERMITE",
@@ -1555,7 +1534,7 @@
         "startx": 19,
         "starty": 7,
         "orientation": "down",
-        "position": 6
+        "position": 9
       },
       {
         "answer": "FLAVONOID",
@@ -1568,7 +1547,7 @@
         "startx": 8,
         "starty": 9,
         "orientation": "down",
-        "position": 8
+        "position": 11
       },
       {
         "answer": "LIGHTCYCLE",
@@ -1581,7 +1560,7 @@
         "startx": 4,
         "starty": 11,
         "orientation": "down",
-        "position": 9
+        "position": 13
       },
       {
         "answer": "PHOTOSYNTHESIS",
@@ -1594,7 +1573,7 @@
         "startx": 10,
         "starty": 12,
         "orientation": "down",
-        "position": 11
+        "position": 15
       },
       {
         "answer": "RELATIVEHUMIDITY",
@@ -1607,7 +1586,7 @@
         "startx": 12,
         "starty": 12,
         "orientation": "down",
-        "position": 12
+        "position": 16
       },
       {
         "answer": "CARYOPHYLLENE",
@@ -1620,7 +1599,7 @@
         "startx": 25,
         "starty": 12,
         "orientation": "down",
-        "position": 13
+        "position": 17
       },
       {
         "answer": "TEMPERATURE",
@@ -1633,7 +1612,7 @@
         "startx": 27,
         "starty": 12,
         "orientation": "down",
-        "position": 14
+        "position": 18
       },
       {
         "answer": "FUNGUSGNAT",
@@ -1646,7 +1625,7 @@
         "startx": 6,
         "starty": 13,
         "orientation": "down",
-        "position": 15
+        "position": 19
       },
       {
         "answer": "TERPENE",
@@ -1659,7 +1638,7 @@
         "startx": 2,
         "starty": 21,
         "orientation": "down",
-        "position": 19
+        "position": 23
       },
       {
         "answer": "HUMULENE",
@@ -1672,52 +1651,13 @@
         "startx": 18,
         "starty": 22,
         "orientation": "down",
-        "position": 21
-      },
-      {
-        "answer": "THRIPS",
-        "clue": "Slender pests that can leave silvery feeding marks on leaves",
-        "category": "Pests",
-        "difficulty": "medium",
-        "approved": true,
-        "normalizedAnswer": "THRIPS",
-        "displayAnswer": "Thrips",
-        "startx": 5,
-        "starty": 26,
-        "orientation": "down",
-        "position": 24
-      },
-      {
-        "answer": "ROOTROT",
-        "clue": "Root-zone disease risk tied to poor oxygen and wet conditions",
-        "category": "Pests",
-        "difficulty": "medium",
-        "approved": true,
-        "normalizedAnswer": "ROOTROT",
-        "displayAnswer": "Root Rot",
-        "startx": 7,
-        "starty": 26,
-        "orientation": "down",
         "position": 25
-      },
-      {
-        "answer": "PINENE",
-        "clue": "Pine-leaning terpene whose name gives away its aroma",
-        "category": "Plant Science",
-        "difficulty": "easy",
-        "approved": true,
-        "normalizedAnswer": "PINENE",
-        "displayAnswer": "Pinene",
-        "startx": 10,
-        "starty": 27,
-        "orientation": "down",
-        "position": 27
       }
     ]
   },
   "stats": {
     "submittedCount": 28,
     "placedCount": 28,
-    "score": 27104
+    "score": 27160
   }
 }

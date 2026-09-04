@@ -1,0 +1,62 @@
+exolve-begin
+exolve-title: THC Weekly Crossword — 2026-W27
+exolve-id: 2026-W27
+exolve-width: 26
+exolve-height: 25
+exolve-grid:
+................M.........
+......M..SUGARLEAF........
+......I.........G.........
+......C.....S...N.........
+....D.R...NITROGEN........
+....I.O.....O...S.DRYBACK.
+....S.N.....M...I......O..
+.P..S.U.A..CALCIUM.....C..
+COMPOSTTEA..T...M.TAPROOT.
+.T..L.R.R.BRACT.....I..C..
+.A..V.I.A....A.N..R.S..O.H
+.S..ELECTRICALCONDUCTIVITY
+.S..D.N.I....Y.D..N.I..R.D
+.I.ROOTZONE..X.E..O.L....R
+.U..X...N.......P.F......O
+.M..Y.......FANLEAF......P
+....G...........R........O
+....E......PHSCALE.......N
+...INTERNODE....I........I
+...........A....T........C
+...........TOPDRESS......S
+...........M..............
+.........PHOSPHORUS.......
+...........S..............
+...........S..............
+exolve-across:
+4. Macronutrient associated with leafy green growth (8)
+5. Primary root that appears early during seed growth (7)
+6. Logarithmic scale used to describe how acidic or basic a solution is (7)
+7. Small resin-covered leaf tucked close to the flower (9)
+10. Nutrient often paired with magnesium in grower conversations (7)
+12. Large leaf that acts like a plant solar panel (7)
+13. Aerated organic brew some growers use to feed soil biology (10)
+15. Area around the roots where moisture, oxygen, and nutrients matter most (8)
+20. Decrease in root-zone moisture between irrigation events (7)
+21. Stem section between two branch points (9)
+22. Macronutrient often discussed around roots and flowering (10)
+25. Adding dry amendments to the surface of a growing medium (8)
+26. Measurement of how readily a nutrient solution carries electrical current (22)
+27. Leaf-like flower structure often confused with calyx in grower talk (5)
+exolve-down:
+1. Presence or movement of air through a root-zone medium (8)
+2. Point on a stem where branches or leaves emerge (4)
+3. Coconut-husk fiber commonly used as a soilless growing medium (8)
+8. Drainage that leaves a container after irrigation (6)
+9. Expanded volcanic glass added to growing mixes to improve air space and drainage (7)
+11. Growing method that supplies mineral nutrients through water without field soil (11)
+14. Macronutrient tied to overall plant function and flower development (9)
+16. Small flower structure growers often talk about when judging bud formation (5)
+17. Nutrient commonly discussed with calcium under bright indoor lighting (9)
+18. Oxygen present in water and available around wet or submerged roots (15)
+19. Needed element required in smaller amounts than primary nutrients (13)
+6. Partially decomposed sphagnum material widely used in soilless growing mixes (8)
+23. Hair-like flower part that changes appearance as buds mature (6)
+24. Microscopic leaf pores that regulate gas exchange and water loss (7)
+exolve-end

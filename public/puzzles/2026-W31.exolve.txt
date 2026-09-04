@@ -1,0 +1,73 @@
+exolve-begin
+exolve-title: THC Weekly Crossword — 2026-W31
+exolve-id: 2026-W31
+exolve-width: 20
+exolve-height: 36
+exolve-grid:
+............L.......
+............I.......
+............G.......
+............H.......
+......EXHAUSTFAN....
+............C.......
+..........T.Y.......
+.G.......TRICHOME...
+.E........A.L.......
+.R........I.E.......
+.MOTHERPLANT....O...
+.I..U.....I.....S...
+.N..M...CANOPY..C...
+CALCIUM.L.G.....I...
+.T..D...O...AIRFLOW.
+.I..I.C.N.T...O.L...
+.O..FLOWERING.O.A...
+.N..I.L...M...T.T...
+...RELATIVEHUMIDITY.
+....R..R..R...N.N...
+.......E....N.G.G...
+...SEEDLING.I...F...
+.......L....T...A..D
+.POTASSIUM.PRUNING.E
+.......S....O......H
+.........C..G......U
+.....V.GROWTENT....M
+.....E...M..N......I
+.....G...P.........D
+.....E...O.........I
+.....TRANSPLANT....F
+.....A...T.........I
+.....T...TEMPERATURE
+.....I...E.........R
+.....V...A..........
+.....E..............
+exolve-across:
+1. Air moisture percentage growers watch through each stage (16)
+2. Moving air that helps prevent hot spots and stagnant humidity (7)
+3. Tool that pulls stale air out of the grow space (10)
+4. Nutrient often paired with magnesium in grower conversations (7)
+6. Moving a plant into a larger container or new medium (10)
+8. Stage when the plant begins building flowers under the right light schedule (9)
+9. Source plant kept around to provide future cuttings (11)
+10. Basic environmental reading that changes plant comfort and drying speed (11)
+18. Early stage after a seed sprouts (8)
+21. Tiny resin gland growers inspect when judging maturity (8)
+22. Removing selected growth to improve structure or airflow (7)
+24. Indoor enclosure used to control light, smell, and environment (8)
+27. Macronutrient tied to overall plant function and flower development (9)
+16. Top layer of plant growth that growers try to keep even under lights (6)
+exolve-down:
+5. Process a cutting must complete before becoming a strong clone (7)
+7. Daily timing pattern that controls indoor light and dark periods (10)
+11. Macronutrient associated with leafy green growth (8)
+12. The process of a seed waking up and starting growth (11)
+13. Support net used to spread branches and hold up heavy flowers (7)
+14. Tool used to pull extra moisture from the grow space (12)
+15. Guiding plant shape instead of letting it grow untouched (8)
+16. A cutting that preserves the genetics of the source plant (5)
+17. Tool used to raise moisture in the air (10)
+19. Simple tool that keeps lights on a consistent schedule (5)
+20. Main flower cluster on a plant (4)
+23. Moving fan used to prevent stale pockets of air (14)
+25. Aerated organic brew some growers use to feed soil biology (10)
+26. Growth phase focused on roots, branches, and leaves (10)
+exolve-end

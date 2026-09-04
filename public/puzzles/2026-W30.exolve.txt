@@ -1,0 +1,66 @@
+exolve-begin
+exolve-title: THC Weekly Crossword — 2026-W30
+exolve-id: 2026-W30
+exolve-width: 23
+exolve-height: 29
+exolve-grid:
+.....BACKCROSS.........
+.............E.........
+....MANGOBUBBLES.......
+.............E....W....
+........J.T..C....H....
+.......TAPROOT....I....
+........R.E..I..C.T....
+........C.LEMONHAZE....
+........U.L..N..L.W....
+........R.I.....I.I....
+........E.SOMANGO.D....
+.......K........R.O....
+....PINENE......A.W....
+....O..E...HUNTING..I..
+....P..P.T.Y....G...N..
+..BLUEBERRYBUTCHER..B..
+.P..L..R.A.R...Y....R..
+.H..A...FILIAL.D....E..
+GENOTYPE.T.D...R....D..
+.N..I..........O....L..
+.O..OUTCROSS.EXPRESSION
+.T..N.....T....O....N..
+.Y...BLUEMANGO.N....E..
+.P........B....I.......
+.E...FEMINIZED.C.......
+..........L....S.......
+..........I............
+..........Z............
+.....BUBBLEGUMBLUE.....
+exolve-across:
+2. Citrus-leaning cultivar name used in planned cross work (9)
+3. DTF flagship line with candy-blueberry and ripe mango flavor notes (9)
+8. How a genetic trait shows itself in the real plant (10)
+6. Grower shorthand for searching through seeds to find elite plants (7)
+10. Blue-fruit parent used as the dad in the Blue Mango cross (16)
+11. Blueberry and sweet-candy style name in the DTF project family (13)
+15. Updated name for the Blue Mango and Blue Bubblegum cross (12)
+16. Mango-heavy parent behind the Blue Mango project (7)
+17. Breeding move where offspring are crossed back to a parent or parent-like plant (9)
+18. Generation label idea behind F1, F2, and F3 breeding talk (6)
+19. Breeding move that brings in less-related genetics (8)
+21. The inherited genetic blueprint behind a plant's traits (8)
+9. Pine-leaning terpene whose name gives away its aroma (6)
+23. Seed type bred to produce female plants at a high rate (9)
+24. Primary root that appears early during seed growth (7)
+exolve-down:
+1. Plant worth saving because it hits the target traits (6)
+4. Classic cultivar name used in one of the planned DTF crosses (10)
+5. Orange-forward cultivar name listed in the DTF project lineup (10)
+6. Plant line made from two different genetic backgrounds (6)
+7. Specific plant feature a breeder may track across generations (5)
+9. Group of plants a breeder evaluates for variation and keepers (10)
+12. The visible expression of genetics and environment working together (9)
+13. Breeder goal of making traits show up more consistently across seeds (9)
+14. Choosing keepers from a population because they show the desired traits (9)
+20. Line developed through repeated selection within related plants (10)
+22. Support net used to spread branches and hold up heavy flowers (7)
+25. Small-batch curing method using sealed glass containers (7)
+26. Growing method that supplies mineral nutrients through water without field soil (11)
+exolve-end

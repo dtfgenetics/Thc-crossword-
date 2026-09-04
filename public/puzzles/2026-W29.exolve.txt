@@ -1,0 +1,59 @@
+exolve-begin
+exolve-title: THC Weekly Crossword — 2026-W29
+exolve-id: 2026-W29
+exolve-width: 28
+exolve-height: 22
+exolve-grid:
+.........EXPRESSION.........
+...............T...F........
+...........PHENOTYPE........
+............U..M...M........
+..........FANLEAF..I........
+......V.....T..T...N........
+..S...I....FILIAL..I........
+..U...A.....N......Z.....P..
+..G...B.K...GENOTYPE.....O..
+STABILIZE.....O.R..D.....P..
+..R...L.E.....D.A........U..
+..L...I.PHOTOPERIOD...S..L..
+..E...T.E....I..T...SEEDPACK
+..A..HYBRID..S...T....E..T..
+..F......N..STIGMA....D..I..
+.........T...I...P....B..O..
+.........E.CALYX.REGULAR.N..
+AUTOFLOWER.......O....N.....
+.........N..ROOTZONE..K.....
+.........O.......T..........
+.........D..................
+........SELECTION...........
+exolve-across:
+2. Seed type that can produce male or female plants (7)
+5. Package format growers buy when starting a new run from genetics (8)
+10. Plant line made from two different genetic backgrounds (6)
+11. Large leaf that acts like a plant solar panel (7)
+13. Small flower structure growers often talk about when judging bud formation (5)
+14. Breeder goal of making traits show up more consistently across seeds (9)
+17. The visible expression of genetics and environment working together (9)
+19. How a genetic trait shows itself in the real plant (10)
+20. Plant type whose flowering is controlled by light and dark timing (11)
+22. Area around the roots where moisture, oxygen, and nutrients matter most (8)
+23. Choosing keepers from a population because they show the desired traits (9)
+25. Plant type that flowers by age instead of relying only on light schedule (10)
+26. Flower structure often seen as a visible hair on developing buds (6)
+27. Generation label idea behind F1, F2, and F3 breeding talk (6)
+28. The inherited genetic blueprint behind a plant's traits (8)
+exolve-down:
+1. Plant worth saving because it hits the target traits (6)
+3. Seller or collection source for genetics in seed form (8)
+4. Small resin-covered leaf tucked close to the flower (9)
+6. Primary root that appears early during seed growth (7)
+7. Point on a stem where branches or leaves emerge (4)
+8. Seed type bred to produce female plants at a high rate (9)
+9. Specific plant feature a breeder may track across generations (5)
+12. Stem section between two branch points (9)
+15. Grower shorthand for searching through seeds to find elite plants (7)
+16. Group of plants a breeder evaluates for variation and keepers (10)
+18. Microscopic leaf pores that regulate gas exchange and water loss (7)
+21. Hair-like flower part that changes appearance as buds mature (6)
+24. Likelihood that a seed is alive enough to sprout (9)
+exolve-end

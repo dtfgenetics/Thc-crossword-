@@ -1,12 +1,186 @@
 {
-  "updatedAt": "2026-06-23T00:00:00.000Z",
+  "updatedAt": "2026-09-04T16:11:31.597Z",
   "puzzles": [
+    {
+      "id": "2026-W36",
+      "week": "2026-W36",
+      "title": "THC Weekly Crossword — 2026-W36",
+      "status": "published",
+      "theme": {
+        "id": "ipm-and-plant-health",
+        "name": "IPM and Plant Health",
+        "description": "Pests, disease pressure, sanitation, and prevention vocabulary."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27104
+      },
+      "file": "2026-W36.json"
+    },
+    {
+      "id": "2026-W35",
+      "week": "2026-W35",
+      "title": "THC Weekly Crossword — 2026-W35",
+      "status": "published",
+      "theme": {
+        "id": "roots-water-and-media",
+        "name": "Roots, Water and Media",
+        "description": "Root-zone science, irrigation measurements, and growing-media terminology."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27350
+      },
+      "file": "2026-W35.json"
+    },
+    {
+      "id": "2026-W34",
+      "week": "2026-W34",
+      "title": "THC Weekly Crossword — 2026-W34",
+      "status": "published",
+      "theme": {
+        "id": "light-and-environment",
+        "name": "Light and Environment",
+        "description": "Lighting metrics, climate, airflow, and plant-environment relationships."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27256
+      },
+      "file": "2026-W34.json"
+    },
+    {
+      "id": "2026-W33",
+      "week": "2026-W33",
+      "title": "THC Weekly Crossword — 2026-W33",
+      "status": "published",
+      "theme": {
+        "id": "harvest-and-extracts",
+        "name": "Harvest and Extracts",
+        "description": "Post-harvest terms and solventless culture."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27478
+      },
+      "file": "2026-W33.json"
+    },
+    {
+      "id": "2026-W32",
+      "week": "2026-W32",
+      "title": "THC Weekly Crossword — 2026-W32",
+      "status": "published",
+      "theme": {
+        "id": "plant-science",
+        "name": "Plant Science",
+        "description": "Terpenes, anatomy, physiology, and biology clues."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27350
+      },
+      "file": "2026-W32.json"
+    },
+    {
+      "id": "2026-W31",
+      "week": "2026-W31",
+      "title": "THC Weekly Crossword — 2026-W31",
+      "status": "published",
+      "theme": {
+        "id": "grow-room-basics",
+        "name": "Grow Room Basics",
+        "description": "Beginner-friendly cultivation terms."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27280
+      },
+      "file": "2026-W31.json"
+    },
+    {
+      "id": "2026-W30",
+      "week": "2026-W30",
+      "title": "THC Weekly Crossword — 2026-W30",
+      "status": "published",
+      "theme": {
+        "id": "dtf-genetics",
+        "name": "DTF Genetics",
+        "description": "Brand, breeding projects, and house cultivar language."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27333
+      },
+      "file": "2026-W30.json"
+    },
+    {
+      "id": "2026-W29",
+      "week": "2026-W29",
+      "title": "THC Weekly Crossword — 2026-W29",
+      "status": "published",
+      "theme": {
+        "id": "seeds-and-reproduction",
+        "name": "Seeds and Reproduction",
+        "description": "Seed types, reproduction, breeding, inheritance, and selection."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27384
+      },
+      "file": "2026-W29.json"
+    },
+    {
+      "id": "2026-W28",
+      "week": "2026-W28",
+      "title": "THC Weekly Crossword — 2026-W28",
+      "status": "published",
+      "theme": {
+        "id": "ipm-and-plant-health",
+        "name": "IPM and Plant Health",
+        "description": "Pests, disease pressure, sanitation, and prevention vocabulary."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27160
+      },
+      "file": "2026-W28.json"
+    },
+    {
+      "id": "2026-W27",
+      "week": "2026-W27",
+      "title": "THC Weekly Crossword — 2026-W27",
+      "status": "published",
+      "theme": {
+        "id": "roots-water-and-media",
+        "name": "Roots, Water and Media",
+        "description": "Root-zone science, irrigation measurements, and growing-media terminology."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27350
+      },
+      "file": "2026-W27.json"
+    },
     {
       "id": "2026-W26",
       "week": "2026-W26",
       "title": "THC Weekly Crossword — 2026-W26",
       "status": "published",
-      "stats": {"submittedCount": 3, "placedCount": 3, "score": 2976},
+      "stats": {
+        "submittedCount": 3,
+        "placedCount": 3,
+        "score": 2970
+      },
       "file": "2026-W26.json"
     }
   ]
