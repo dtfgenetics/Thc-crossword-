@@ -1,5 +1,5 @@
 export function createGameSession(puzzleId) {
-  return { puzzleId, startedAt: null, completedAt: null, hints: 0, checks: 0, mistakeCells: [] };
+  return { puzzleId, startedAt: null, completedAt: null, hints: 0, checks: 0, mistakeCells: [], forfeited: false };
 }
 
 export function startGameSession(session, now = Date.now()) {
@@ -14,6 +14,10 @@ export function addCheck(session, wrongCellKeys = []) {
   const mistakes = new Set(session.mistakeCells || []);
   for (const cell of wrongCellKeys) mistakes.add(cell);
   return { ...session, checks: (session.checks || 0) + 1, mistakeCells: [...mistakes] };
+}
+
+export function forfeitGameSession(session) {
+  return { ...session, forfeited: true };
 }
 
 export function finishGameSession(session, now = Date.now()) {
@@ -32,6 +36,7 @@ export function formatElapsed(totalSeconds) {
 }
 
 export function scoreGameSession(session, totalSeconds = elapsedSeconds(session)) {
+  if (session.forfeited) return 100;
   const timePenalty = Math.floor(Math.max(0, totalSeconds) / 5);
   const hintPenalty = (session.hints || 0) * 75;
   const mistakePenalty = (session.mistakeCells?.length || 0) * 25;
