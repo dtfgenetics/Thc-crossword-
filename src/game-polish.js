@@ -214,7 +214,6 @@ function enhancePlayPanel() {
   }
   toolbar.querySelector('[data-action="clear"]')?.classList.add('secondary-action');
   toolbar.querySelector('[data-action="print"]')?.classList.add('secondary-action');
-
   if (progress) progress.classList.add('game-progress');
 }
 
@@ -240,6 +239,13 @@ function watchSolvedState() {
   if (progress.textContent?.startsWith('Solved')) completeGame();
 }
 
+function blockAction(event, message) {
+  if (confirm(message)) return false;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  return true;
+}
+
 function bindSessionEvents() {
   const shell = document.querySelector('.shell');
   if (!shell || shell.dataset.gameBound) return;
@@ -255,10 +261,14 @@ function bindSessionEvents() {
         updateHud();
       });
     }
-    if (action === 'clear' && confirm('Clear every letter in this puzzle and restart the run?')) {
+    if (action === 'clear') {
+      if (blockAction(event, 'Clear every letter in this puzzle and restart the run?')) return;
       session = createGameSession(puzzle.id);
       saveSession();
       updateHud();
+    }
+    if (action === 'reveal') {
+      blockAction(event, 'Reveal the entire puzzle? This ends the scored run.');
     }
   }, true);
 
@@ -271,7 +281,10 @@ async function mount() {
   if (mounted || !document.querySelector('.grid')) return;
   mounted = true;
   puzzle = await loadPuzzle();
-  if (!puzzle) return;
+  if (!puzzle) {
+    mounted = false;
+    return;
+  }
   session = safeJson(`${SESSION_PREFIX}${puzzle.id}`, createGameSession(puzzle.id));
   if (session.puzzleId !== puzzle.id) session = createGameSession(puzzle.id);
   enhanceHeader();
