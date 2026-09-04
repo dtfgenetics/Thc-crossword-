@@ -1,0 +1,121 @@
+.solver-current-clue {
+  display: none;
+  margin: 10px 0 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--game-line, #294431);
+  border-radius: 14px;
+  background: #0b1b11;
+  color: var(--game-paper, #f7f5e8);
+}
+
+.solver-current-clue-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--game-gold, #ffd166);
+  font-size: .68rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.solver-current-clue strong {
+  display: block;
+  line-height: 1.35;
+}
+
+.solver-settings {
+  margin: 10px 0 14px;
+  border: 1px solid var(--game-line, #294431);
+  border-radius: 14px;
+  background: #0b1b11;
+  overflow: clip;
+}
+
+.solver-settings > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  cursor: pointer;
+  color: var(--game-paper, #f7f5e8);
+  font-weight: 900;
+}
+
+.solver-settings-panel {
+  display: grid;
+  gap: 10px;
+  padding: 12px 14px 14px;
+  border-top: 1px solid var(--game-line, #294431);
+}
+
+.solver-settings-panel label {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--game-muted, #b8c8b1);
+  font-weight: 700;
+}
+
+.solver-settings-panel input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--game-lime, #a6ff4d);
+}
+
+.solver-settings-panel button {
+  min-height: 44px;
+  border: 1px solid var(--game-line, #294431);
+  border-radius: 999px;
+  background: #173522;
+  color: var(--game-paper, #f7f5e8);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+html[data-crossword-timer="hidden"] [data-game-stat="timer"] {
+  visibility: hidden;
+}
+
+html[data-crossword-timer="hidden"] [data-game-stat="timer"]::after {
+  content: 'Hidden';
+  visibility: visible;
+  color: var(--game-muted, #b8c8b1);
+  font-size: .8rem;
+}
+
+html[data-crossword-clues="compact"] .clues li button {
+  padding-block: 7px;
+  line-height: 1.2;
+}
+
+.cell:focus-visible,
+.clues button:focus-visible,
+.toolbar button:focus-visible,
+.solver-settings summary:focus-visible,
+.solver-settings button:focus-visible,
+.solver-settings input:focus-visible {
+  outline: 3px solid var(--game-gold, #ffd166);
+  outline-offset: 2px;
+}
+
+@media (max-width: 880px) {
+  .solver-current-clue {
+    display: block;
+    position: sticky;
+    top: 72px;
+    z-index: 5;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .22);
+  }
+}
+
+@media (max-width: 600px) {
+  .solver-current-clue {
+    top: 68px;
+    margin-inline: -2px;
+  }
+
+  .solver-settings-panel {
+    grid-template-columns: 1fr;
+  }
+}
