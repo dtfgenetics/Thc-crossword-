@@ -5,6 +5,7 @@ import {
   createGameSession,
   elapsedSeconds,
   finishGameSession,
+  forfeitGameSession,
   formatElapsed,
   scoreGameSession,
   shareResultText,
@@ -36,6 +37,12 @@ describe('crossword game session', () => {
     expect(session.completedAt).toBe(61000);
     expect(scoreGameSession(session, 60)).toBe(888);
     expect(scoreGameSession({ ...session, hints: 99 }, 99999)).toBe(100);
+  });
+
+  it('forces a minimum score after reveal-all forfeits the run', () => {
+    const session = forfeitGameSession(startGameSession(createGameSession('2026-W36'), 1000));
+    expect(session.forfeited).toBe(true);
+    expect(scoreGameSession(session, 1)).toBe(100);
   });
 
   it('updates career stats without double-counting a solved puzzle', () => {
