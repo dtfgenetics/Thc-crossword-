@@ -24,6 +24,10 @@ window.addEventListener('keydown', (event) => {
   const active = document.querySelector('.cell.active');
   if (!active) return;
 
+  // Once the crossword owns an arrow key, keep the browser from scrolling the
+  // page even when the active square is already at the edge of the grid.
+  event.preventDefault();
+
   let x = Number(active.dataset.x) + step[0];
   let y = Number(active.dataset.y) + step[1];
   let candidate = document.querySelector(`.cell[data-x="${x}"][data-y="${y}"]`);
@@ -36,7 +40,6 @@ window.addEventListener('keydown', (event) => {
 
   if (!candidate || candidate.classList.contains('black')) return;
 
-  event.preventDefault();
   candidate.click();
   window.requestAnimationFrame(() => candidate.focus({ preventScroll: true }));
 });
