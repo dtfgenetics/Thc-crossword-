@@ -17,13 +17,13 @@ h1 { font-size: clamp(2rem, 8vw, 5rem); line-height: .9; margin: 0 0 12px; }
 .shell.single { grid-template-columns: 1fr; }
 .panel { background: #102418; border: 1px solid #294431; border-radius: 24px; padding: 18px; }
 .toolbar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
-.toolbar button { border: 0; border-radius: 999px; padding: 10px 16px; font-weight: 900; background: #a6ff4d; color: #102015; cursor: pointer; }
+.toolbar button { border: 0; border-radius: 999px; padding: 10px 16px; min-height: 44px; font-weight: 900; background: #a6ff4d; color: #102015; cursor: pointer; }
 .status { color: #b8c8b1; background: #07130d; border-radius: 14px; padding: 12px; }
 .progress { margin: 8px 0 14px; color: #ffd166; font-weight: 800; }
 .mobile-input { position: fixed; left: -1000px; top: 0; width: 1px; height: 1px; opacity: .01; }
 .export-preview { white-space: pre-wrap; overflow: auto; background: #07130d; color: #f3f7ef; border: 1px solid #294431; border-radius: 16px; padding: 16px; line-height: 1.5; }
-.grid { --cols: 15; display: grid; grid-template-columns: repeat(var(--cols), minmax(30px, 1fr)); gap: 3px; overflow: auto; }
-.cell { aspect-ratio: 1 / 1; position: relative; border: 0; border-radius: 8px; background: #f7f5e8; color: #102015; font-weight: 900; cursor: pointer; }
+.grid { --cols: 15; display: grid; grid-template-columns: repeat(var(--cols), minmax(30px, 1fr)); gap: 3px; overflow: auto; overscroll-behavior-inline: contain; scrollbar-gutter: stable; padding: 2px 2px 6px; -webkit-overflow-scrolling: touch; }
+.cell { aspect-ratio: 1 / 1; position: relative; border: 0; border-radius: 8px; background: #f7f5e8; color: #102015; font-weight: 900; cursor: pointer; touch-action: manipulation; }
 .cell.black { background: #07130d; cursor: default; outline: 1px solid #294431; }
 .cell.word { background: #fff8c9; }
 .cell.active { outline: 3px solid #a6ff4d; background: #d9ffc5; }
@@ -33,8 +33,20 @@ h1 { font-size: clamp(2rem, 8vw, 5rem); line-height: .9; margin: 0 0 12px; }
 .cell b { display: grid; place-items: center; width: 100%; height: 100%; font-size: clamp(1rem, 3vw, 1.55rem); }
 .clues { max-height: 80vh; overflow: auto; }
 .clues ol { list-style: none; padding: 0; display: grid; gap: 8px; }
-.clues button { width: 100%; text-align: left; border: 1px solid #294431; border-radius: 16px; padding: 11px 12px; background: #173522; color: #f3f7ef; cursor: pointer; }
+.clues button { width: 100%; min-height: 44px; text-align: left; border: 1px solid #294431; border-radius: 16px; padding: 11px 12px; background: #173522; color: #f3f7ef; cursor: pointer; touch-action: manipulation; }
 .clues em { color: #ffd166; font-style: normal; }
 :where(button, a, .cell):focus-visible { outline: 3px solid #ffd166; outline-offset: 3px; }
 @media (max-width: 880px) { .shell { grid-template-columns: 1fr; } .clues { max-height: none; } }
+@media (max-width: 600px) {
+  .hero, .shell { padding-inline: 12px; }
+  .hero { padding-top: 18px; padding-bottom: 14px; }
+  .panel { padding: 12px; border-radius: 18px; }
+  .toolbar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .toolbar button { width: 100%; padding-inline: 10px; }
+  .status { margin-bottom: 8px; }
+  .grid { grid-template-columns: repeat(var(--cols), 32px); width: 100%; max-width: 100%; }
+  .cell { border-radius: 6px; }
+  .cell span { top: 2px; left: 3px; font-size: .55rem; }
+  .cell b { font-size: 1rem; }
+}
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
