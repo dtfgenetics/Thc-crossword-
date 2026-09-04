@@ -20,15 +20,13 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@vitejs/plugin-legacy": "latest",
-    "vite": "latest",
-    "typescript": "latest",
-    "crossword-layout-generator": "latest"
+    "crossword-layout-generator": "0.1.1"
   },
   "devDependencies": {
-    "vitest": "latest"
+    "vite": "8.2.2",
+    "vitest": "4.1.10"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=20.20"
   }
 }

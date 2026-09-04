@@ -4,6 +4,7 @@ import path from 'node:path';
 import { validateClueBank } from '../src/crossword/validate.js';
 import { exportIpuz, exportExolve } from '../src/crossword/exporters.js';
 import { buildWeeklyPuzzle } from '../src/crossword/generatePuzzle.js';
+import { loadClueBank } from './load-clue-bank.mjs';
 
 function arg(name, fallback) {
   const index = process.argv.indexOf(`--${name}`);
@@ -24,7 +25,7 @@ const week = arg('week', '2026-W26');
 const max = Number(arg('max', '28'));
 const attempts = Number(arg('attempts', '200'));
 const themeId = arg('theme', 'grow-room-basics');
-const bank = JSON.parse(await fs.readFile('content/clue-bank.json', 'utf8'));
+const bank = await loadClueBank();
 const themes = JSON.parse(await fs.readFile('content/themes.json', 'utf8').catch(() => '[]'));
 const bankErrors = validateClueBank(bank);
 
