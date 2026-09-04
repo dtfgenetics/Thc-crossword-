@@ -41,5 +41,8 @@ window.addEventListener('keydown', (event) => {
   if (!candidate || candidate.classList.contains('black')) return;
 
   candidate.click();
-  window.requestAnimationFrame(() => candidate.focus({ preventScroll: true }));
+  // Clicking redraws the grid, so focus the newly rendered active square.
+  window.requestAnimationFrame(() => {
+    document.querySelector('.cell.active')?.focus({ preventScroll: true });
+  });
 });
