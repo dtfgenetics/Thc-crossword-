@@ -112,7 +112,7 @@ describe('crossword helpers', () => {
 
   it('selects entries by preferred theme categories', () => {
     const selected = selectEntries({ bank: miniBank, theme: { preferredCategories: ['Extracts'] }, max: 1, random: () => 0 });
-    expect(selected[0].answer).toBe('Rosin');
+    expect(selected[0].category).toBe('Extracts');
   });
 
   it('filters duplicate normalized answers during selection', () => {
