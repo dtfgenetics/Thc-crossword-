@@ -1,6 +1,7 @@
 import './styles.css';
 import { progressStats } from './crossword/progress.js';
 import { puzzleExportBase, puzzleJsonPath } from './crossword/routes.js';
+import { loadStoredLetters, saveStoredLetters } from './crossword/storage.js';
 
 const BLACK = '.';
 const app = document.querySelector('#app');
@@ -104,11 +105,10 @@ function buildMeta(puzzle) {
   return { starts, across, down };
 }
 function loadLetters(puzzle) {
-  try { return JSON.parse(localStorage.getItem(`thc-crossword:${puzzle.id}`) || '{}'); }
-  catch { return {}; }
+  return loadStoredLetters(window.localStorage, `thc-crossword:${puzzle.id}`);
 }
 function saveLetters(puzzle, letters) {
-  localStorage.setItem(`thc-crossword:${puzzle.id}`, JSON.stringify(letters));
+  return saveStoredLetters(window.localStorage, `thc-crossword:${puzzle.id}`, letters);
 }
 function renderArchive(archive, puzzle) {
   const puzzles = archive.puzzles || [];
