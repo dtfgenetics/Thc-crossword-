@@ -16,18 +16,50 @@ function readPrefs() {
 }
 
 function savePrefs(prefs) {
-  localStorage.setItem(PREF_KEY, JSON.stringify(prefs));
+  try { localStorage.setItem(PREF_KEY, JSON.stringify(prefs)); }
+  catch { /* Solver preferences are optional enhancement state. */ }
+}
+
+function activeClueButton() {
+  return document.querySelector('.clues button.active-clue');
 }
 
 function activeClueText() {
-  const active = document.querySelector('.clues button.active-clue');
+  const active = activeClueButton();
   if (!active) return 'Choose a square or clue to begin.';
   return active.textContent.replace(/\s+/g, ' ').trim();
 }
 
+function activeClueMeta() {
+  const active = activeClueButton();
+  if (!active) return 'READY';
+  const number = active.querySelector('strong')?.textContent?.replace(/\.$/, '') || '—';
+  const direction = active.dataset.o === 'down' ? 'DOWN' : 'ACROSS';
+  return `${number} ${direction}`;
+}
+
+function orderedClueButtons() {
+  return [...document.querySelectorAll('.clues button[data-x][data-y][data-o]')];
+}
+
+function navigateClue(delta) {
+  const buttons = orderedClueButtons();
+  if (!buttons.length) return;
+  const current = activeClueButton();
+  const currentIndex = Math.max(0, buttons.indexOf(current));
+  const targetIndex = (currentIndex + delta + buttons.length) % buttons.length;
+  buttons[targetIndex]?.click();
+}
+
 function syncCurrentClue() {
+  const text = activeClueText();
   const label = document.querySelector('[data-solver-current-clue]');
-  if (label) label.textContent = activeClueText();
+  if (label) label.textContent = text;
+
+  const dockClue = document.querySelector('[data-solver-dock-clue]');
+  const dockMeta = document.querySelector('[data-solver-dock-meta]');
+  if (dockClue) dockClue.textContent = text;
+  if (dockMeta) dockMeta.textContent = activeClueMeta();
 }
 
 function applyPrefs(prefs) {
@@ -60,6 +92,30 @@ function buildCurrentClueBar() {
   }
   const status = document.querySelector('#status');
   if (status) new MutationObserver(syncCurrentClue).observe(status, { childList: true, subtree: true });
+}
+
+function buildMobileClueDock() {
+  if (document.querySelector('.solver-mobile-dock')) return;
+  const grid = document.querySelector('.grid');
+  if (!grid) return;
+
+  const dock = document.createElement('nav');
+  dock.className = 'solver-mobile-dock';
+  dock.setAttribute('aria-label', 'Mobile clue navigator');
+  dock.innerHTML = `
+    <button type="button" class="solver-dock-button" data-solver-clue-nav="-1" aria-label="Previous clue">‹</button>
+    <div class="solver-dock-copy" aria-live="polite">
+      <span data-solver-dock-meta>${activeClueMeta()}</span>
+      <strong data-solver-dock-clue>${activeClueText()}</strong>
+    </div>
+    <button type="button" class="solver-dock-button" data-solver-clue-nav="1" aria-label="Next clue">›</button>`;
+  grid.after(dock);
+
+  dock.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-solver-clue-nav]');
+    if (!button) return;
+    navigateClue(Number(button.dataset.solverClueNav));
+  });
 }
 
 function buildSettings() {
@@ -105,6 +161,7 @@ function mount() {
   if (mounted || !document.querySelector('.grid')) return;
   mounted = true;
   buildCurrentClueBar();
+  buildMobileClueDock();
   buildSettings();
   syncCurrentClue();
 }

@@ -23,6 +23,10 @@
   line-height: 1.35;
 }
 
+.solver-mobile-dock {
+  display: none;
+}
+
 .solver-settings {
   margin: 10px 0 14px;
   border: 1px solid var(--game-line, #294431);
@@ -94,7 +98,8 @@ html[data-crossword-clues="compact"] .clues li button {
 .toolbar button:focus-visible,
 .solver-settings summary:focus-visible,
 .solver-settings button:focus-visible,
-.solver-settings input:focus-visible {
+.solver-settings input:focus-visible,
+.solver-dock-button:focus-visible {
   outline: 3px solid var(--game-gold, #ffd166);
   outline-offset: 2px;
 }
@@ -107,6 +112,73 @@ html[data-crossword-clues="compact"] .clues li button {
     z-index: 5;
     box-shadow: 0 12px 28px rgba(0, 0, 0, .22);
   }
+
+  .solver-mobile-dock {
+    position: fixed;
+    left: max(8px, env(safe-area-inset-left));
+    right: max(8px, env(safe-area-inset-right));
+    bottom: max(8px, env(safe-area-inset-bottom));
+    z-index: 30;
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr) 52px;
+    align-items: stretch;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid color-mix(in srgb, var(--game-lime, #a6ff4d) 24%, var(--game-line, #294431));
+    border-radius: 18px;
+    background: rgba(7, 20, 12, .94);
+    box-shadow: 0 18px 46px rgba(0, 0, 0, .42), 0 0 30px rgba(166, 255, 77, .06);
+    backdrop-filter: blur(14px);
+  }
+
+  .solver-dock-button {
+    min-width: 48px;
+    min-height: 52px;
+    border: 1px solid var(--game-line, #294431);
+    border-radius: 13px;
+    background: linear-gradient(180deg, #1b442b, #102a1c);
+    color: var(--game-paper, #f7f5e8);
+    font-size: 1.8rem;
+    font-weight: 900;
+    line-height: 1;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  .solver-dock-button:active {
+    transform: translateY(1px);
+  }
+
+  .solver-dock-copy {
+    min-width: 0;
+    display: grid;
+    align-content: center;
+    gap: 2px;
+    padding: 2px 4px;
+  }
+
+  .solver-dock-copy span {
+    color: var(--game-gold, #ffd166);
+    font-size: .62rem;
+    font-weight: 950;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  .solver-dock-copy strong {
+    display: -webkit-box;
+    min-width: 0;
+    overflow: hidden;
+    color: var(--game-paper, #f7f5e8);
+    font-size: .82rem;
+    line-height: 1.25;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .shell {
+    padding-bottom: 92px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -117,5 +189,31 @@ html[data-crossword-clues="compact"] .clues li button {
 
   .solver-settings-panel {
     grid-template-columns: 1fr;
+  }
+
+  .solver-mobile-dock {
+    grid-template-columns: 50px minmax(0, 1fr) 50px;
+    padding: 7px;
+    border-radius: 16px;
+  }
+
+  .solver-dock-button {
+    min-height: 54px;
+  }
+
+  .solver-dock-copy strong {
+    font-size: .78rem;
+  }
+}
+
+@media (hover: none) {
+  .solver-dock-button:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solver-dock-button {
+    transition: none !important;
   }
 }
