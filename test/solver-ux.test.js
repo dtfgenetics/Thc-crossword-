@@ -37,7 +37,7 @@ describe('researched crossword solver UX', () => {
     expect(js).toContain('data-solver-dock-clue');
     expect(js).toContain('data-solver-dock-meta');
     expect(js).toContain('syncCurrentClue');
-    expect(js).toContain("button.dataset.o === 'down'");
+    expect(js).toContain("active.dataset.o === 'down'");
   });
 
   it('persists solver preferences', () => {
