@@ -1,6 +1,23 @@
 {
-  "updatedAt": "2026-09-04T16:11:31.597Z",
+  "updatedAt": "2026-09-07T16:26:47.950Z",
   "puzzles": [
+    {
+      "id": "2026-W37",
+      "week": "2026-W37",
+      "title": "THC Weekly Crossword — 2026-W37",
+      "status": "published",
+      "theme": {
+        "id": "seeds-and-reproduction",
+        "name": "Seeds and Reproduction",
+        "description": "Seed types, reproduction, breeding, inheritance, and selection."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27400
+      },
+      "file": "2026-W37.json"
+    },
     {
       "id": "2026-W36",
       "week": "2026-W36",

@@ -1,0 +1,62 @@
+exolve-begin
+exolve-title: THC Weekly Crossword — 2026-W37
+exolve-id: 2026-W37
+exolve-width: 24
+exolve-height: 25
+exolve-grid:
+.......HYBRID...........
+..........O.............
+..........O.............
+.......HUNTING..K......P
+..........Z.....E......O
+..........O.FANLEAF....P
+..........N.....P.I....U
+........PHENOTYPE.L....L
+...V....I..O.R..R.I.B..A
+.S.I....S..D.A...TAPROOT
+.T.A.PHOTOPERIOD..L.A..I
+.A.B....I....T......C..O
+.B.I..CALYX....STOMATA.N
+.I.L...U.......E........
+.L.I...T....SELECTION.I.
+.INTERNODE.S...D......N.
+.Z.Y...F...E.S.P......B.
+.E.....L..REGULAR.....R.
+.......O...D.G.C......E.
+.......W...B.A.K......D.
+FEMINIZED..A.R........L.
+.......R...N.L........I.
+...........K.EXPRESSION.
+.............A........E.
+.............F..........
+exolve-across:
+1. Primary root that appears early during seed growth (7)
+2. Large leaf that acts like a plant solar panel (7)
+6. Seed type bred to produce female plants at a high rate (9)
+7. Plant line made from two different genetic backgrounds (6)
+8. Seed type that can produce male or female plants (7)
+3. Microscopic leaf pores that regulate gas exchange and water loss (7)
+12. The visible expression of genetics and environment working together (9)
+13. Choosing keepers from a population because they show the desired traits (9)
+14. Small flower structure growers often talk about when judging bud formation (5)
+17. Stem section between two branch points (9)
+21. How a genetic trait shows itself in the real plant (10)
+22. Grower shorthand for searching through seeds to find elite plants (7)
+23. Plant type whose flowering is controlled by light and dark timing (11)
+exolve-down:
+3. Package format growers buy when starting a new run from genetics (8)
+4. Plant worth saving because it hits the target traits (6)
+5. Seller or collection source for genetics in seed form (8)
+9. Point on a stem where branches or leaves emerge (4)
+10. Small resin-covered leaf tucked close to the flower (9)
+11. Specific plant feature a breeder may track across generations (5)
+15. Plant type that flowers by age instead of relying only on light schedule (10)
+16. Area around the roots where moisture, oxygen, and nutrients matter most (8)
+18. Likelihood that a seed is alive enough to sprout (9)
+19. Breeder goal of making traits show up more consistently across seeds (9)
+20. Group of plants a breeder evaluates for variation and keepers (10)
+12. Hair-like flower part that changes appearance as buds mature (6)
+24. Leaf-like flower structure often confused with calyx in grower talk (5)
+25. Generation label idea behind F1, F2, and F3 breeding talk (6)
+26. Line developed through repeated selection within related plants (10)
+exolve-end
