@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   build-daily:
@@ -14,25 +15,54 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
+
       - name: Install dependencies
-        run: npm install
+        run: npm install --no-audit --no-fund
+
       - name: Generate or promote daily puzzle
         run: npm run crossword:publish-today
+
       - name: Validate puzzles
         run: npm run crossword:validate
+
       - name: Test
         run: npm test
+
       - name: Build
         run: npm run build
-      - name: Commit puzzle files
+
+      - name: Publish generated puzzle through PR gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AUTOMATION_BRANCH: automation/daily-crossword
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C "$AUTOMATION_BRANCH"
           git add public/puzzles
           test ! -f package-lock.json || git add package-lock.json
-          git diff --cached --quiet || git commit -m "Generate daily crossword"
-          git push
+
+          if git diff --cached --quiet; then
+            echo "No generated puzzle changes to publish."
+            exit 0
+          fi
+
+          git commit -m "Generate daily crossword"
+          git push --force-with-lease origin "HEAD:$AUTOMATION_BRANCH"
+
+          if gh pr view "$AUTOMATION_BRANCH" --json number >/dev/null 2>&1; then
+            echo "Existing daily crossword PR updated."
+          else
+            gh pr create \
+              --base main \
+              --head "$AUTOMATION_BRANCH" \
+              --title "Generate daily crossword" \
+              --body "Automated daily crossword generation. Merge only after CI validates the generated puzzle, tests, and production build."
+          fi
