@@ -1,0 +1,49 @@
+exolve-begin
+exolve-title: THC Daily Crossword — 2026-09-12
+exolve-id: 2026-09-12
+exolve-width: 17
+exolve-height: 22
+exolve-grid:
+.DEHUMIDIFIER....
+...U.O...........
+...M.TEMPERATURE.
+...I.H...........
+...D.E...........
+G..I.R...........
+E..F.P...........
+R..I.L...........
+M..E.A..F........
+I.TRANSPLANT.....
+N....T..O......T.
+A.....C.W..A...R.
+T...CLONE..I...A.
+I..T..L.R..R...I.
+OSCILLATINGFAN.N.
+N..M....N..L.I.I.
+.SEEDLING.ROOTING
+...R.......W.R.G.
+.............O...
+.......PRUNING...
+.............E...
+....EXHAUSTFAN...
+exolve-across:
+2. Process a cutting must complete before becoming a strong clone (7)
+3. Early stage after a seed sprouts (8)
+5. A cutting that preserves the genetics of the source plant (5)
+8. Tool that pulls stale air out of the grow space (10)
+11. Moving fan used to prevent stale pockets of air (14)
+13. Moving a plant into a larger container or new medium (10)
+15. Removing selected growth to improve structure or airflow (7)
+17. Tool used to pull extra moisture from the grow space (12)
+18. Basic environmental reading that changes plant comfort and drying speed (11)
+exolve-down:
+1. Main flower cluster on a plant (4)
+4. Tool used to raise moisture in the air (10)
+6. Stage when the plant begins building flowers under the right light schedule (9)
+7. Macronutrient associated with leafy green growth (8)
+9. Moving air that helps prevent hot spots and stagnant humidity (7)
+10. Guiding plant shape instead of letting it grow untouched (8)
+12. Source plant kept around to provide future cuttings (11)
+14. Simple tool that keeps lights on a consistent schedule (5)
+16. The process of a seed waking up and starting growth (11)
+exolve-end
