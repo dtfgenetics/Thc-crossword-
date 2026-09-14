@@ -1,0 +1,63 @@
+exolve-begin
+exolve-title: THC Weekly Crossword — 2026-W38
+exolve-id: 2026-W38
+exolve-width: 25
+exolve-height: 26
+exolve-grid:
+.......E.................
+.......X.................
+.B.....H........D........
+.U....MANGOBUBBLES.......
+.B.....U........H........
+.B.....S........U........
+.L..WHITEWIDOW..M........
+.E.S...F........I........
+.G.E...A........D........
+.U.LEMONHAZE....I........
+.M.E............F........
+.B.CALIORANGE...I........
+.L.T............E....P.T.
+.U.I...K...BACKCROSS.H.R.
+GENOTYPE.........U.T.E.A.
+...N...E..FILIAL.TRAINING
+....H..P.T.N.....C.B.O.S.
+..BLUEBERRYBUTCHER.I.T.P.
+..L.N..R.A.R..O..O.L.Y.L.
+..U.T...TIMER.C..S.I.P.A.
+..E.I....T.D..O..S.Z.E.N.
+SOMANGO....L..C....E...T.
+..A.G..HYBRID.O..........
+..N........N..I..........
+..G........EXPRESSION....
+.POPULATION..............
+exolve-across:
+3. Orange-forward cultivar name listed in the DTF project lineup (10)
+5. Classic cultivar name used in one of the planned DTF crosses (10)
+6. Plant line made from two different genetic backgrounds (6)
+7. Citrus-leaning cultivar name used in planned cross work (9)
+8. How a genetic trait shows itself in the real plant (10)
+9. Updated name for the Blue Mango and Blue Bubblegum cross (12)
+11. Mango-heavy parent behind the Blue Mango project (7)
+2. Blue-fruit parent used as the dad in the Blue Mango cross (16)
+13. Group of plants a breeder evaluates for variation and keepers (10)
+17. Generation label idea behind F1, F2, and F3 breeding talk (6)
+18. Breeding move where offspring are crossed back to a parent or parent-like plant (9)
+21. The inherited genetic blueprint behind a plant's traits (8)
+22. Guiding plant shape instead of letting it grow untouched (8)
+24. Simple tool that keeps lights on a consistent schedule (5)
+exolve-down:
+1. Specific plant feature a breeder may track across generations (5)
+2. DTF flagship line with candy-blueberry and ripe mango flavor notes (9)
+4. Plant worth saving because it hits the target traits (6)
+10. The visible expression of genetics and environment working together (9)
+12. Grower shorthand for searching through seeds to find elite plants (7)
+14. Choosing keepers from a population because they show the desired traits (9)
+15. Blueberry and sweet-candy style name in the DTF project family (13)
+16. Breeder goal of making traits show up more consistently across seeds (9)
+19. Line developed through repeated selection within related plants (10)
+20. Breeding move that brings in less-related genetics (8)
+23. Coconut-husk fiber commonly used as a soilless growing medium (8)
+25. Tool that pulls stale air out of the grow space (10)
+26. Tool used to pull extra moisture from the grow space (12)
+27. Moving a plant into a larger container or new medium (10)
+exolve-end
