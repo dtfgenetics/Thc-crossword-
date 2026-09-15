@@ -1,4 +1,23 @@
 {
-  "updatedAt": null,
-  "puzzles": []
+  "updatedAt": "2026-09-15T15:34:37.709Z",
+  "puzzleType": "daily",
+  "puzzles": [
+    {
+      "id": "2026-09-15",
+      "date": "2026-09-15",
+      "title": "THC Daily Crossword — 2026-09-15",
+      "status": "published",
+      "theme": {
+        "id": "grow-room-basics",
+        "name": "Grow Room Basics",
+        "description": "Beginner-friendly cultivation terms."
+      },
+      "stats": {
+        "submittedCount": 18,
+        "placedCount": 18,
+        "score": 17601
+      },
+      "file": "2026-09-15.json"
+    }
+  ]
 }
