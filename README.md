@@ -1,14 +1,14 @@
-# THC Weekly Crossword
+# THC Daily Crossword
 
-A weekly crossword generator and browser-playable crossword game for the THC / DTF games hub.
+A daily crossword generator and browser-playable crossword game for the THC / DTF games hub. Legacy weekly puzzles remain supported for archives and exports.
 
 This repo is built as a clean public repository. It uses permissive public crossword tooling where useful and adds our own validation, weekly publishing, archive, export, and branded player layer.
 
 ## What it does
 
-- Generates weekly crossword puzzle JSON from an approved clue bank.
-- Publishes the current puzzle to `public/puzzles/current.json`.
-- Publishes archived puzzles to `public/puzzles/YYYY-WW.json`.
+- Generates daily crossword puzzle JSON from an approved clue bank, with legacy weekly generation retained.
+- Publishes the current daily puzzle to `public/puzzles/current.json` and `public/puzzles/daily/current.json`.
+- Publishes daily archives under `public/puzzles/daily/YYYY-MM-DD.json`; legacy weekly archives remain supported under `public/puzzles/YYYY-WW.json`.
 - Exports matching `YYYY-WW.ipuz.json` and `YYYY-WW.exolve.txt` files.
 - Runs a mobile-friendly browser crossword player.
 - Saves solver progress in `localStorage`.
@@ -33,16 +33,16 @@ npm install
 npm run dev
 ```
 
-## Generate a weekly puzzle
+## Generate today's daily puzzle
 
 ```sh
-npm run crossword:generate -- --week 2026-W26 --theme grow-room-basics --max 28 --attempts 200
+npm run crossword:publish-today
 ```
 
-## Publish the next weekly puzzle
+## Generate a legacy weekly puzzle
 
 ```sh
-npm run crossword:publish-next -- --theme plant-science
+npm run crossword:generate:weekly -- --week 2026-W38 --theme plant-science --max 28 --attempts 200
 ```
 
 Dry run without writing files:
