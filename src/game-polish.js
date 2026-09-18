@@ -1,4 +1,5 @@
 import './game-polish.css';
+import { puzzleJsonPath } from './crossword/routes.js';
 import {
   addCheck,
   addHint,
@@ -31,7 +32,7 @@ function saveSession() {
 
 function currentPuzzlePath() {
   const id = new URLSearchParams(location.search).get('puzzle');
-  return id && /^\d{4}-W\d{2}$/.test(id) ? `/puzzles/${id}.json` : '/puzzles/current.json';
+  return puzzleJsonPath(id);
 }
 
 async function loadPuzzle() {
@@ -165,7 +166,7 @@ function enhanceHeader() {
   const meta = document.createElement('div');
   meta.className = 'game-meta';
   meta.innerHTML = `
-    <span class="game-pill">${puzzle?.week || puzzle?.id || 'Weekly'}</span>
+    <span class="game-pill">${puzzle?.date || puzzle?.week || puzzle?.id || 'Daily'}</span>
     <span class="game-pill theme-pill">${puzzle?.theme?.name || 'Mixed challenge'}</span>`;
   h1?.after(meta);
 
