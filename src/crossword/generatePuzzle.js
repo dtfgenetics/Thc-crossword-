@@ -22,7 +22,7 @@ export function buildWeeklyPuzzle({ bank, themes = [], week, themeId = 'grow-roo
   });
 }
 
-export function buildDailyPuzzle({ bank, themes = [], date, themeId = 'grow-room-basics', max = 18, attempts = 200 }) {
+export function buildDailyPuzzle({ bank, themes = [], date, themeId = 'grow-room-basics', max = 20, attempts = 240 }) {
   parseDailyDate(date);
   return buildPuzzle({
     bank,
