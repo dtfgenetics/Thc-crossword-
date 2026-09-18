@@ -38,6 +38,15 @@ const requiredFiles = [
 ];
 
 const errors = [];
+
+const shellSource = await fs.readFile('index.html', 'utf8');
+const runtimeSource = await fs.readFile('src/main.js', 'utf8');
+const polishSource = await fs.readFile('src/game-polish.js', 'utf8');
+if (!shellSource.includes('THC Daily Crossword')) errors.push('Public shell must identify the primary product as THC Daily Crossword.');
+if (shellSource.includes('THC Weekly Crossword')) errors.push('Legacy weekly-only product branding must not return.');
+if (!runtimeSource.includes("puzzle.date ? 'Daily Puzzle' : 'Crossword Puzzle'")) errors.push('Runtime must label daily puzzles from puzzle metadata.');
+if (!polishSource.includes("import { puzzleJsonPath } from './crossword/routes.js';")) errors.push('Game session layer must share canonical puzzle routing.');
+if (!polishSource.includes('return puzzleJsonPath(id);')) errors.push('Game session loader must support daily and weekly archive IDs through puzzleJsonPath().');
 async function exists(file) { try { await fs.access(file); return true; } catch { return false; } }
 for (const file of requiredFiles) if (!(await exists(file))) errors.push(`Missing required file: ${file}`);
 
