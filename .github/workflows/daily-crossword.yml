@@ -11,15 +11,15 @@ permissions:
 
 jobs:
   build-daily:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: '24'
 
@@ -27,7 +27,7 @@ jobs:
         run: npm install --no-audit --no-fund
 
       - name: Generate or promote daily puzzle
-        run: npm run crossword:publish-today
+        run: npm run crossword:publish-today\n\n      - name: Verify daily product output\n        run: |\n          node --input-type=module <<'NODE'\n          import fs from 'node:fs';\n          const puzzle = JSON.parse(fs.readFileSync('public/puzzles/current.json','utf8'));\n          if (puzzle.puzzleType !== 'daily') throw new Error(`Expected daily current puzzle, got ${puzzle.puzzleType}`);\n          if (!String(puzzle.title).startsWith('THC Daily Crossword')) throw new Error('Current puzzle title is not daily');\n          if ((puzzle.words || []).length < 12) throw new Error(`Daily puzzle too small: ${(puzzle.words || []).length} words`);\n          NODE
 
       - name: Validate puzzles
         run: npm run crossword:validate
