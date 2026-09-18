@@ -28,6 +28,10 @@ const requiredFiles = [
   'content/themes.json',
   'docs/public-code-audit.md',
   'scripts/generate-weekly-crossword.mjs',
+  'scripts/generate-daily-crossword.mjs',
+  'scripts/run-daily-crossword.mjs',
+  'scripts/build-daily-index.mjs',
+  'content/daily-theme-calendar.json',
   'scripts/publish-next.mjs',
   'scripts/audit-clue-bank.mjs',
   'scripts/validate-puzzles.mjs',
@@ -58,7 +62,7 @@ for (const script of ['dev','build','crossword:generate','crossword:publish-next
 const bank = JSON.parse(await fs.readFile('content/clue-bank.json', 'utf8'));
 errors.push(...validateClueBank(bank));
 const approvedCount = bank.filter((entry) => entry.approved !== false).length;
-if (approvedCount < 80) errors.push(`Clue bank too small for weekly production: ${approvedCount}/80 approved entries.`);
+if (approvedCount < 100) errors.push(`Clue bank too small for daily production: ${approvedCount}/100 approved entries.`);
 
 const themes = JSON.parse(await fs.readFile('content/themes.json', 'utf8'));
 if (!themes.length) errors.push('No crossword themes defined.');
