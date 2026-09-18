@@ -8,16 +8,17 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
       - run: npm install --no-audit --no-fund
       - run: npm run crossword:audit
       - run: npm test
       - run: npm run crossword:publish-next -- --theme plant-science --dry-run
+      - run: npm run crossword:publish-today -- --date 2026-09-17 --dry-run
       - run: npm run crossword:generate -- --week 2026-W26 --theme grow-room-basics --attempts 50
       - run: npm run crossword:validate
       - run: npm run crossword:validate-ipuz
