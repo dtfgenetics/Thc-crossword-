@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "purpose": "Default rotating theme schedule for THC Daily Crossword generation.",
+  "version": 2,
+  "purpose": "Default rotating theme and puzzle-size schedule for THC Daily Crossword production.",
   "timezone": "America/Chicago",
   "weeklyRotation": [
     {
@@ -8,7 +8,7 @@
       "themeId": "grow-room-basics",
       "label": "Grow Room Basics",
       "difficultyTarget": "easy-medium",
-      "maxWords": 16,
+      "maxWords": 20,
       "notes": "Beginner-friendly cultivation, tools, airflow, light, and environment terms."
     },
     {
@@ -16,7 +16,7 @@
       "themeId": "dtf-genetics",
       "label": "DTF Genetics",
       "difficultyTarget": "medium",
-      "maxWords": 18,
+      "maxWords": 20,
       "notes": "Brand, breeding projects, house crosses, and cultivar lineage language."
     },
     {
@@ -24,7 +24,7 @@
       "themeId": "plant-science",
       "label": "Plant Science",
       "difficultyTarget": "medium-hard",
-      "maxWords": 18,
+      "maxWords": 22,
       "notes": "Terpenes, plant anatomy, biology, and grower science terms."
     },
     {
@@ -40,7 +40,7 @@
       "themeId": "dtf-genetics",
       "label": "Flavor Friday",
       "difficultyTarget": "easy-medium",
-      "maxWords": 20,
+      "maxWords": 22,
       "notes": "DTF flavor notes, fruit terms, strain-family language, and cultivar clues."
     },
     {
@@ -48,7 +48,7 @@
       "themeId": "grow-room-basics",
       "label": "Weekend Grow Check",
       "difficultyTarget": "easy",
-      "maxWords": 14,
+      "maxWords": 18,
       "notes": "Fast mini crossword for growers checking plants on the weekend."
     },
     {
@@ -56,7 +56,7 @@
       "themeId": "plant-science",
       "label": "Sunday Mixed Mini",
       "difficultyTarget": "mixed",
-      "maxWords": 16,
+      "maxWords": 20,
       "notes": "Mixed educational puzzle that can pull from science, cultivation, and breeding terms."
     }
   ]
