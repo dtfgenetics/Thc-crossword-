@@ -8,8 +8,8 @@ const app = document.querySelector('#app');
 
 const fallbackPuzzle = {
   id: 'demo',
-  title: 'THC Weekly Crossword Demo',
-  subtitle: 'Run npm run crossword:generate to publish the weekly puzzle.',
+  title: 'THC Crossword Demo',
+  subtitle: 'The current published puzzle will appear here when available.',
   adultUseNotice: 'Cannabis-themed parody and education content for adults 21+ where legal.',
   grid: [
     ['.', 'R', '.', '.', '.', '.'],
@@ -41,7 +41,7 @@ function exportBase(puzzle) {
 }
 function renderExportLinks(puzzle) {
   const base = exportBase(puzzle);
-  if (!base) return '<p class="archive-empty">Export files appear after a generated weekly puzzle is loaded.</p>';
+  if (!base) return '<p class="archive-empty">Export files appear after a published puzzle is loaded.</p>';
   const puzzleId = encodeURIComponent(puzzle.id);
   return `<div class="export-list">
     <a href="${base}.json">Playable JSON</a>
@@ -112,7 +112,7 @@ function saveLetters(puzzle, letters) {
 }
 function renderArchive(archive, puzzle) {
   const puzzles = archive.puzzles || [];
-  if (!puzzles.length) return '<p class="archive-empty">Archive appears after the generator publishes weekly puzzle files.</p>';
+  if (!puzzles.length) return '<p class="archive-empty">Archive appears after published puzzle files are indexed.</p>';
   return `<div class="archive-list">${puzzles.map((item) => {
     const active = item.id === puzzle.id ? ' active-archive' : '';
     return `<a class="archive-link${active}" href="?puzzle=${encodeURIComponent(item.id)}">${escapeHtml(item.week || item.id)} <span>${item.stats?.placedCount || 0} words</span></a>`;
@@ -126,7 +126,7 @@ function render(puzzle, archive) {
 
   app.innerHTML = `
     <header class="hero">
-      <p class="eyebrow">Adults 21+ • Weekly Puzzle</p>
+      <p class="eyebrow">Adults 21+ • ${puzzle.date ? 'Daily Puzzle' : 'Crossword Puzzle'}</p>
       <h1>${escapeHtml(puzzle.title)}</h1>
       <p>${escapeHtml(puzzle.subtitle || '')}</p>
       <p class="notice">${escapeHtml(puzzle.adultUseNotice || '')}</p>
