@@ -22,17 +22,21 @@ function run(command, args) {
   });
 }
 
-const zone = arg('timezone', 'America/Chicago');
+const calendar = JSON.parse(await fs.readFile('content/daily-theme-calendar.json', 'utf8'));
+const zone = arg('timezone', calendar.timezone || 'America/Chicago');
 const runDate = arg('date', currentDailyDate(new Date(), zone));
-const theme = arg('theme', 'grow-room-basics');
-const limit = arg('max', '18');
-const tries = arg('attempts', '200');
+const dayName = new Intl.DateTimeFormat('en-US', { weekday: 'long', timeZone: 'UTC' })
+  .format(new Date(`${runDate}T12:00:00.000Z`));
+const dailyPlan = calendar.weeklyRotation?.find((entry) => entry.day === dayName) || null;
+const theme = arg('theme', dailyPlan?.themeId || 'grow-room-basics');
+const limit = arg('max', String(dailyPlan?.maxWords || 20));
+const tries = arg('attempts', '240');
 const dailyDir = path.resolve('public/puzzles/daily');
 const rootDir = path.resolve('public/puzzles');
 const dailyFile = path.join(dailyDir, `${runDate}.json`);
 const exists = await fs.access(dailyFile).then(() => true).catch(() => false);
 
-console.log(`Daily crossword target: ${runDate}`);
+console.log(`Daily crossword target: ${runDate} · ${dayName} · ${theme} · target ${limit} entries`);
 
 if (hasFlag('dry-run')) {
   console.log(exists ? 'Dry run: existing puzzle would become current.' : 'Dry run: new puzzle would be generated.');
