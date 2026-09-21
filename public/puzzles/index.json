@@ -1,6 +1,23 @@
 {
-  "updatedAt": "2026-09-14T16:57:49.050Z",
+  "updatedAt": "2026-09-21T17:01:52.136Z",
   "puzzles": [
+    {
+      "id": "2026-W39",
+      "week": "2026-W39",
+      "title": "THC Weekly Crossword — 2026-W39",
+      "status": "published",
+      "theme": {
+        "id": "grow-room-basics",
+        "name": "Grow Room Basics",
+        "description": "Beginner-friendly cultivation terms."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27350
+      },
+      "file": "2026-W39.json"
+    },
     {
       "id": "2026-W38",
       "week": "2026-W38",
