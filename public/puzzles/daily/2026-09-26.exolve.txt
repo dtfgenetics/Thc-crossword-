@@ -1,0 +1,43 @@
+exolve-begin
+exolve-title: THC Daily Crossword — 2026-09-26
+exolve-id: 2026-09-26
+exolve-width: 22
+exolve-height: 16
+exolve-grid:
+......EXHAUSTFAN......
+....H.......R.........
+....U.......A....G..D.
+.T..M...CALCIUM..R..E.
+PRUNING.L...N....O..H.
+.A..D...O..AIRFLOW..U.
+.N..I.C.N.T.N....T..M.
+.S..FLOWERING..TRELLIS
+.P..I.L...M...N..N..D.
+.L.RELATIVEHUMIDITY.I.
+.A..R.....R...T.....F.
+.N............R.....I.
+.TEMPERATURE..O.....E.
+..............G.....R.
+.....LIGHTCYCLE.......
+..............N.......
+exolve-across:
+3. Basic environmental reading that changes plant comfort and drying speed (11)
+6. Removing selected growth to improve structure or airflow (7)
+7. Daily timing pattern that controls indoor light and dark periods (10)
+8. Air moisture percentage growers watch through each stage (16)
+9. Moving air that helps prevent hot spots and stagnant humidity (7)
+10. Tool that pulls stale air out of the grow space (10)
+11. Nutrient often paired with magnesium in grower conversations (7)
+16. Stage when the plant begins building flowers under the right light schedule (9)
+17. Support net used to spread branches and hold up heavy flowers (7)
+exolve-down:
+1. Main flower cluster on a plant (4)
+2. Simple tool that keeps lights on a consistent schedule (5)
+4. Macronutrient associated with leafy green growth (8)
+5. Guiding plant shape instead of letting it grow untouched (8)
+11. A cutting that preserves the genetics of the source plant (5)
+12. Indoor enclosure used to control light, smell, and environment (8)
+13. Tool used to pull extra moisture from the grow space (12)
+14. Tool used to raise moisture in the air (10)
+15. Moving a plant into a larger container or new medium (10)
+exolve-end
