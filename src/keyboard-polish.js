@@ -1,11 +1,44 @@
 import { shouldIgnorePuzzleKeyTarget } from './crossword/keyboardTarget.js';
+import { navigationIntent, wordEdgeCoordinates } from './crossword/keyboardNavigation.js';
 
-const ARROWS = {
-  ArrowLeft: [-1, 0],
-  ArrowRight: [1, 0],
-  ArrowUp: [0, -1],
-  ArrowDown: [0, 1]
-};
+function focusRenderedActiveCell() {
+  window.requestAnimationFrame(() => {
+    document.querySelector('.cell.active')?.focus({ preventScroll: true });
+  });
+}
+
+function clickCellAt(x, y) {
+  const cell = document.querySelector(`.cell[data-x="${x}"][data-y="${y}"]`);
+  if (!cell || cell.classList.contains('black')) return false;
+  cell.click();
+  focusRenderedActiveCell();
+  return true;
+}
+
+function stepToOpenCell(active, [dx, dy]) {
+  let x = Number(active.dataset.x) + dx;
+  let y = Number(active.dataset.y) + dy;
+  let candidate = document.querySelector(`.cell[data-x="${x}"][data-y="${y}"]`);
+
+  while (candidate?.classList.contains('black')) {
+    x += dx;
+    y += dy;
+    candidate = document.querySelector(`.cell[data-x="${x}"][data-y="${y}"]`);
+  }
+
+  if (!candidate || candidate.classList.contains('black')) return false;
+  candidate.click();
+  focusRenderedActiveCell();
+  return true;
+}
+
+function moveToWordEdge(edge) {
+  const activeClue = document.querySelector('.clues button.active-clue');
+  const orientation = activeClue?.dataset.o === 'down' ? 'down' : 'across';
+  const coordinates = wordEdgeCoordinates(document.querySelectorAll('.cell.word, .cell.active'), orientation, edge);
+  if (!coordinates) return false;
+  return clickCellAt(coordinates.x, coordinates.y);
+}
 
 window.addEventListener('keydown', (event) => {
   if (shouldIgnorePuzzleKeyTarget(event.target)) {
@@ -18,31 +51,31 @@ window.addEventListener('keydown', (event) => {
     return;
   }
 
-  const step = ARROWS[event.key];
-  if (!step) return;
+  const intent = navigationIntent(event.key);
+  if (!intent) return;
 
   const active = document.querySelector('.cell.active');
   if (!active) return;
 
-  // Once the crossword owns an arrow key, keep the browser from scrolling the
-  // page even when the active square is already at the edge of the grid.
+  // These keys belong to the crossword while the grid is active. Prevent page
+  // scrolling and browser Home/End behavior once the puzzle accepts them.
   event.preventDefault();
 
-  let x = Number(active.dataset.x) + step[0];
-  let y = Number(active.dataset.y) + step[1];
-  let candidate = document.querySelector(`.cell[data-x="${x}"][data-y="${y}"]`);
-
-  while (candidate?.classList.contains('black')) {
-    x += step[0];
-    y += step[1];
-    candidate = document.querySelector(`.cell[data-x="${x}"][data-y="${y}"]`);
+  if (intent.type === 'step') {
+    stepToOpenCell(active, intent.delta);
+    return;
   }
 
-  if (!candidate || candidate.classList.contains('black')) return;
+  if (intent.type === 'word-edge') {
+    moveToWordEdge(intent.edge);
+    return;
+  }
 
-  candidate.click();
-  // Clicking redraws the grid, so focus the newly rendered active square.
-  window.requestAnimationFrame(() => {
-    document.querySelector('.cell.active')?.focus({ preventScroll: true });
-  });
+  if (intent.type === 'toggle-direction') {
+    // main.js already toggles across/down when the currently active crossing
+    // is selected again. Reuse that canonical path so pointer and keyboard
+    // behavior cannot drift apart.
+    active.click();
+    focusRenderedActiveCell();
+  }
 });
