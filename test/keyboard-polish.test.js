@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import fs from 'node:fs';
 import { shouldIgnorePuzzleKeyTarget } from '../src/crossword/keyboardTarget.js';
+import { GRID_ARROW_STEPS, navigationIntent } from '../src/crossword/keyboardNavigation.js';
 
 const keyboard = fs.readFileSync('src/keyboard-polish.js', 'utf8');
 const html = fs.readFileSync('index.html', 'utf8');
@@ -23,28 +24,31 @@ describe('crossword keyboard polish', () => {
   });
 
   it('supports all four arrow keys and skips blocked cells', () => {
-    for (const key of ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown']) {
-      expect(keyboard).toContain(key);
-    }
+    expect(Object.keys(GRID_ARROW_STEPS)).toEqual(['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown']);
+    expect(navigationIntent('ArrowLeft')).toEqual({ type: 'step', delta: [-1, 0] });
+    expect(navigationIntent('ArrowRight')).toEqual({ type: 'step', delta: [1, 0] });
+    expect(navigationIntent('ArrowUp')).toEqual({ type: 'step', delta: [0, -1] });
+    expect(navigationIntent('ArrowDown')).toEqual({ type: 'step', delta: [0, 1] });
     expect(keyboard).toContain("classList.contains('black')");
     expect(keyboard).toContain('candidate.click()');
-    expect(keyboard).toContain("document.querySelector('.cell.active')?.focus");
+    expect(keyboard).toContain('focusRenderedActiveCell()');
   });
 
-  it('prevents page scrolling when crossword arrow navigation owns the key', () => {
-    const activeLookup = keyboard.indexOf("document.querySelector('.cell.active')");
+  it('prevents page scrolling when crossword navigation owns the key', () => {
+    const intentLookup = keyboard.indexOf('const intent = navigationIntent(event.key)');
+    const activeLookup = keyboard.indexOf("const active = document.querySelector('.cell.active')", intentLookup);
     const preventDefault = keyboard.indexOf('event.preventDefault()', activeLookup);
-    const candidateLookup = keyboard.indexOf('let candidate =', activeLookup);
-    expect(activeLookup).toBeGreaterThanOrEqual(0);
+    expect(intentLookup).toBeGreaterThanOrEqual(0);
+    expect(activeLookup).toBeGreaterThan(intentLookup);
     expect(preventDefault).toBeGreaterThan(activeLookup);
-    expect(candidateLookup).toBeGreaterThan(preventDefault);
   });
 
   it('refocuses the newly rendered active square after navigation redraws the grid', () => {
     const clickIndex = keyboard.indexOf('candidate.click()');
-    const activeFocusIndex = keyboard.indexOf("document.querySelector('.cell.active')?.focus", clickIndex);
+    const helperCallIndex = keyboard.indexOf('focusRenderedActiveCell()', clickIndex);
     expect(clickIndex).toBeGreaterThanOrEqual(0);
-    expect(activeFocusIndex).toBeGreaterThan(clickIndex);
+    expect(helperCallIndex).toBeGreaterThan(clickIndex);
+    expect(keyboard).toContain("document.querySelector('.cell.active')?.focus");
     expect(keyboard).not.toContain('candidate.focus');
   });
 
