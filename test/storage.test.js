@@ -1,7 +1,15 @@
 import { describe, expect, it } from 'vitest';
+import fs from 'node:fs';
 import { loadStoredLetters, saveStoredLetters } from '../src/crossword/storage.js';
 
 describe('crossword persistence', () => {
+  it('guards browser storage acquisition before calling persistence helpers', () => {
+    const main = fs.readFileSync(new URL('../src/main.js', import.meta.url), 'utf8');
+    expect(main).toMatch(/function browserStorage\(\) \{[\s\S]*return window\.localStorage;[\s\S]*catch \{[\s\S]*return null;/);
+    expect(main).toContain('loadStoredLetters(browserStorage()');
+    expect(main).toContain('saveStoredLetters(browserStorage()');
+  });
+
   it('loads valid saved letters', () => {
     const storage = { getItem: () => '{"2,3":"S"}' };
     expect(loadStoredLetters(storage, 'puzzle')).toEqual({ '2,3': 'S' });
