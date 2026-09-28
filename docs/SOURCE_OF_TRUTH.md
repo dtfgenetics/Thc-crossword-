@@ -1,14 +1,14 @@
-# THC Weekly Crossword — Source of Truth
+# THC Daily Crossword — Source of Truth
 
-`dtfgenetics/Thc-crossword-` is the canonical code and machine-readable content repository for the THC Weekly Crossword.
+`dtfgenetics/Thc-crossword-` is the canonical code and machine-readable content repository for the THC Daily Crossword.
 
 Google Drive `04 Games/THC Crossword` is canonical for approved brand/art masters, human review records, printable release packages, and archived approved exports intended for long-term project control.
 
 ## Machine sources
 
 - `content/clue-bank.json` — original approved clue bank.
-- `content/themes.json` — weekly theme definitions.
-- `public/puzzles/current.json` and archived weekly puzzle JSON — published game data.
+- `content/themes.json` — theme definitions used by daily generation and retained weekly archive/export tooling.
+- `public/puzzles/current.json`, `public/puzzles/daily/current.json`, and daily archives — current published game data; legacy weekly archives remain supported.
 - IPUZ and Exolve exports are generated from the canonical puzzle data.
 
 ## Rules
