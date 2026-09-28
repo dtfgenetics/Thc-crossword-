@@ -104,11 +104,18 @@ function buildMeta(puzzle) {
   }
   return { starts, across, down };
 }
+function browserStorage() {
+  try {
+    return window.localStorage;
+  } catch {
+    return null;
+  }
+}
 function loadLetters(puzzle) {
-  return loadStoredLetters(window.localStorage, `thc-crossword:${puzzle.id}`);
+  return loadStoredLetters(browserStorage(), `thc-crossword:${puzzle.id}`);
 }
 function saveLetters(puzzle, letters) {
-  return saveStoredLetters(window.localStorage, `thc-crossword:${puzzle.id}`, letters);
+  return saveStoredLetters(browserStorage(), `thc-crossword:${puzzle.id}`, letters);
 }
 function renderArchive(archive, puzzle) {
   const puzzles = archive.puzzles || [];
