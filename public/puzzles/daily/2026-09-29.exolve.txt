@@ -1,0 +1,56 @@
+exolve-begin
+exolve-title: THC Daily Crossword — 2026-09-29
+exolve-id: 2026-09-29
+exolve-width: 21
+exolve-height: 27
+exolve-grid:
+..........STABILIZE..
+.............A.......
+.............C.......
+.............K.....C.
+.........SELECTION.A.
+.............R.....L.
+.............O.....I.
+.............SOMANGO.
+..I...B...K..S.....R.
+MANGOBUBBLES.......A.
+..B...B.L.E...HUNTING
+..R...B.U.P.T.Y....G.
+..E..BLUEBERRYBUTCHER
+..D...E.M.R.A.R......
+..L...G.A..FILIAL....
+..I...U.N...T.D..W...
+..N...M.G........H...
+..E...B.O........I...
+......L....POPULATION
+......U......H...E...
+.....LEMONHAZE...W...
+.............N...I...
+.....EXPRESSION..D...
+.............T...O...
+.............Y...W...
+.............P.......
+.............E.......
+exolve-across:
+3. Citrus-leaning cultivar name used in planned cross work (9)
+9. Mango-heavy parent behind the Blue Mango project (7)
+10. Group of plants a breeder evaluates for variation and keepers (10)
+11. Choosing keepers from a population because they show the desired traits (9)
+12. Breeder goal of making traits show up more consistently across seeds (9)
+13. Blue-fruit parent used as the dad in the Blue Mango cross (16)
+14. Updated name for the Blue Mango and Blue Bubblegum cross (12)
+15. How a genetic trait shows itself in the real plant (10)
+6. Grower shorthand for searching through seeds to find elite plants (7)
+17. Generation label idea behind F1, F2, and F3 breeding talk (6)
+exolve-down:
+1. DTF flagship line with candy-blueberry and ripe mango flavor notes (9)
+2. Classic cultivar name used in one of the planned DTF crosses (10)
+4. Orange-forward cultivar name listed in the DTF project lineup (10)
+5. Plant worth saving because it hits the target traits (6)
+6. Plant line made from two different genetic backgrounds (6)
+7. Specific plant feature a breeder may track across generations (5)
+8. The visible expression of genetics and environment working together (9)
+16. Blueberry and sweet-candy style name in the DTF project family (13)
+18. Line developed through repeated selection within related plants (10)
+19. Breeding move where offspring are crossed back to a parent or parent-like plant (9)
+exolve-end
