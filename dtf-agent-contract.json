@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "repository": "dtfgenetics/Thc-crossword-",
+  "controlRepository": "dtfgenetics/Thc",
+  "defaultBranch": "main",
+  "canonicalDomains": [
+    "THC Daily Crossword game",
+    "crossword clue bank",
+    "crossword publishing and exports",
+    "crossword browser player"
+  ],
+  "sourceRoots": [
+    "src/",
+    "content/",
+    "scripts/",
+    "public/",
+    "docs/",
+    "package.json",
+    "AGENTS.md"
+  ],
+  "protectedPaths": [
+    ".github/workflows/**",
+    ".env*",
+    "public/puzzles/current.json",
+    "public/puzzles/daily/current.json"
+  ],
+  "verificationProfiles": {
+    "default": {
+      "commands": [
+        "npm test",
+        "npm run verify",
+        "npm run build"
+      ],
+      "ciAuthoritative": true
+    },
+    "content": {
+      "commands": [
+        "npm run crossword:audit",
+        "npm run crossword:validate",
+        "npm run crossword:validate-ipuz",
+        "npm run crossword:validate-exolve",
+        "npm run crossword:check-exports"
+      ],
+      "ciAuthoritative": true
+    },
+    "release": {
+      "commands": [
+        "npm run crossword:audit",
+        "npm test",
+        "npm run crossword:validate",
+        "npm run crossword:validate-ipuz",
+        "npm run crossword:validate-exolve",
+        "npm run crossword:check-exports",
+        "npm run verify",
+        "npm run build"
+      ],
+      "ciAuthoritative": true
+    }
+  },
+  "production": {
+    "directMutation": false,
+    "integrationOwner": "dtfgenetics/Thc",
+    "route": "/games/thc-crossword/",
+    "notes": "Puzzle publication outputs must remain reproducible from canonical clue/content sources; central DTFSeeds integration controls visitor release."
+  }
+}
