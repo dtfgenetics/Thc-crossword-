@@ -1,0 +1,40 @@
+exolve-begin
+exolve-title: THC Daily Crossword — 2026-10-08
+exolve-id: 2026-10-08
+exolve-width: 20
+exolve-height: 13
+exolve-grid:
+............K..H....
+........C...I..A....
+.......BUBBLEHASH...
+....M...R...F..H....
+DRYSIFT.I..W.....F..
+R...C.R.NODE.....U..
+Y..DRYING..T..B..L..
+T...O.M....T..U..L..
+ROSIN....JARCURE.M..
+I..........I..P..E..
+M....CALCIUM.AIRFLOW
+..............N..T..
+.......PRESSBAG.....
+exolve-across:
+1. Small-batch curing method using sealed glass containers (7)
+4. Solventless extract made with heat and pressure (5)
+6. Harvest step that removes moisture before long-term storage (6)
+11. Water-and-screen style resin collection often judged by melt quality (10)
+10. Screened resin collection method done without water (7)
+13. Filter bag used when pressing flower or hash into rosin (8)
+15. Point on a stem where branches or leaves emerge (4)
+16. Nutrient often paired with magnesium in grower conversations (7)
+17. Moving air that helps prevent hot spots and stagnant humidity (7)
+exolve-down:
+2. Leaf material removed while preparing harvested flower (4)
+3. Concentrated resin preparation with old-school roots (4)
+5. Collected resin glands often found at the bottom of a grinder (4)
+7. Filter size unit often discussed with rosin bags and sift screens (6)
+8. Trimming method done before the flower is fully dried (7)
+9. Briefly opening curing containers to manage trapped moisture and air (7)
+10. Trimming method done after the drying period (7)
+12. Post-dry process that improves storage quality and aroma (6)
+14. High-grade hash description for resin that melts very cleanly (8)
+exolve-end
