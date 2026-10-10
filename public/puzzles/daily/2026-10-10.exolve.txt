@@ -1,0 +1,44 @@
+exolve-begin
+exolve-title: THC Daily Crossword — 2026-10-10
+exolve-id: 2026-10-10
+exolve-width: 23
+exolve-height: 17
+exolve-grid:
+.....D.................
+.....E....ROOTING......
+.....H.......R.........
+.....U.......A....G....
+..G..M...CALCIUM..R..P.
+SEEDLING.L...N....O..R.
+..R..D...O..AIRFLOW..U.
+..M..I.C.N.T.N....T..N.
+..I..FLOWERING..TRELLIS
+..N..I.L...M...N..N..N.
+..A.RELATIVEHUMIDITY.G.
+..T..R.....R...T.......
+..I............R.......
+..O.......TRICHOME.....
+..N............G.......
+......LIGHTCYCLE.......
+...............N.......
+exolve-across:
+1. Early stage after a seed sprouts (8)
+2. Daily timing pattern that controls indoor light and dark periods (10)
+6. Moving air that helps prevent hot spots and stagnant humidity (7)
+7. Process a cutting must complete before becoming a strong clone (7)
+8. Support net used to spread branches and hold up heavy flowers (7)
+10. Tiny resin gland growers inspect when judging maturity (8)
+12. Stage when the plant begins building flowers under the right light schedule (9)
+15. Air moisture percentage growers watch through each stage (16)
+4. Nutrient often paired with magnesium in grower conversations (7)
+exolve-down:
+3. Main flower cluster on a plant (4)
+4. A cutting that preserves the genetics of the source plant (5)
+5. Simple tool that keeps lights on a consistent schedule (5)
+9. The process of a seed waking up and starting growth (11)
+11. Removing selected growth to improve structure or airflow (7)
+13. Guiding plant shape instead of letting it grow untouched (8)
+14. Indoor enclosure used to control light, smell, and environment (8)
+16. Tool used to pull extra moisture from the grow space (12)
+17. Macronutrient associated with leafy green growth (8)
+exolve-end
