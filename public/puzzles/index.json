@@ -1,7 +1,24 @@
 {
-  "updatedAt": "2026-10-12T20:16:07.312Z",
+  "updatedAt": "2026-10-13T18:14:51.506Z",
   "puzzleType": "daily",
   "puzzles": [
+    {
+      "id": "2026-10-13",
+      "date": "2026-10-13",
+      "title": "THC Daily Crossword — 2026-10-13",
+      "status": "published",
+      "theme": {
+        "id": "dtf-genetics",
+        "name": "DTF Genetics",
+        "description": "Brand, breeding projects, and house cultivar language."
+      },
+      "stats": {
+        "submittedCount": 20,
+        "placedCount": 20,
+        "score": 19433
+      },
+      "file": "2026-10-13.json"
+    },
     {
       "id": "2026-10-12",
       "date": "2026-10-12",
