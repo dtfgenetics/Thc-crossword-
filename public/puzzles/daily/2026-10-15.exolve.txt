@@ -1,0 +1,43 @@
+exolve-begin
+exolve-title: THC Daily Crossword — 2026-10-15
+exolve-id: 2026-10-15
+exolve-width: 18
+exolve-height: 16
+exolve-grid:
+............K..H..
+........C...I..A..
+.......BUBBLEHASH.
+....M...R...F..H..
+DRYSIFT.I..W.....P
+R...C.R.NODE.....R
+Y..DRYING..TERPENE
+T...O.M....T.....S
+ROSIN....JARCURE.S
+I.......B..I.....B
+M......FULLMELT..A
+........R........G
+........P.........
+.......AIRFLOW....
+........N.........
+........G.........
+exolve-across:
+4. Harvest step that removes moisture before long-term storage (6)
+5. Small-batch curing method using sealed glass containers (7)
+6. Solventless extract made with heat and pressure (5)
+10. Screened resin collection method done without water (7)
+13. Water-and-screen style resin collection often judged by melt quality (10)
+14. High-grade hash description for resin that melts very cleanly (8)
+15. Point on a stem where branches or leaves emerge (4)
+16. Aromatic compound that helps shape a cultivar's smell and flavor (7)
+17. Moving air that helps prevent hot spots and stagnant humidity (7)
+exolve-down:
+1. Concentrated resin preparation with old-school roots (4)
+2. Leaf material removed while preparing harvested flower (4)
+3. Collected resin glands often found at the bottom of a grinder (4)
+7. Trimming method done before the flower is fully dried (7)
+8. Briefly opening curing containers to manage trapped moisture and air (7)
+9. Filter bag used when pressing flower or hash into rosin (8)
+10. Trimming method done after the drying period (7)
+11. Filter size unit often discussed with rosin bags and sift screens (6)
+12. Post-dry process that improves storage quality and aroma (6)
+exolve-end
