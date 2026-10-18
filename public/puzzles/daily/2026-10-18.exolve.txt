@@ -1,0 +1,48 @@
+exolve-begin
+exolve-title: THC Daily Crossword — 2026-10-18
+exolve-id: 2026-10-18
+exolve-width: 18
+exolve-height: 19
+exolve-grid:
+..............F...
+.......P......L...
+......PISTIL..A...
+.......N......V...
+...FANLEAF....O...
+.......N..T...N.H.
+.....KEEPER...O.U.
+..........A.N.I.N.
+....CANNABINOID.T.
+.E..A.....T.D...I.
+.X..L..L...TERPENE
+.P.HYBRID..A..H.G.
+.R..X..M...P..E...
+.E.....O.MYRCENE..
+.S.....N...O..O...
+.S..SELECTION.T...
+.I.....N...T..Y...
+ROOTZONE......P...
+.N......SUGARLEAF.
+exolve-across:
+1. Plant compound family that includes THC and CBD (11)
+4. Plant worth saving because it hits the target traits (6)
+5. Small resin-covered leaf tucked close to the flower (9)
+6. Plant line made from two different genetic backgrounds (6)
+8. Aromatic compound that helps shape a cultivar's smell and flavor (7)
+9. Large leaf that acts like a plant solar panel (7)
+10. Hair-like flower part that changes appearance as buds mature (6)
+15. Area around the roots where moisture, oxygen, and nutrients matter most (8)
+17. Earthy terpene often discussed in aroma profiles (7)
+18. Choosing keepers from a population because they show the desired traits (9)
+exolve-down:
+2. Point on a stem where branches or leaves emerge (4)
+3. Specific plant feature a breeder may track across generations (5)
+7. Pine-leaning terpene whose name gives away its aroma (6)
+8. Primary root that appears early during seed growth (7)
+1. Small flower structure growers often talk about when judging bud formation (5)
+11. How a genetic trait shows itself in the real plant (10)
+12. Citrus-associated terpene found in many aromatic plants (8)
+13. Plant compound group that can contribute color and character (9)
+14. Grower shorthand for searching through seeds to find elite plants (7)
+16. The visible expression of genetics and environment working together (9)
+exolve-end
