@@ -1,0 +1,51 @@
+exolve-begin
+exolve-title: THC Daily Crossword — 2026-10-19
+exolve-id: 2026-10-19
+exolve-width: 19
+exolve-height: 22
+exolve-grid:
+.........ROOTING...
+....H.......R......
+.G..U.......A....G.
+.E..M...CALCIUM..R.
+PRUNING.L...N....O.
+.M..D...O..AIRFLOW.
+.I..I.C.N.T.N....T.
+.N..FLOWERING.T..E.
+.A..I.L...M...R..N.
+.T.RELATIVEHUMIDITY
+.I..R.....R...C....
+.O............H.T..
+.N......E.NITROGEN.
+........X.....M.M..
+.....LIGHTCYCLE.P..
+........A.......E..
+.....DEHUMIDIFIER..
+........S.......A..
+.OSCILLATINGFAN.T..
+........F.......U..
+........A.......R..
+........N.......E..
+exolve-across:
+1. Macronutrient associated with leafy green growth (8)
+3. Daily timing pattern that controls indoor light and dark periods (10)
+4. Nutrient often paired with magnesium in grower conversations (7)
+6. Removing selected growth to improve structure or airflow (7)
+9. Tool used to pull extra moisture from the grow space (12)
+10. Moving fan used to prevent stale pockets of air (14)
+12. Stage when the plant begins building flowers under the right light schedule (9)
+15. Process a cutting must complete before becoming a strong clone (7)
+17. Moving air that helps prevent hot spots and stagnant humidity (7)
+18. Air moisture percentage growers watch through each stage (16)
+exolve-down:
+2. Main flower cluster on a plant (4)
+5. Simple tool that keeps lights on a consistent schedule (5)
+7. Tiny resin gland growers inspect when judging maturity (8)
+8. Tool that pulls stale air out of the grow space (10)
+11. Basic environmental reading that changes plant comfort and drying speed (11)
+13. Tool used to raise moisture in the air (10)
+14. Guiding plant shape instead of letting it grow untouched (8)
+4. A cutting that preserves the genetics of the source plant (5)
+16. The process of a seed waking up and starting growth (11)
+19. Indoor enclosure used to control light, smell, and environment (8)
+exolve-end
