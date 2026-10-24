@@ -1,0 +1,53 @@
+exolve-begin
+exolve-title: THC Daily Crossword — 2026-10-24
+exolve-id: 2026-10-24
+exolve-width: 15
+exolve-height: 26
+exolve-grid:
+..E............
+..X............
+..H............
+..A............
+..U............
+..S.L..........
+..TRICHOME.....
+..F.G..........
+..A.H..........
+..NITROGEN.....
+.F..C..........
+.L..Y.C.....S..
+.O..CLONE.T.E..
+.W..L.L...R.E..
+TEMPERATURE.D.H
+.R...O....L.L.U
+AIRFLOW.CALCIUM
+.N...T....I.N.I
+.G.G.I....S.G.D
+..PRUNING.....I
+...O.G........F
+...W..........I
+...TRANSPLANT.E
+...E..........R
+...N...........
+.MOTHERPLANT...
+exolve-across:
+2. Basic environmental reading that changes plant comfort and drying speed (11)
+3. Moving air that helps prevent hot spots and stagnant humidity (7)
+4. Macronutrient associated with leafy green growth (8)
+6. Nutrient often paired with magnesium in grower conversations (7)
+8. Moving a plant into a larger container or new medium (10)
+10. A cutting that preserves the genetics of the source plant (5)
+11. Source plant kept around to provide future cuttings (11)
+14. Removing selected growth to improve structure or airflow (7)
+17. Tiny resin gland growers inspect when judging maturity (8)
+exolve-down:
+1. Indoor enclosure used to control light, smell, and environment (8)
+5. Stage when the plant begins building flowers under the right light schedule (9)
+7. Tool that pulls stale air out of the grow space (10)
+9. Support net used to spread branches and hold up heavy flowers (7)
+12. Tool used to raise moisture in the air (10)
+13. Daily timing pattern that controls indoor light and dark periods (10)
+15. Early stage after a seed sprouts (8)
+16. Main flower cluster on a plant (4)
+18. Process a cutting must complete before becoming a strong clone (7)
+exolve-end
