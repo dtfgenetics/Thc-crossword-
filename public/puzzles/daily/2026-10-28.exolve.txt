@@ -1,0 +1,47 @@
+exolve-begin
+exolve-title: THC Daily Crossword — 2026-10-28
+exolve-id: 2026-10-28
+exolve-width: 26
+exolve-height: 16
+exolve-grid:
+....................P.E...
+.S.....PISTIL..H....H.X...
+.U......N......Y....E.P..P
+.G......T..T...B..S.N.R..O
+.A....KEEPER...ROOTZONE..P
+.R......R..A.N.I..A.T.S..U
+.L...CANNABINOID..B.Y.S..L
+.E.M....O..T.D....I.P.I..A
+CALYX.L.D.T..E....L.E.O..T
+.F.R.PINENE.......I...N..I
+...C..M...R.......Z......O
+...E..O.TAPROOT..SELECTION
+.HUNTING..E...............
+...E..E.FANLEAF...........
+......N...E...............
+......E...................
+exolve-across:
+2. Plant compound family that includes THC and CBD (11)
+4. Plant worth saving because it hits the target traits (6)
+6. Pine-leaning terpene whose name gives away its aroma (6)
+7. Large leaf that acts like a plant solar panel (7)
+9. Primary root that appears early during seed growth (7)
+11. Hair-like flower part that changes appearance as buds mature (6)
+12. Grower shorthand for searching through seeds to find elite plants (7)
+16. Small flower structure growers often talk about when judging bud formation (5)
+18. Area around the roots where moisture, oxygen, and nutrients matter most (8)
+21. Choosing keepers from a population because they show the desired traits (9)
+exolve-down:
+1. Plant line made from two different genetic backgrounds (6)
+3. Small resin-covered leaf tucked close to the flower (9)
+5. Point on a stem where branches or leaves emerge (4)
+8. Specific plant feature a breeder may track across generations (5)
+10. Aromatic compound that helps shape a cultivar's smell and flavor (7)
+13. Earthy terpene often discussed in aroma profiles (7)
+14. Breeder goal of making traits show up more consistently across seeds (9)
+15. The visible expression of genetics and environment working together (9)
+17. How a genetic trait shows itself in the real plant (10)
+19. Stem section between two branch points (9)
+20. Citrus-associated terpene found in many aromatic plants (8)
+22. Group of plants a breeder evaluates for variation and keepers (10)
+exolve-end
