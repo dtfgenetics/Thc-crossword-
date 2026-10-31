@@ -1,0 +1,43 @@
+exolve-begin
+exolve-title: THC Daily Crossword — 2026-10-31
+exolve-id: 2026-10-31
+exolve-width: 23
+exolve-height: 16
+exolve-grid:
+.........C.............
+......TRELLIS........L.
+.........O.....P.....I.
+T......C.N.T...ROOTING.
+E....FLOWERING.U.....H.
+M......L...M...N.A...T.
+P...RELATIVEHUMIDITY.C.
+E.......R..R...N.R...Y.
+R.......A...N..G.F...C.
+A.SEEDLING..I....L...L.
+T.......S...TRICHOME.E.
+U.......P...R....W.....
+R.......L...O..........
+EXHAUSTFAN..GERMINATION
+........N...E..........
+........TRAINING.......
+exolve-across:
+3. Process a cutting must complete before becoming a strong clone (7)
+6. Early stage after a seed sprouts (8)
+10. Tool that pulls stale air out of the grow space (10)
+11. The process of a seed waking up and starting growth (11)
+12. Tiny resin gland growers inspect when judging maturity (8)
+13. Air moisture percentage growers watch through each stage (16)
+14. Stage when the plant begins building flowers under the right light schedule (9)
+15. Support net used to spread branches and hold up heavy flowers (7)
+17. Guiding plant shape instead of letting it grow untouched (8)
+exolve-down:
+1. Removing selected growth to improve structure or airflow (7)
+2. Moving a plant into a larger container or new medium (10)
+4. Main flower cluster on a plant (4)
+5. Basic environmental reading that changes plant comfort and drying speed (11)
+7. Simple tool that keeps lights on a consistent schedule (5)
+8. Macronutrient associated with leafy green growth (8)
+9. Daily timing pattern that controls indoor light and dark periods (10)
+16. Moving air that helps prevent hot spots and stagnant humidity (7)
+18. A cutting that preserves the genetics of the source plant (5)
+exolve-end
