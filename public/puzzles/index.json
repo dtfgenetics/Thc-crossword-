@@ -1,7 +1,24 @@
 {
-  "updatedAt": "2026-10-31T16:03:47.755Z",
+  "updatedAt": "2026-11-01T17:06:03.158Z",
   "puzzleType": "daily",
   "puzzles": [
+    {
+      "id": "2026-11-01",
+      "date": "2026-11-01",
+      "title": "THC Daily Crossword — 2026-11-01",
+      "status": "published",
+      "theme": {
+        "id": "plant-science",
+        "name": "Plant Science",
+        "description": "Terpenes, anatomy, physiology, and biology clues."
+      },
+      "stats": {
+        "submittedCount": 20,
+        "placedCount": 20,
+        "score": 19670
+      },
+      "file": "2026-11-01.json"
+    },
     {
       "id": "2026-10-31",
       "date": "2026-10-31",
