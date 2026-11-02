@@ -1,0 +1,62 @@
+exolve-begin
+exolve-title: THC Weekly Crossword — 2026-W42
+exolve-id: 2026-W42
+exolve-width: 25
+exolve-height: 25
+exolve-grid:
+.........MYCORRHIZAE.....
+....P......A..........T..
+....H......N..L.......E..
+....O...TRANSPIRATION.M.L
+....T......A..G.......P.I
+....O......B..H...F...E.G
+....S.....LIGHTCYCLE..R.H
+C...Y......N..M...A...A.T
+A...N......O..E...V...T.I
+RELATIVEHUMIDITY..O...U.N
+Y...H......D..E...N...R.T
+O..DEWPOINT...RHIZOSPHERE
+P...S.H.....P.....I.....N
+H...I.S..M..I..PPFD.....S
+Y...S.C..Y..N...A.......I
+L....VAPORPRESSUREDEFICIT
+L.....L..C..N.E...L.....Y
+E.....E.TERPENE..AIRFLOW.
+N........N....D......I...
+E...LIMONENE..B......N...
+..............A......A...
+.........PHOTON..HUMULENE
+..............K......O...
+.....................O...
+...........CHLOROPHYLL...
+exolve-across:
+2. Air moisture percentage growers watch through each stage (16)
+3. Aromatic compound that helps shape a cultivar's smell and flavor (7)
+4. Green pigment central to absorbing light energy for photosynthesis (11)
+7. Daily timing pattern that controls indoor light and dark periods (10)
+8. Moving air that helps prevent hot spots and stagnant humidity (7)
+13. Citrus-associated terpene found in many aromatic plants (8)
+14. Loss of water vapor from plant surfaces, mainly through stomata (13)
+15. Fungal partners that form symbiotic relationships with plant roots (11)
+16. Packet of light counted by common horticultural lighting measurements (6)
+18. Environmental metric combining temperature and humidity pressure (20)
+20. Photon-flux density metric for photosynthetically active light reaching a square meter each second (4)
+22. Earthy terpene also found in hops (8)
+23. Temperature where air moisture can begin condensing (8)
+24. Narrow root-influenced zone where plants, media, and microbes interact (11)
+exolve-down:
+1. Plant compound family that includes THC and CBD (11)
+5. Instrument used to quantify light at the plant canopy (10)
+6. Pine-leaning terpene whose name gives away its aroma (6)
+9. Process that uses light energy to build sugars from carbon dioxide and water (14)
+10. Basic environmental reading that changes plant comfort and drying speed (11)
+11. Strength of light reaching the canopy (14)
+12. Earthy terpene often discussed in aroma profiles (7)
+17. Plant compound group that can contribute color and character (9)
+19. Daily total of photosynthetic photons received by a square meter (3)
+21. Floral terpene name also associated with lavender aroma (8)
+25. Common abbreviation for the roughly 400-to-700-nanometer waveband used in plant-light measurements (3)
+26. Peppery terpene often mentioned in aroma discussions (13)
+27. Logarithmic scale used to describe how acidic or basic a solution is (7)
+28. Seller or collection source for genetics in seed form (8)
+exolve-end

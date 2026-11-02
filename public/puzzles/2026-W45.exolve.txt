@@ -1,0 +1,58 @@
+exolve-begin
+exolve-title: THC Weekly Crossword — 2026-W45
+exolve-id: 2026-W45
+exolve-width: 28
+exolve-height: 21
+exolve-grid:
+......................S.....
+......................U.....
+..........S......S....G.....
+..........E.H.HUNTING.A.....
+.....V....E.Y....O....R.....
+..FEMINIZED.B....M....L.....
+.....A....B.REGULAR.K.E.....
+.....B....A.I....T..E.A.....
+.....INTERNODE..FANLEAF..A..
+.....L....K.........P....U.S
+.....I.P....PHENOTYPE....T.E
+SELECTION...I..O.R..ROOTZONE
+...X.Y.P....S..D.A...U.A.F.D
+...P...U.PHOTOPERIOD.T.P.L.P
+...R...L....I....T...C.R.O.A
+...E...A..CALYX......R.O.W.C
+...S...T.............O.O.E.K
+...STABILIZE.BACKCROSS.T.R..
+...I...O.............S......
+...O..INBREDLINE............
+...N........................
+exolve-across:
+4. Seed type bred to produce female plants at a high rate (9)
+6. Large leaf that acts like a plant solar panel (7)
+9. Seed type that can produce male or female plants (7)
+14. Small flower structure growers often talk about when judging bud formation (5)
+15. Choosing keepers from a population because they show the desired traits (9)
+16. Area around the roots where moisture, oxygen, and nutrients matter most (8)
+18. Plant type whose flowering is controlled by light and dark timing (11)
+19. Grower shorthand for searching through seeds to find elite plants (7)
+21. Stem section between two branch points (9)
+23. Breeder goal of making traits show up more consistently across seeds (9)
+22. The visible expression of genetics and environment working together (9)
+26. Breeding move where offspring are crossed back to a parent or parent-like plant (9)
+27. Line developed through repeated selection within related plants (10)
+exolve-down:
+1. Package format growers buy when starting a new run from genetics (8)
+2. Small resin-covered leaf tucked close to the flower (9)
+3. Plant worth saving because it hits the target traits (6)
+5. Point on a stem where branches or leaves emerge (4)
+7. Specific plant feature a breeder may track across generations (5)
+8. Seller or collection source for genetics in seed form (8)
+10. Primary root that appears early during seed growth (7)
+11. Plant line made from two different genetic backgrounds (6)
+12. Group of plants a breeder evaluates for variation and keepers (10)
+13. How a genetic trait shows itself in the real plant (10)
+17. Microscopic leaf pores that regulate gas exchange and water loss (7)
+20. Likelihood that a seed is alive enough to sprout (9)
+22. Hair-like flower part that changes appearance as buds mature (6)
+24. Plant type that flowers by age instead of relying only on light schedule (10)
+25. Breeding move that brings in less-related genetics (8)
+exolve-end

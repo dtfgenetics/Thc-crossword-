@@ -1,79 +1,78 @@
 {
-  "updatedAt": "2026-11-02T20:44:27.332Z",
-  "puzzleType": "daily",
+  "updatedAt": "2026-11-02T20:48:19.096Z",
   "puzzles": [
     {
-      "id": "2026-11-02",
-      "date": "2026-11-02",
-      "title": "THC Daily Crossword — 2026-11-02",
+      "id": "2026-W45",
+      "week": "2026-W45",
+      "title": "THC Weekly Crossword — 2026-W45",
       "status": "published",
       "theme": {
-        "id": "grow-room-basics",
-        "name": "Grow Room Basics",
-        "description": "Beginner-friendly cultivation terms."
+        "id": "seeds-and-reproduction",
+        "name": "Seeds and Reproduction",
+        "description": "Seed types, reproduction, breeding, inheritance, and selection."
       },
       "stats": {
-        "submittedCount": 20,
-        "placedCount": 20,
-        "score": 19600
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27412
       },
-      "file": "2026-11-02.json"
+      "file": "2026-W45.json"
     },
     {
-      "id": "2026-11-01",
-      "date": "2026-11-01",
-      "title": "THC Daily Crossword — 2026-11-01",
+      "id": "2026-W44",
+      "week": "2026-W44",
+      "title": "THC Weekly Crossword — 2026-W44",
       "status": "published",
       "theme": {
-        "id": "plant-science",
-        "name": "Plant Science",
-        "description": "Terpenes, anatomy, physiology, and biology clues."
+        "id": "ipm-and-plant-health",
+        "name": "IPM and Plant Health",
+        "description": "Pests, disease pressure, sanitation, and prevention vocabulary."
       },
       "stats": {
-        "submittedCount": 20,
-        "placedCount": 20,
-        "score": 19670
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27160
       },
-      "file": "2026-11-01.json"
+      "file": "2026-W44.json"
     },
     {
-      "id": "2026-10-31",
-      "date": "2026-10-31",
-      "title": "THC Daily Crossword — 2026-10-31",
+      "id": "2026-W43",
+      "week": "2026-W43",
+      "title": "THC Weekly Crossword — 2026-W43",
       "status": "published",
       "theme": {
-        "id": "grow-room-basics",
-        "name": "Grow Room Basics",
-        "description": "Beginner-friendly cultivation terms."
+        "id": "roots-water-and-media",
+        "name": "Roots, Water and Media",
+        "description": "Root-zone science, irrigation measurements, and growing-media terminology."
       },
       "stats": {
-        "submittedCount": 18,
-        "placedCount": 18,
-        "score": 17632
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27350
       },
-      "file": "2026-10-31.json"
+      "file": "2026-W43.json"
     },
     {
-      "id": "2026-10-30",
-      "date": "2026-10-30",
-      "title": "THC Daily Crossword — 2026-10-30",
+      "id": "2026-W42",
+      "week": "2026-W42",
+      "title": "THC Weekly Crossword — 2026-W42",
       "status": "published",
       "theme": {
-        "id": "dtf-genetics",
-        "name": "DTF Genetics",
-        "description": "Brand, breeding projects, and house cultivar language."
+        "id": "light-and-environment",
+        "name": "Light and Environment",
+        "description": "Lighting metrics, climate, airflow, and plant-environment relationships."
       },
       "stats": {
-        "submittedCount": 22,
-        "placedCount": 22,
-        "score": 21402
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27375
       },
-      "file": "2026-10-30.json"
+      "file": "2026-W42.json"
     },
     {
-      "id": "2026-10-29",
-      "date": "2026-10-29",
-      "title": "THC Daily Crossword — 2026-10-29",
+      "id": "2026-W41",
+      "week": "2026-W41",
+      "title": "THC Weekly Crossword — 2026-W41",
       "status": "published",
       "theme": {
         "id": "harvest-and-extracts",
@@ -81,16 +80,16 @@
         "description": "Post-harvest terms and solventless culture."
       },
       "stats": {
-        "submittedCount": 18,
-        "placedCount": 18,
-        "score": 17728
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27471
       },
-      "file": "2026-10-29.json"
+      "file": "2026-W41.json"
     },
     {
-      "id": "2026-10-28",
-      "date": "2026-10-28",
-      "title": "THC Daily Crossword — 2026-10-28",
+      "id": "2026-W40",
+      "week": "2026-W40",
+      "title": "THC Weekly Crossword — 2026-W40",
       "status": "published",
       "theme": {
         "id": "plant-science",
@@ -98,33 +97,16 @@
         "description": "Terpenes, anatomy, physiology, and biology clues."
       },
       "stats": {
-        "submittedCount": 22,
-        "placedCount": 22,
-        "score": 21584
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27298
       },
-      "file": "2026-10-28.json"
+      "file": "2026-W40.json"
     },
     {
-      "id": "2026-10-27",
-      "date": "2026-10-27",
-      "title": "THC Daily Crossword — 2026-10-27",
-      "status": "published",
-      "theme": {
-        "id": "dtf-genetics",
-        "name": "DTF Genetics",
-        "description": "Brand, breeding projects, and house cultivar language."
-      },
-      "stats": {
-        "submittedCount": 20,
-        "placedCount": 20,
-        "score": 19433
-      },
-      "file": "2026-10-27.json"
-    },
-    {
-      "id": "2026-10-26",
-      "date": "2026-10-26",
-      "title": "THC Daily Crossword — 2026-10-26",
+      "id": "2026-W39",
+      "week": "2026-W39",
+      "title": "THC Weekly Crossword — 2026-W39",
       "status": "published",
       "theme": {
         "id": "grow-room-basics",
@@ -132,50 +114,16 @@
         "description": "Beginner-friendly cultivation terms."
       },
       "stats": {
-        "submittedCount": 20,
-        "placedCount": 20,
-        "score": 19582
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27350
       },
-      "file": "2026-10-26.json"
+      "file": "2026-W39.json"
     },
     {
-      "id": "2026-10-25",
-      "date": "2026-10-25",
-      "title": "THC Daily Crossword — 2026-10-25",
-      "status": "published",
-      "theme": {
-        "id": "plant-science",
-        "name": "Plant Science",
-        "description": "Terpenes, anatomy, physiology, and biology clues."
-      },
-      "stats": {
-        "submittedCount": 20,
-        "placedCount": 20,
-        "score": 19655
-      },
-      "file": "2026-10-25.json"
-    },
-    {
-      "id": "2026-10-24",
-      "date": "2026-10-24",
-      "title": "THC Daily Crossword — 2026-10-24",
-      "status": "published",
-      "theme": {
-        "id": "grow-room-basics",
-        "name": "Grow Room Basics",
-        "description": "Beginner-friendly cultivation terms."
-      },
-      "stats": {
-        "submittedCount": 18,
-        "placedCount": 18,
-        "score": 17610
-      },
-      "file": "2026-10-24.json"
-    },
-    {
-      "id": "2026-10-23",
-      "date": "2026-10-23",
-      "title": "THC Daily Crossword — 2026-10-23",
+      "id": "2026-W38",
+      "week": "2026-W38",
+      "title": "THC Weekly Crossword — 2026-W38",
       "status": "published",
       "theme": {
         "id": "dtf-genetics",
@@ -183,16 +131,84 @@
         "description": "Brand, breeding projects, and house cultivar language."
       },
       "stats": {
-        "submittedCount": 22,
-        "placedCount": 22,
-        "score": 21402
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27350
       },
-      "file": "2026-10-23.json"
+      "file": "2026-W38.json"
     },
     {
-      "id": "2026-10-22",
-      "date": "2026-10-22",
-      "title": "THC Daily Crossword — 2026-10-22",
+      "id": "2026-W37",
+      "week": "2026-W37",
+      "title": "THC Weekly Crossword — 2026-W37",
+      "status": "published",
+      "theme": {
+        "id": "seeds-and-reproduction",
+        "name": "Seeds and Reproduction",
+        "description": "Seed types, reproduction, breeding, inheritance, and selection."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27400
+      },
+      "file": "2026-W37.json"
+    },
+    {
+      "id": "2026-W36",
+      "week": "2026-W36",
+      "title": "THC Weekly Crossword — 2026-W36",
+      "status": "published",
+      "theme": {
+        "id": "ipm-and-plant-health",
+        "name": "IPM and Plant Health",
+        "description": "Pests, disease pressure, sanitation, and prevention vocabulary."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27104
+      },
+      "file": "2026-W36.json"
+    },
+    {
+      "id": "2026-W35",
+      "week": "2026-W35",
+      "title": "THC Weekly Crossword — 2026-W35",
+      "status": "published",
+      "theme": {
+        "id": "roots-water-and-media",
+        "name": "Roots, Water and Media",
+        "description": "Root-zone science, irrigation measurements, and growing-media terminology."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27350
+      },
+      "file": "2026-W35.json"
+    },
+    {
+      "id": "2026-W34",
+      "week": "2026-W34",
+      "title": "THC Weekly Crossword — 2026-W34",
+      "status": "published",
+      "theme": {
+        "id": "light-and-environment",
+        "name": "Light and Environment",
+        "description": "Lighting metrics, climate, airflow, and plant-environment relationships."
+      },
+      "stats": {
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27256
+      },
+      "file": "2026-W34.json"
+    },
+    {
+      "id": "2026-W33",
+      "week": "2026-W33",
+      "title": "THC Weekly Crossword — 2026-W33",
       "status": "published",
       "theme": {
         "id": "harvest-and-extracts",
@@ -200,16 +216,16 @@
         "description": "Post-harvest terms and solventless culture."
       },
       "stats": {
-        "submittedCount": 18,
-        "placedCount": 18,
-        "score": 17728
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27478
       },
-      "file": "2026-10-22.json"
+      "file": "2026-W33.json"
     },
     {
-      "id": "2026-10-21",
-      "date": "2026-10-21",
-      "title": "THC Daily Crossword — 2026-10-21",
+      "id": "2026-W32",
+      "week": "2026-W32",
+      "title": "THC Weekly Crossword — 2026-W32",
       "status": "published",
       "theme": {
         "id": "plant-science",
@@ -217,33 +233,16 @@
         "description": "Terpenes, anatomy, physiology, and biology clues."
       },
       "stats": {
-        "submittedCount": 22,
-        "placedCount": 22,
-        "score": 21584
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27350
       },
-      "file": "2026-10-21.json"
+      "file": "2026-W32.json"
     },
     {
-      "id": "2026-10-20",
-      "date": "2026-10-20",
-      "title": "THC Daily Crossword — 2026-10-20",
-      "status": "published",
-      "theme": {
-        "id": "dtf-genetics",
-        "name": "DTF Genetics",
-        "description": "Brand, breeding projects, and house cultivar language."
-      },
-      "stats": {
-        "submittedCount": 20,
-        "placedCount": 20,
-        "score": 19433
-      },
-      "file": "2026-10-20.json"
-    },
-    {
-      "id": "2026-10-19",
-      "date": "2026-10-19",
-      "title": "THC Daily Crossword — 2026-10-19",
+      "id": "2026-W31",
+      "week": "2026-W31",
+      "title": "THC Weekly Crossword — 2026-W31",
       "status": "published",
       "theme": {
         "id": "grow-room-basics",
@@ -251,50 +250,16 @@
         "description": "Beginner-friendly cultivation terms."
       },
       "stats": {
-        "submittedCount": 20,
-        "placedCount": 20,
-        "score": 19582
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27280
       },
-      "file": "2026-10-19.json"
+      "file": "2026-W31.json"
     },
     {
-      "id": "2026-10-18",
-      "date": "2026-10-18",
-      "title": "THC Daily Crossword — 2026-10-18",
-      "status": "published",
-      "theme": {
-        "id": "plant-science",
-        "name": "Plant Science",
-        "description": "Terpenes, anatomy, physiology, and biology clues."
-      },
-      "stats": {
-        "submittedCount": 20,
-        "placedCount": 20,
-        "score": 19658
-      },
-      "file": "2026-10-18.json"
-    },
-    {
-      "id": "2026-10-17",
-      "date": "2026-10-17",
-      "title": "THC Daily Crossword — 2026-10-17",
-      "status": "published",
-      "theme": {
-        "id": "grow-room-basics",
-        "name": "Grow Room Basics",
-        "description": "Beginner-friendly cultivation terms."
-      },
-      "stats": {
-        "submittedCount": 18,
-        "placedCount": 18,
-        "score": 17626
-      },
-      "file": "2026-10-17.json"
-    },
-    {
-      "id": "2026-10-16",
-      "date": "2026-10-16",
-      "title": "THC Daily Crossword — 2026-10-16",
+      "id": "2026-W30",
+      "week": "2026-W30",
+      "title": "THC Weekly Crossword — 2026-W30",
       "status": "published",
       "theme": {
         "id": "dtf-genetics",
@@ -302,283 +267,74 @@
         "description": "Brand, breeding projects, and house cultivar language."
       },
       "stats": {
-        "submittedCount": 22,
-        "placedCount": 22,
-        "score": 21402
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27333
       },
-      "file": "2026-10-16.json"
+      "file": "2026-W30.json"
     },
     {
-      "id": "2026-10-15",
-      "date": "2026-10-15",
-      "title": "THC Daily Crossword — 2026-10-15",
+      "id": "2026-W29",
+      "week": "2026-W29",
+      "title": "THC Weekly Crossword — 2026-W29",
       "status": "published",
       "theme": {
-        "id": "harvest-and-extracts",
-        "name": "Harvest and Extracts",
-        "description": "Post-harvest terms and solventless culture."
+        "id": "seeds-and-reproduction",
+        "name": "Seeds and Reproduction",
+        "description": "Seed types, reproduction, breeding, inheritance, and selection."
       },
       "stats": {
-        "submittedCount": 18,
-        "placedCount": 18,
-        "score": 17712
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27384
       },
-      "file": "2026-10-15.json"
+      "file": "2026-W29.json"
     },
     {
-      "id": "2026-10-14",
-      "date": "2026-10-14",
-      "title": "THC Daily Crossword — 2026-10-14",
+      "id": "2026-W28",
+      "week": "2026-W28",
+      "title": "THC Weekly Crossword — 2026-W28",
       "status": "published",
       "theme": {
-        "id": "plant-science",
-        "name": "Plant Science",
-        "description": "Terpenes, anatomy, physiology, and biology clues."
+        "id": "ipm-and-plant-health",
+        "name": "IPM and Plant Health",
+        "description": "Pests, disease pressure, sanitation, and prevention vocabulary."
       },
       "stats": {
-        "submittedCount": 22,
-        "placedCount": 22,
-        "score": 21584
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27160
       },
-      "file": "2026-10-14.json"
+      "file": "2026-W28.json"
     },
     {
-      "id": "2026-10-13",
-      "date": "2026-10-13",
-      "title": "THC Daily Crossword — 2026-10-13",
+      "id": "2026-W27",
+      "week": "2026-W27",
+      "title": "THC Weekly Crossword — 2026-W27",
       "status": "published",
       "theme": {
-        "id": "dtf-genetics",
-        "name": "DTF Genetics",
-        "description": "Brand, breeding projects, and house cultivar language."
+        "id": "roots-water-and-media",
+        "name": "Roots, Water and Media",
+        "description": "Root-zone science, irrigation measurements, and growing-media terminology."
       },
       "stats": {
-        "submittedCount": 20,
-        "placedCount": 20,
-        "score": 19433
+        "submittedCount": 28,
+        "placedCount": 28,
+        "score": 27350
       },
-      "file": "2026-10-13.json"
+      "file": "2026-W27.json"
     },
     {
-      "id": "2026-10-12",
-      "date": "2026-10-12",
-      "title": "THC Daily Crossword — 2026-10-12",
+      "id": "2026-W26",
+      "week": "2026-W26",
+      "title": "THC Weekly Crossword — 2026-W26",
       "status": "published",
-      "theme": {
-        "id": "grow-room-basics",
-        "name": "Grow Room Basics",
-        "description": "Beginner-friendly cultivation terms."
-      },
       "stats": {
-        "submittedCount": 20,
-        "placedCount": 20,
-        "score": 19558
+        "submittedCount": 3,
+        "placedCount": 3,
+        "score": 2970
       },
-      "file": "2026-10-12.json"
-    },
-    {
-      "id": "2026-10-11",
-      "date": "2026-10-11",
-      "title": "THC Daily Crossword — 2026-10-11",
-      "status": "published",
-      "theme": {
-        "id": "plant-science",
-        "name": "Plant Science",
-        "description": "Terpenes, anatomy, physiology, and biology clues."
-      },
-      "stats": {
-        "submittedCount": 20,
-        "placedCount": 20,
-        "score": 19658
-      },
-      "file": "2026-10-11.json"
-    },
-    {
-      "id": "2026-10-10",
-      "date": "2026-10-10",
-      "title": "THC Daily Crossword — 2026-10-10",
-      "status": "published",
-      "theme": {
-        "id": "grow-room-basics",
-        "name": "Grow Room Basics",
-        "description": "Beginner-friendly cultivation terms."
-      },
-      "stats": {
-        "submittedCount": 18,
-        "placedCount": 18,
-        "score": 17609
-      },
-      "file": "2026-10-10.json"
-    },
-    {
-      "id": "2026-10-09",
-      "date": "2026-10-09",
-      "title": "THC Daily Crossword — 2026-10-09",
-      "status": "published",
-      "theme": {
-        "id": "dtf-genetics",
-        "name": "DTF Genetics",
-        "description": "Brand, breeding projects, and house cultivar language."
-      },
-      "stats": {
-        "submittedCount": 22,
-        "placedCount": 22,
-        "score": 21402
-      },
-      "file": "2026-10-09.json"
-    },
-    {
-      "id": "2026-10-08",
-      "date": "2026-10-08",
-      "title": "THC Daily Crossword — 2026-10-08",
-      "status": "published",
-      "theme": {
-        "id": "harvest-and-extracts",
-        "name": "Harvest and Extracts",
-        "description": "Post-harvest terms and solventless culture."
-      },
-      "stats": {
-        "submittedCount": 18,
-        "placedCount": 18,
-        "score": 17740
-      },
-      "file": "2026-10-08.json"
-    },
-    {
-      "id": "2026-10-07",
-      "date": "2026-10-07",
-      "title": "THC Daily Crossword — 2026-10-07",
-      "status": "published",
-      "theme": {
-        "id": "plant-science",
-        "name": "Plant Science",
-        "description": "Terpenes, anatomy, physiology, and biology clues."
-      },
-      "stats": {
-        "submittedCount": 22,
-        "placedCount": 22,
-        "score": 21584
-      },
-      "file": "2026-10-07.json"
-    },
-    {
-      "id": "2026-10-06",
-      "date": "2026-10-06",
-      "title": "THC Daily Crossword — 2026-10-06",
-      "status": "published",
-      "theme": {
-        "id": "dtf-genetics",
-        "name": "DTF Genetics",
-        "description": "Brand, breeding projects, and house cultivar language."
-      },
-      "stats": {
-        "submittedCount": 20,
-        "placedCount": 20,
-        "score": 19433
-      },
-      "file": "2026-10-06.json"
-    },
-    {
-      "id": "2026-10-04",
-      "date": "2026-10-04",
-      "title": "THC Daily Crossword — 2026-10-04",
-      "status": "published",
-      "theme": {
-        "id": "plant-science",
-        "name": "Plant Science",
-        "description": "Terpenes, anatomy, physiology, and biology clues."
-      },
-      "stats": {
-        "submittedCount": 20,
-        "placedCount": 20,
-        "score": 19670
-      },
-      "file": "2026-10-04.json"
-    },
-    {
-      "id": "2026-10-03",
-      "date": "2026-10-03",
-      "title": "THC Daily Crossword — 2026-10-03",
-      "status": "published",
-      "theme": {
-        "id": "grow-room-basics",
-        "name": "Grow Room Basics",
-        "description": "Beginner-friendly cultivation terms."
-      },
-      "stats": {
-        "submittedCount": 18,
-        "placedCount": 18,
-        "score": 17622
-      },
-      "file": "2026-10-03.json"
-    },
-    {
-      "id": "2026-10-02",
-      "date": "2026-10-02",
-      "title": "THC Daily Crossword — 2026-10-02",
-      "status": "published",
-      "theme": {
-        "id": "dtf-genetics",
-        "name": "DTF Genetics",
-        "description": "Brand, breeding projects, and house cultivar language."
-      },
-      "stats": {
-        "submittedCount": 22,
-        "placedCount": 22,
-        "score": 21402
-      },
-      "file": "2026-10-02.json"
-    },
-    {
-      "id": "2026-10-01",
-      "date": "2026-10-01",
-      "title": "THC Daily Crossword — 2026-10-01",
-      "status": "published",
-      "theme": {
-        "id": "harvest-and-extracts",
-        "name": "Harvest and Extracts",
-        "description": "Post-harvest terms and solventless culture."
-      },
-      "stats": {
-        "submittedCount": 18,
-        "placedCount": 18,
-        "score": 17712
-      },
-      "file": "2026-10-01.json"
-    },
-    {
-      "id": "2026-09-30",
-      "date": "2026-09-30",
-      "title": "THC Daily Crossword — 2026-09-30",
-      "status": "published",
-      "theme": {
-        "id": "plant-science",
-        "name": "Plant Science",
-        "description": "Terpenes, anatomy, physiology, and biology clues."
-      },
-      "stats": {
-        "submittedCount": 22,
-        "placedCount": 22,
-        "score": 21584
-      },
-      "file": "2026-09-30.json"
-    },
-    {
-      "id": "2026-09-29",
-      "date": "2026-09-29",
-      "title": "THC Daily Crossword — 2026-09-29",
-      "status": "published",
-      "theme": {
-        "id": "dtf-genetics",
-        "name": "DTF Genetics",
-        "description": "Brand, breeding projects, and house cultivar language."
-      },
-      "stats": {
-        "submittedCount": 20,
-        "placedCount": 20,
-        "score": 19433
-      },
-      "file": "2026-09-29.json"
+      "file": "2026-W26.json"
     }
   ]
 }

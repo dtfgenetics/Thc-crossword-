@@ -1,0 +1,67 @@
+exolve-begin
+exolve-title: THC Weekly Crossword — 2026-W44
+exolve-id: 2026-W44
+exolve-width: 28
+exolve-height: 30
+exolve-grid:
+............................
+......................P.....
+......................I.....
+.................MYRCENE....
+.........ROOTROT....A.E.....
+.............H..LIMONENE....
+..........THRIPS....N.E.....
+.............Z......A.......
+........AIRFLOW...S.B.......
+.............S.DEWPOINT.....
+.......F.....P....I.N.......
+.......L...APHID..D.O.......
+...L...A.....E....E.I.......
+...I...VAPORPRESSUREDEFICIT.
+...G.F.O.H.E.E....M.....A.E.
+...H.U.N.O.L......I.....R.M.
+...T.N.O.TRANSPIRATION..Y.P.
+...C.G.I.O.T......E.....O.E.
+...Y.U.D.S.I............P.R.
+...C.S...Y.V............H.A.
+...LIGHTINTENSITY.......Y.T.
+...E.N...T.H...A.LINALOOL.U.
+.T...A...H.U...P........L.R.
+.E...T...E.MYCORRHIZAE..E.E.
+.R.......S.I...O........N...
+.POWDERYMILDEW.O...HUMULENE.
+.E.......S.I...T............
+.N.........T................
+.E.CHLOROPHYLL..............
+............................
+exolve-across:
+2. Earthy terpene often discussed in aroma profiles (7)
+4. Root-zone disease risk tied to poor oxygen and wet conditions (7)
+6. Citrus-associated terpene found in many aromatic plants (8)
+7. Slender pests that can leave silvery feeding marks on leaves (6)
+8. Moving air that helps prevent hot spots and stagnant humidity (7)
+10. Temperature where air moisture can begin condensing (8)
+12. Soft-bodied plant pest that can cluster on tender growth (5)
+14. Environmental metric combining temperature and humidity pressure (20)
+20. Loss of water vapor from plant surfaces, mainly through stomata (13)
+21. Strength of light reaching the canopy (14)
+23. Floral terpene name also associated with lavender aroma (8)
+25. Fungal partners that form symbiotic relationships with plant roots (11)
+26. White fungal issue that can spread across leaves in poor conditions (13)
+27. Earthy terpene also found in hops (8)
+28. Green pigment central to absorbing light energy for photosynthesis (11)
+exolve-down:
+1. Pine-leaning terpene whose name gives away its aroma (6)
+3. Plant compound family that includes THC and CBD (11)
+5. Narrow root-influenced zone where plants, media, and microbes interact (11)
+9. Tiny pest that leaves stippling and webbing when ignored (10)
+11. Plant compound group that can contribute color and character (9)
+13. Daily timing pattern that controls indoor light and dark periods (10)
+15. Process that uses light energy to build sugars from carbon dioxide and water (14)
+16. Air moisture percentage growers watch through each stage (16)
+17. Peppery terpene often mentioned in aroma discussions (13)
+18. Basic environmental reading that changes plant comfort and drying speed (11)
+19. Small flying pest often connected to wet growing media (10)
+22. Primary root that appears early during seed growth (7)
+24. Aromatic compound that helps shape a cultivar's smell and flavor (7)
+exolve-end
