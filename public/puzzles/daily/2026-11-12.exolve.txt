@@ -1,0 +1,48 @@
+exolve-begin
+exolve-title: THC Daily Crossword — 2026-11-12
+exolve-id: 2026-11-12
+exolve-width: 12
+exolve-height: 21
+exolve-grid:
+........W.F.
+........E.U.
+.GROWTENT.L.
+........T.L.
+....DRYTRIM.
+........I.E.
+.....TRIM.L.
+......O...T.
+...DRYSIFT..
+......I.....
+SEEDBANK..H.
+.......I..A.
+..BUBBLEHASH
+.....U.F..H.
+JARCURE..F..
+.....P.D.A..
+....MICRON..
+.....N.Y.L..
+CURING.I.E..
+.......N.A..
+PRESSBAG.F..
+exolve-across:
+2. Small-batch curing method using sealed glass containers (7)
+6. Leaf material removed while preparing harvested flower (4)
+7. Screened resin collection method done without water (7)
+9. Post-dry process that improves storage quality and aroma (6)
+10. Water-and-screen style resin collection often judged by melt quality (10)
+11. Filter size unit often discussed with rosin bags and sift screens (6)
+12. Filter bag used when pressing flower or hash into rosin (8)
+14. Trimming method done after the drying period (7)
+16. Seller or collection source for genetics in seed form (8)
+18. Indoor enclosure used to control light, smell, and environment (8)
+exolve-down:
+1. Solventless extract made with heat and pressure (5)
+3. Collected resin glands often found at the bottom of a grinder (4)
+4. Harvest step that removes moisture before long-term storage (6)
+5. Concentrated resin preparation with old-school roots (4)
+8. Trimming method done before the flower is fully dried (7)
+13. Briefly opening curing containers to manage trapped moisture and air (7)
+15. High-grade hash description for resin that melts very cleanly (8)
+17. Large leaf that acts like a plant solar panel (7)
+exolve-end

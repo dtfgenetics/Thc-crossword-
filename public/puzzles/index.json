@@ -1,7 +1,24 @@
 {
-  "updatedAt": "2026-11-11T18:39:15.972Z",
+  "updatedAt": "2026-11-12T18:52:15.169Z",
   "puzzleType": "daily",
   "puzzles": [
+    {
+      "id": "2026-11-12",
+      "date": "2026-11-12",
+      "title": "THC Daily Crossword — 2026-11-12",
+      "status": "published",
+      "theme": {
+        "id": "harvest-and-extracts",
+        "name": "Harvest and Extracts",
+        "description": "Post-harvest terms and solventless culture."
+      },
+      "stats": {
+        "submittedCount": 18,
+        "placedCount": 18,
+        "score": 17748
+      },
+      "file": "2026-11-12.json"
+    },
     {
       "id": "2026-11-11",
       "date": "2026-11-11",
