@@ -1,7 +1,24 @@
 {
-  "updatedAt": "2026-11-13T18:30:19.505Z",
+  "updatedAt": "2026-11-14T17:02:03.261Z",
   "puzzleType": "daily",
   "puzzles": [
+    {
+      "id": "2026-11-14",
+      "date": "2026-11-14",
+      "title": "THC Daily Crossword — 2026-11-14",
+      "status": "published",
+      "theme": {
+        "id": "grow-room-basics",
+        "name": "Grow Room Basics",
+        "description": "Beginner-friendly cultivation terms."
+      },
+      "stats": {
+        "submittedCount": 18,
+        "placedCount": 18,
+        "score": 17595
+      },
+      "file": "2026-11-14.json"
+    },
     {
       "id": "2026-11-13",
       "date": "2026-11-13",
