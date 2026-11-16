@@ -1,0 +1,47 @@
+exolve-begin
+exolve-title: THC Daily Crossword — 2026-11-16
+exolve-id: 2026-11-16
+exolve-width: 24
+exolve-height: 18
+exolve-grid:
+....D...................
+....E....ROOTING........
+T...H.......R...........
+E...U.......A...........
+M...M...CALCIUM.....T..M
+PRUNING.L...N...T...R..O
+E...D...O...I...R...A..T
+R...I.C.N.T.N.SEEDLING.H
+A...FLOWERING...L...S..E
+T...I.L...M.....L...P..R
+U..RELATIVEHUMIDITY.L..P
+R...R..R..R.....S...A..L
+E......I............N..A
+..LIGHTCYCLE.GERMINATION
+.......H...............T
+.....GROWTENT...........
+.......M................
+.......EXHAUSTFAN.......
+exolve-across:
+1. Daily timing pattern that controls indoor light and dark periods (10)
+4. Process a cutting must complete before becoming a strong clone (7)
+8. Early stage after a seed sprouts (8)
+6. Nutrient often paired with magnesium in grower conversations (7)
+9. Removing selected growth to improve structure or airflow (7)
+11. Air moisture percentage growers watch through each stage (16)
+13. The process of a seed waking up and starting growth (11)
+15. Stage when the plant begins building flowers under the right light schedule (9)
+16. Indoor enclosure used to control light, smell, and environment (8)
+17. Tool that pulls stale air out of the grow space (10)
+exolve-down:
+2. Basic environmental reading that changes plant comfort and drying speed (11)
+3. Moving a plant into a larger container or new medium (10)
+5. Support net used to spread branches and hold up heavy flowers (7)
+6. A cutting that preserves the genetics of the source plant (5)
+7. Source plant kept around to provide future cuttings (11)
+10. Main flower cluster on a plant (4)
+12. Guiding plant shape instead of letting it grow untouched (8)
+14. Tiny resin gland growers inspect when judging maturity (8)
+18. Simple tool that keeps lights on a consistent schedule (5)
+19. Tool used to pull extra moisture from the grow space (12)
+exolve-end
