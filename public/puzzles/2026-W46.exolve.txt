@@ -1,0 +1,63 @@
+exolve-begin
+exolve-title: THC Weekly Crossword — 2026-W46
+exolve-id: 2026-W46
+exolve-width: 25
+exolve-height: 26
+exolve-grid:
+...........B.......B.....
+..MANGOBUBBLES.....A.....
+...........U.E.....C.....
+.......INBREDLINE..K.....
+...........M.E.....C...E.
+B..........A.C.....R...X.
+U.......PHENOTYPE..O...P.
+B.T...S....G.I.....S...R.
+B.E...T.K..O.OUTCROSS..E.
+LEMONHAZE....N......U..S.
+E.P...B.E.K...HUNTING..S.
+G.E...I.P.I.T.Y.....APHID
+U.R..BLUEBERRYBUTCHER..O.
+M.A...I.R.F.A.R.....L..N.
+B.T...Z....FILIAL...E....
+L.U...E.....T.D..SOMANGO.
+U.R..........P...E..F....
+E.E.......GENOTYPE.......
+.............P...D.......
+.............U...P.......
+...........CALIORANGE....
+.............A...C.......
+.............T...K.......
+.......WHITEWIDOW........
+.............O...........
+........GERMINATION......
+exolve-across:
+4. Orange-forward cultivar name listed in the DTF project lineup (10)
+5. Citrus-leaning cultivar name used in planned cross work (9)
+6. Classic cultivar name used in one of the planned DTF crosses (10)
+8. Mango-heavy parent behind the Blue Mango project (7)
+3. Grower shorthand for searching through seeds to find elite plants (7)
+10. The visible expression of genetics and environment working together (9)
+11. Blue-fruit parent used as the dad in the Blue Mango cross (16)
+15. Updated name for the Blue Mango and Blue Bubblegum cross (12)
+17. Line developed through repeated selection within related plants (10)
+19. Breeding move that brings in less-related genetics (8)
+20. The inherited genetic blueprint behind a plant's traits (8)
+21. Generation label idea behind F1, F2, and F3 breeding talk (6)
+22. Soft-bodied plant pest that can cluster on tender growth (5)
+24. The process of a seed waking up and starting growth (11)
+exolve-down:
+1. Specific plant feature a breeder may track across generations (5)
+2. Plant worth saving because it hits the target traits (6)
+3. Plant line made from two different genetic backgrounds (6)
+7. DTF flagship line with candy-blueberry and ripe mango flavor notes (9)
+9. Breeder goal of making traits show up more consistently across seeds (9)
+12. Group of plants a breeder evaluates for variation and keepers (10)
+13. Blueberry and sweet-candy style name in the DTF project family (13)
+14. How a genetic trait shows itself in the real plant (10)
+16. Choosing keepers from a population because they show the desired traits (9)
+18. Breeding move where offspring are crossed back to a parent or parent-like plant (9)
+8. Package format growers buy when starting a new run from genetics (8)
+23. Basic environmental reading that changes plant comfort and drying speed (11)
+25. Collected resin glands often found at the bottom of a grinder (4)
+26. Small resin-covered leaf tucked close to the flower (9)
+exolve-end

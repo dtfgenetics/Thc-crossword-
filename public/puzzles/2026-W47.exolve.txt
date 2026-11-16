@@ -1,0 +1,63 @@
+exolve-begin
+exolve-title: THC Weekly Crossword — 2026-W47
+exolve-id: 2026-W47
+exolve-width: 25
+exolve-height: 26
+exolve-grid:
+............S............
+....H...CLONE.....R......
+....U.......E.....O......
+.T..M...M...D.....O....M.
+PRUNING.AIRFLOW...TRELLIS
+.A..D...G...I...C.I..I.C.
+.N..I.C.N.T.N.TRAINING.R.
+.S..FLOWERING...L.G..H.O.
+.P..I.L.S.M.....C....T.N.
+.L.RELATIVEHUMIDITY..C.U.
+.A..R...U.R.....U....Y.T.
+.N......M..P..N.M....C.R.
+.T.D..L....H..I......L.I.
+..GERMINATION.TRICHOME.E.
+...H..G....S..R........N.
+...U..H....P.MOTHERPLANT.
+...M..T....H..G..........
+...I..I..GROWTENT........
+...D..N....R..N..........
+...I..T....U.............
+...F..EXHAUSTFAN.........
+...I..N..................
+...E.OSCILLATINGFAN......
+...R..I..................
+......TEMPERATURE........
+......Y..................
+exolve-across:
+1. A cutting that preserves the genetics of the source plant (5)
+2. Moving air that helps prevent hot spots and stagnant humidity (7)
+4. Basic environmental reading that changes plant comfort and drying speed (11)
+5. Indoor enclosure used to control light, smell, and environment (8)
+9. Source plant kept around to provide future cuttings (11)
+10. Moving fan used to prevent stale pockets of air (14)
+11. Tiny resin gland growers inspect when judging maturity (8)
+13. Guiding plant shape instead of letting it grow untouched (8)
+14. Air moisture percentage growers watch through each stage (16)
+15. Tool that pulls stale air out of the grow space (10)
+17. The process of a seed waking up and starting growth (11)
+18. Removing selected growth to improve structure or airflow (7)
+20. Support net used to spread branches and hold up heavy flowers (7)
+23. Stage when the plant begins building flowers under the right light schedule (9)
+exolve-down:
+3. Moving a plant into a larger container or new medium (10)
+6. Tool used to raise moisture in the air (10)
+7. Macronutrient associated with leafy green growth (8)
+8. Early stage after a seed sprouts (8)
+12. Daily timing pattern that controls indoor light and dark periods (10)
+16. Main flower cluster on a plant (4)
+19. Nutrient often paired with magnesium in grower conversations (7)
+21. Simple tool that keeps lights on a consistent schedule (5)
+22. Process a cutting must complete before becoming a strong clone (7)
+24. Tool used to pull extra moisture from the grow space (12)
+25. Needed element required in smaller amounts than primary nutrients (13)
+26. Strength of light reaching the canopy (14)
+27. Nutrient commonly discussed with calcium under bright indoor lighting (9)
+28. Macronutrient often discussed around roots and flowering (10)
+exolve-end
