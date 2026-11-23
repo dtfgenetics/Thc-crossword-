@@ -1,0 +1,48 @@
+exolve-begin
+exolve-title: THC Daily Crossword — 2026-11-23
+exolve-id: 2026-11-23
+exolve-width: 22
+exolve-height: 19
+exolve-grid:
+.........ROOTING......
+T...H.......R.........
+E...U.......A.........
+M...M...CALCIUM.......
+PRUNING.L...N...T....L
+E...D...O...I...R....I
+R...I.C.N.T.N.SEEDLING
+A...FLOWERING...L....H
+T...I.L...M...N.L....T
+U..RELATIVEHUMIDITY..C
+R...R..R..R...T.S....Y
+E......A......R......C
+.......N.TRICHOME....L
+.......S......G......E
+.......P.GROWTENT.....
+.......L......N.......
+....EXHAUSTFAN........
+.......N..............
+.....MOTHERPLANT......
+exolve-across:
+1. Stage when the plant begins building flowers under the right light schedule (9)
+2. Removing selected growth to improve structure or airflow (7)
+3. Indoor enclosure used to control light, smell, and environment (8)
+6. Tiny resin gland growers inspect when judging maturity (8)
+9. Source plant kept around to provide future cuttings (11)
+4. Nutrient often paired with magnesium in grower conversations (7)
+10. Process a cutting must complete before becoming a strong clone (7)
+13. Early stage after a seed sprouts (8)
+16. Air moisture percentage growers watch through each stage (16)
+17. Tool that pulls stale air out of the grow space (10)
+exolve-down:
+4. A cutting that preserves the genetics of the source plant (5)
+5. Macronutrient associated with leafy green growth (8)
+7. Simple tool that keeps lights on a consistent schedule (5)
+8. Moving a plant into a larger container or new medium (10)
+11. Tool used to raise moisture in the air (10)
+12. Support net used to spread branches and hold up heavy flowers (7)
+14. Daily timing pattern that controls indoor light and dark periods (10)
+15. Basic environmental reading that changes plant comfort and drying speed (11)
+18. Guiding plant shape instead of letting it grow untouched (8)
+19. Main flower cluster on a plant (4)
+exolve-end
